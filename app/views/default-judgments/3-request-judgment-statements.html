@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Choose defendant
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="urgent" method="post">
+        <div class="govuk-form-group">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+              <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-4">
+                Do these statements apply to the Defendant?
+              </h1>
+              <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
+            </legend>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>The time for responding to the claim has expired.</li>
+              <li>The Defendant has not responded to the claim.</li>
+              <li>There is no outstanding application by the Defendant to strike out the claim or for summary judgment.</li>
+              <li>The Defendant has not satisfied the whole claim, including costs.</li>
+              <li>The Defendant has not filed an admission together with request for time to pay.</li>
+            </ul>
+              <fieldset class="govuk-fieldset" aria-describedby="certify none of the statements apply">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="certify" name="certify" type="checkbox" value="certify-none-apply">
+                    <label class="govuk-label govuk-checkboxes__label" for="certify none of the statements apply">
+                      I certify that all of the above statements apply to the Defendant
+                    </label>
+                  </div>
+          <div class="govuk-button-group govuk-!-margin-top-6">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Previous
+            </button>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+      </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
