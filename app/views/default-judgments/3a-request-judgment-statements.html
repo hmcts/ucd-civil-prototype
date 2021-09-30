@@ -1,0 +1,64 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  Request default judgment eligibility check
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="4-payments-made" method="post">
+        <div class="govuk-form-group">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+              <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+              <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-4">
+                You cannot request default judgment
+              </h1>
+              <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
+            </legend>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Why?
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <p>You can only request default judgment if:</p>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>the time for responding to the claim has expired</li>
+                  <li>the Defendant has not responded to the claim</li>
+                  <li>there is no outstanding application by the Defendant to strike out the claim or for summary judgment</li>
+                  <li>the Defendant has not satisfied the whole claim, including costs</li>
+                  <li>the Defendant has not filed an admission together with request for time to pay</li>
+                </ul>
+    
+              </div>
+            </details>
+            <p>You can <a href="3-request-judgment-statements.html" class="govuk-link govuk-link--no-visited-state">change your answer</a> or wait until all of the statements apply to the Defendant to request default judgment.</p>
+            <p><a href="" class="govuk-link govuk-link--no-visited-state">Return to case overview</a></p>
+          <div class="govuk-button-group govuk-!-margin-top-6">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Previous
+            </button>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+          <div class="govuk-button-group">
+            <a href="" class="govuk-link govuk-link--no-visited-state">Cancel</a>
+          </div>
+
+      </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
