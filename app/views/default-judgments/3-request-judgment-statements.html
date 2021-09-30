@@ -1,7 +1,7 @@
-{% extends "layout.html" %}
+{% extends "layout-manage-cases.html" %}
 
 {% block pageTitle %}
-  Choose defendant
+Request default judgment statements
 {% endblock %}
 
 {% block beforeContent %}
@@ -14,13 +14,13 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-      <form class="form" action="4-test" method="post">
+      <form class="form" action="3a-request-judgment-statements" method="post">
         <div class="govuk-form-group">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
               <span class="govuk-caption-m">#1522-0584-2506-7027</span>
               <h1 class="govuk-fieldset__heading govuk-!-margin-bottom-4">
-                Do these statements apply to the Defendant?
+                Do all of these statements apply to the Defendant?
               </h1>
               <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
             </legend>
@@ -47,6 +47,10 @@
               Continue
             </button>
           </div>
+          <div class="govuk-button-group">
+            <a href="" class="govuk-link govuk-link--no-visited-state">Cancel</a>
+          </div>
+
       </div>
       </form>
     </div>

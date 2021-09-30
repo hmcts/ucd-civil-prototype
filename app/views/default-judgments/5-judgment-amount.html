@@ -1,0 +1,61 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  Judgment amount
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="3-request-judgment-statements" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+              <h1 class="govuk-fieldset__heading">
+                Judgment amount
+              </h1>
+              <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
+            </legend>
+            <p class="govuk-body">The judgment will order the Defendant to pay £1,200, including the claim fee and interest, if applicable, as shown:</p>
+            
+            <p class="govuk-body govuk-!-margin-bottom-1">Claim amount</p>
+            <p class="govuk-body govuk-!-margin-top-0">£{{data['claimAmount']}}</p>
+
+            <p class="govuk-body govuk-!-margin-bottom-1">Claim fee amount</p>
+            <p class="govuk-body govuk-!-margin-top-0">£{{data['claimFee']}}</p>
+
+            <p class="govuk-body govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Subtotal</p>
+            <p class="govuk-body govuk-!-margin-top-0">£{{data['claimSubtotal']}}</p>
+
+            <p class="govuk-body govuk-!-margin-bottom-1">Amount already paid</p>
+            <p class="govuk-body govuk-!-margin-top-0">£{{data['claimAmountPaid']}}</p>
+
+            <p class="govuk-body govuk-!-margin-bottom-1 govuk-!-font-weight-bold">Total still owed</p>
+            <p class="govuk-body govuk-!-margin-top-0">£{{data['claimTotalOwed']}}</p>
+
+          <div class="govuk-button-group govuk-!-margin-top-6">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Previous
+            </button>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+          <div class="govuk-button-group">
+            <a href="" class="govuk-link govuk-link--no-visited-state">Cancel</a>
+          </div>
+
+      </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

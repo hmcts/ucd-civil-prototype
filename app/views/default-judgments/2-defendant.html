@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout-manage-cases.html" %}
 
 {% block pageTitle %}
   Choose defendant
@@ -29,7 +29,7 @@
             </div> -->
             <div class="govuk-radios govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="defendent1" name="defendant" type="radio" value="Mary Richards">
+                <input class="govuk-radios__input" id="defendant1" name="defendant" type="radio" value="Mary Richards">
                 <label class="govuk-label govuk-radios__label" for="defendant mary richards">
                   Mary Richards
                 </label>
@@ -55,6 +55,9 @@
             <button class="govuk-button" data-module="govuk-button">
               Continue
             </button>
+          </div>
+          <div class="govuk-button-group govuk-!-margin-top-0">
+            <a href="" class="govuk-link govuk-link--no-visited-state">Cancel</a>
           </div>
       </div>
       </form>
