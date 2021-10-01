@@ -27,19 +27,61 @@
             <!-- <div id="changed-name-hint" class="govuk-hint">
               A judge will still need to approve this order.
             </div> -->
-            <div class="govuk-radios govuk-radios">
+          
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately">
                 <label class="govuk-label govuk-radios__label" for="immediately">
                   Immediately
                 </label>
               </div>
+
+
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="by-set-date" name="how-to-pay" type="radio" value="By a set date">
-                <label class="govuk-label govuk-radios__label" for="by a set date">
+                <input class="govuk-radios__input" id="by-set-date" name="how-to-pay" type="radio" value="By a set date" data-aria-controls="conditional-date">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
                   By a set date
                 </label>
               </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-date">
+                <div class="govuk-form-group">
+                  <!-- <label class="govuk-label" for="contact-by-phone">
+                    Phone number
+                  </label> -->
+                  <div id="regular-payments-hint" class="govuk-hint">
+                    For example, 7 12 20212
+                  </div>
+      
+                  <div class="govuk-date-input" id="reviewed-by">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="reviewed-by-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="reviewed-by-day" name="reviewed-by-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="reviewed-by-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="reviewed-by-month" name="reviewed-by-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="reviewed-by-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="reviewed-by-year" name="reviewed-by-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                  </div>  
+                  </div>
+
+
+        
+              </div>
+
+              
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="repayment-plan" name="how-to-pay" type="radio" value="By repayment plan">
                 <label class="govuk-label govuk-radios__label" for="by repayment plan">
