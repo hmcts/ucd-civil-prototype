@@ -20,7 +20,7 @@ Example usage:
 module.exports = {
 
   // Insert values here
-  "defendant": "Mary Richards",
+//  "defendant": "Mary Richards",
   "claimAmount": "1,130",
   "claimFee": "70",
   "claimSubtotal": "1,200",
