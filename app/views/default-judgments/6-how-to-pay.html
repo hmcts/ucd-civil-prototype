@@ -1,0 +1,67 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  How do you want the Defendant to pay?
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="6c-repayment-plan" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+              <h1 class="govuk-fieldset__heading">
+                How do you want {{data['defendant']}} to pay?
+              </h1>
+              <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
+            </legend>
+            <!-- <div id="changed-name-hint" class="govuk-hint">
+              A judge will still need to approve this order.
+            </div> -->
+            <div class="govuk-radios govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately">
+                <label class="govuk-label govuk-radios__label" for="immediately">
+                  Immediately
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="by-set-date" name="how-to-pay" type="radio" value="By a set date">
+                <label class="govuk-label govuk-radios__label" for="by a set date">
+                  By a set date
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="repayment-plan" name="how-to-pay" type="radio" value="By repayment plan">
+                <label class="govuk-label govuk-radios__label" for="by repayment plan">
+                  By repayment plan
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="govuk-button-group govuk-!-margin-top-6">
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Previous
+            </button>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+          </div>
+          <div class="govuk-button-group govuk-!-margin-top-0">
+            <a href="" class="govuk-link govuk-link--no-visited-state">Cancel</a>
+          </div>
+      </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
