@@ -6,15 +6,30 @@ const router = express.Router()
 module.exports = router
 
 router.post('/default-judgments/2-defendant', function(req, res) {
-    res.redirect('3-request-judgment-statements')
-})
-
-router.post('/default-judgments/3a-request-judgment-statements', function(req, res) {
-    if (req.body['certify'] === undefined) {
-        res.redirect('3a-request-judgment-statements')
+    if (req.body['submit-button'] === 'continue') {
+        res.redirect('3-request-judgment-statements')
     }
     else {
-        res.redirect('4-payments-made')
+        res.redirect('../')
+    }    
+})
+
+router.post('/default-judgments/3-request-judgment-statements', function(req, res) {
+    if (req.body['certify'] === undefined) {
+        if (req.body['submit-button'] === 'continue') {
+            res.redirect('3a-request-judgment-statements')
+        }
+        else {
+            res.redirect('2-defendant')
+        }
+    }
+    else {
+        if (req.body['submit-button'] === 'continue') {
+            res.redirect('4-payments-made')
+        }
+        else {
+            res.redirect('2-defendant')
+        }        
     }
 })
 
@@ -32,8 +47,43 @@ router.post('/default-judgments/4-payments-made', function(req, res) {
     req.session.data.displayFee = req.session.data.claimFee.toLocaleString('en', {useGrouping:true})
     req.session.data.displayAmountPaid = req.session.data.claimAmountPaid.toLocaleString('en', {useGrouping:true})
     req.session.data.displayTotalOwed = req.session.data.claimTotalOwed.toLocaleString('en', {useGrouping:true})
-    res.redirect('5-judgment-amount')
+
+    if (req.body['submit-button'] === 'continue') {
+        res.redirect('5-judgment-amount')
+    }
+    else {
+        res.redirect('3-request-judgment-statements')
+    }    
 })
+
+router.post('/default-judgments/5-judgment-amount', function(req, res) {
+    if (req.body['submit-button'] === 'continue') {
+        res.redirect('6-how-to-pay')
+    }
+    else {
+        res.redirect('4-payments-made')
+    }    
+})
+
+router.post('/default-judgments/6-how-to-pay', function(req, res) {
+    console.log("Submit button: ", req.body['submit-button'])    
+    console.log("How to pay: ", req.body['how-to-pay'])
+    if (req.body['submit-button'] === 'continue') {
+        if (req.body['how-to-pay'] === 'immediately') {
+            res.redirect('7-cya-immediately')
+        }
+        else if (req.body['how-to-pay'] === 'by-set-date'){
+            res.redirect('7a-cya-by-set-date')
+        }
+        else {
+            res.redirect('6c-repayment-plan')
+        }
+    }
+    else {
+        res.redirect('5-judgment-amount')
+    }        
+})
+
 
 
 

@@ -14,7 +14,7 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-      <form class="form" action="6c-repaymen-plan" method="post">
+      <form class="form" action="/default-judgments/6c-repaymen-plan" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -105,17 +105,8 @@
           </fieldset>
 
           <!-- Buttons -->
-          <div class="govuk-button-group govuk-!-margin-top-6">
-            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Previous
-            </button>
-            <button class="govuk-button" data-module="govuk-button">
-              Continue
-            </button>
-          </div>
-          <div class="govuk-button-group govuk-!-margin-top-0">
-            <a href="" class="govuk-link govuk-link--no-visited-state">Cancel</a>
-          </div>
+          {% include "../includes/buttons.html" %}
+
       </div>
       </form>
     </div>

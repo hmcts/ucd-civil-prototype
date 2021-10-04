@@ -14,7 +14,7 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-      <form class="form" action="6c-repayment-plan" method="post">
+      <form class="form" action="/default-judgments/6-how-to-pay" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -30,7 +30,7 @@
           
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately">
+                <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="immediately">
                 <label class="govuk-label govuk-radios__label" for="immediately">
                   Immediately
                 </label>
@@ -38,7 +38,7 @@
 
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="by-set-date" name="how-to-pay" type="radio" value="By a set date" data-aria-controls="conditional-date">
+                <input class="govuk-radios__input" id="by-set-date" name="how-to-pay" type="radio" value="by-set-date" data-aria-controls="conditional-date">
                 <label class="govuk-label govuk-radios__label" for="contact-2">
                   By a set date
                 </label>
@@ -76,32 +76,23 @@
                     </div>
                   </div>  
                   </div>
-
-
         
               </div>
 
               
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="repayment-plan" name="how-to-pay" type="radio" value="By repayment plan">
+                <input class="govuk-radios__input" id="repayment-plan" name="how-to-pay" type="radio" value="by-repayment-plan">
                 <label class="govuk-label govuk-radios__label" for="by repayment plan">
                   By repayment plan
                 </label>
               </div>
             </div>
           </fieldset>
-          <div class="govuk-button-group govuk-!-margin-top-6">
-            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Previous
-            </button>
-            <button class="govuk-button" data-module="govuk-button">
-              Continue
-            </button>
-          </div>
-          <div class="govuk-button-group govuk-!-margin-top-0">
-            <a href="" class="govuk-link govuk-link--no-visited-state">Cancel</a>
-          </div>
-      </div>
+
+          <!-- Buttons -->
+          {% include "../includes/buttons.html" %}
+
+        </div>
       </form>
     </div>
   </div>

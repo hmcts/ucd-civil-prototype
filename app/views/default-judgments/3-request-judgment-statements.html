@@ -14,7 +14,7 @@ Request default judgment statements
     <div class="govuk-grid-column-two-thirds">
 
 
-      <form class="form" action="/default-judgments/3a-request-judgment-statements" method="post">
+      <form class="form" action="/default-judgments/3-request-judgment-statements" method="post">
         <div class="govuk-form-group">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
@@ -39,17 +39,9 @@ Request default judgment statements
                       I certify that all of the above statements apply to the Defendant
                     </label>
                   </div>
-          <div class="govuk-button-group govuk-!-margin-top-6">
-            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Previous
-            </button>
-            <button class="govuk-button" data-module="govuk-button">
-              Continue
-            </button>
-          </div>
-          <div class="govuk-button-group">
-            <a href="" class="govuk-link govuk-link--no-visited-state">Cancel</a>
-          </div>
+
+          <!-- Buttons -->
+          {% include "../includes/buttons.html" %}
 
       </div>
       </form>
