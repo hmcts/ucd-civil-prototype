@@ -20,12 +20,12 @@ Example usage:
 module.exports = {
 
   // Insert values here
-//  "defendant": "Mary Richards",
-  "claimAmount": "1,130",
-  "claimFee": "70",
-  "claimSubtotal": "1,200",
-  "claimAmountPaid": "100",
-  "claimTotalOwed": "1,100"
+  "defendant": "Mary Richards",
+  "claimAmount": 1130,
+  "claimFee": 70,
+  "claimSubtotal": 1200,
+  "claimAmountPaid": 100,
+  "claimTotalOwed": 1100
   
  
 }

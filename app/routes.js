@@ -18,6 +18,27 @@ router.post('/default-judgments/3a-request-judgment-statements', function(req, r
     }
 })
 
+router.post('/default-judgments/4-payments-made', function(req, res) {
+    if (req.body['payment-made'] === "no") {
+        req.session.data.claimAmountPaid = 0
+    }
+
+    // number formatting to show eg 1200 as 1,200
+    req.session.data.claimSubtotal = req.session.data.claimAmount + req.session.data.claimFee
+    req.session.data.claimTotalOwed = req.session.data.claimSubtotal - req.session.data.claimAmountPaid
+
+    req.session.data.displaySubtotal = req.session.data.claimSubtotal.toLocaleString('en', {useGrouping:true})
+    req.session.data.displayAmount = req.session.data.claimAmount.toLocaleString('en', {useGrouping:true})
+    req.session.data.displayFee = req.session.data.claimFee.toLocaleString('en', {useGrouping:true})
+    req.session.data.displayAmountPaid = req.session.data.claimAmountPaid.toLocaleString('en', {useGrouping:true})
+    req.session.data.displayTotalOwed = req.session.data.claimTotalOwed.toLocaleString('en', {useGrouping:true})
+    res.redirect('5-judgment-amount')
+})
+
+
+
+
+
 
 
 
