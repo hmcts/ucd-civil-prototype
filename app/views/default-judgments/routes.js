@@ -10,26 +10,22 @@ router.post('/default-judgments/2-defendant', function(req, res) {
 })
 
 router.post('/default-judgments/3-request-judgment-statements', function(req, res) {
-    if (req.body['certify'] === undefined) {
-        if (req.body['submit-button'] === 'continue') {
+    if (req.body['submit-button'] === 'continue') {
+        if (req.body['certify'] === undefined) {
             res.redirect('/default-judgments/3a-request-judgment-statements')
         }
         else {
-            res.redirect('/default-judgments/2-defendant')
+            res.redirect('/default-judgments/4-payments-made')
         }
     }
     else {
-        if (req.body['submit-button'] === 'continue') {
-            res.redirect('/default-judgments/4-payments-made')
-        }
-        else {
-            res.redirect('/default-judgments/2-defendant')
-        }        
-    }
+        res.redirect('/default-judgments/2-defendant')
+    }        
+    
 })
 
 router.post('/default-judgments/4-payments-made', function(req, res) {
-    if (req.body['payment-made'] === "no") {
+    if (req.body['payment-made'] === "No") {
         req.session.data.claimAmountPaid = 0
     }
     console.log("Defendant", req.session.data.defendant)
@@ -62,14 +58,16 @@ router.post('/default-judgments/5-judgment-amount', function(req, res) {
 })
 
 router.post('/default-judgments/6-how-to-pay', function(req, res) {
-    // console.log("Submit button: ", req.body['submit-button'])    
-    // console.log("How to pay: ", req.body['how-to-pay'])
+
+    var month = req.body['paid-by-month']
+    req.session.data.paidByDate = req.body['paid-by-day'] + " " + req.session.data.monthName[month] + " " + req.body['paid-by-year']
+
     if (req.body['submit-button'] === 'continue') {
-        if (req.body['how-to-pay'] === 'immediately') {
-            res.redirect('/default-judgments/7-cya-immediately')
+        if (req.body['how-to-pay'] === 'Immediately') {
+            res.redirect('/default-judgments/7-check-your-answers')
         }
-        else if (req.body['how-to-pay'] === 'by-set-date'){
-            res.redirect('/default-judgments/7a-cya-by-set-date')
+        else if (req.body['how-to-pay'] === 'By a set date'){
+            res.redirect('/default-judgments/7-check-your-answers')
         }
         else {
             res.redirect('/default-judgments/6c-repayment-plan')
@@ -78,6 +76,19 @@ router.post('/default-judgments/6-how-to-pay', function(req, res) {
     else {
         res.redirect('/default-judgments/5-judgment-amount')
     }        
+})
+
+router.post('/default-judgments/6c-repayment-plan', function(req, res) {
+    if (req.body['submit-button'] === 'continue') {
+        var month = req.body['start-month']
+        req.session.data.paymentStartDate = req.body['start-day'] + " " + req.session.data.monthName[month] + " " + req.body['start-year']
+        req.session.data.displayRegularPayment = req.session.data.regularPayment.toLocaleString('en', {useGrouping:true})
+    
+        res.redirect('/default-judgments/7-check-your-answers')
+    }
+    else {
+        res.redirect('/default-judgments/6-how-to-pay')
+    }    
 })
 
 
