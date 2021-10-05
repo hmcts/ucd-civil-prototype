@@ -28,7 +28,7 @@
               A judge will still need to approve this order.
             </div> -->
             
-            <p class="govuk-body">Total claim amount is £{{data['claimTotalOwed']}}</p>
+            <p class="govuk-body">Total claim amount is £{{data['displayTotalOwed']}}</p>
 
             <!-- Regular payments of -->
             <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-weight-bold govuk-!-margin-top-7" for="weight">
@@ -39,7 +39,7 @@
             </div>
             <div class="govuk-input__wrapper">
               <div class="govuk-input__prefix" aria-hidden="true">£</div>
-              <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+              <input class="govuk-input govuk-input--width-5" id="regularPayment" name="regularPayment" type="text" spellcheck="false">
             </div>
 
             <!-- How often do you want to receive payments? -->
@@ -48,20 +48,20 @@
             </label>
             <div class="govuk-radios govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately">
-                <label class="govuk-label govuk-radios__label" for="immediately">
+                <input class="govuk-radios__input" id="every-week" name="frequency" type="radio" value="every-week">
+                <label class="govuk-label govuk-radios__label" for="every-week">
                   Every week
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="by-set-date" name="how-to-pay" type="radio" value="By a set date">
-                <label class="govuk-label govuk-radios__label" for="by a set date">
+                <input class="govuk-radios__input" id="every-2-weeks" name="frequency" type="radio" value="every-2-weeks">
+                <label class="govuk-label govuk-radios__label" for="every-2-weeks">
                   Every 2 weeks
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="repayment-plan" name="how-to-pay" type="radio" value="By repayment plan">
-                <label class="govuk-label govuk-radios__label" for="by repayment plan">
+                <input class="govuk-radios__input" id="every-month" name="frequency" type="radio" value="every-month">
+                <label class="govuk-label govuk-radios__label" for="every-month">
                   Every month
                 </label>
               </div>
@@ -74,27 +74,27 @@
             <div id="regular-payments-hint" class="govuk-hint">
               This must be after 7 December 2021
             </div>
-            <div class="govuk-date-input" id="reviewed-by">
+            <div class="govuk-date-input" id="start-date">
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="reviewed-by-day">
+                  <label class="govuk-label govuk-date-input__label" for="start-day">
                     Day
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="reviewed-by-day" name="reviewed-by-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="reviewed-by-month">
+                  <label class="govuk-label govuk-date-input__label" for="start-month">
                     Month
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="reviewed-by-month" name="reviewed-by-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
               </div>
               <div class="govuk-date-input__item">
                 <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="reviewed-by-year">
+                  <label class="govuk-label govuk-date-input__label" for="start-year">
                     Year
                   </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="reviewed-by-year" name="reviewed-by-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
               </div>
             </div>   
 
