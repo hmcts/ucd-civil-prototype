@@ -20,7 +20,11 @@
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Has {{data['defendant']}} paid some of the amount owed?
+                {% if (data['defendant'] === 'Both defendants') %}
+                  Have the defendants paid some of the amount owed?
+                {% else %}
+                  Has {{data['defendant']}} paid some of the amount owed?
+                {% endif %}
               </h1>
               <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3>
             </legend>

@@ -21,7 +21,7 @@ module.exports = {
 
   // Insert values here
   "defendant": "Mary Richards",
-  "claimAmount": 1130,
+  "claimAmount": 10000,
   "claimFee": 70,
   "claimSubtotal": 1200,
   "claimAmountPaid": 100,
