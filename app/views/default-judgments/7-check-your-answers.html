@@ -1,0 +1,230 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  Repayment plan
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+      <h1 class="govuk-heading-l">Check your answers</h1>
+      
+      <!-- Multiple defendants -->
+      {% if (data['defendant'] === 'Both defendants') %}      
+      <h2 class="govuk-heading-m">Defendants' details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Mary Richards
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="2-defendant.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Phoebe Farmer
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="2-defendant.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+      
+      <!-- One defendant -->
+      {% else %}
+      <h2 class="govuk-heading-m">Defendant's details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['defendant']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="2-defendant.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+      {% endif %}
+      
+      <h2 class="govuk-heading-m">Payment</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Has the Defendant paid some of the amount owed?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['payment-made']}}
+            {% if (data['payment-made'] == "Yes") %}
+            <p class="govuk-!-font-weight-bold">Amount already paid</p>
+            <p>£{{data['displayAmountPaid']}}</p>
+            {% endif %}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="4-payments-made.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> amount already paid</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total to be paid by the Defendant
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £{{data['displayTotalOwed']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> total to be paid by the defendant</span>
+            </a>
+          </dd>
+        </div>
+
+        <!-- Paid immediately -->
+        {% if (data['how-to-pay'] === "Immediately") %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How do you want the Defendant to pay?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['how-to-pay']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="6-how-to-pay.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> how the defendant should pay</span>
+            </a>
+          </dd>
+        </div>
+      
+        <!-- Paid by set date-->
+        {% elseif (data['how-to-pay'] === "By a set date") %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How do you want the Defendant to pay?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            By {{data['paidByDate']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="6-how-to-pay.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> how the defendant should pay</span>
+            </a>
+          </dd>
+        </div>
+
+        {% else %}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How do you want the Defendant to pay?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['how-to-pay']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="6-how-to-pay.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> how the defendant should pay</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Regular payments of
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £{{data['displayRegularPayment']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="6c-repayment-plan.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> regular payments amount</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            How often do you want to receive payments?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['frequency']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="6c-repayment-plan.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> frequency of payments</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of first instalment
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['paymentStartDate']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="6c-repayment-plan.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> date of first instalment</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Length of payment plan
+          </dt>
+          <dd class="govuk-summary-list__value">
+            6 weeks, 4 days
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="6c-repayment-plan.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> length of payment plan</span>
+            </a>
+          </dd>
+        </div>
+
+        {% endif %}
+      
+      </dl>
+
+      <!-- Buttons -->
+      {% include "../includes/buttons.html" %}
+
+    </div>
+  </div>
+{% endblock %}
