@@ -1,6 +1,6 @@
 module.exports = (router) => {
 
-router.post('/default-judgments/2-defendant', function(req, res) {
+router.post('/damages/default-judgments/2-defendant', function(req, res) {
 	var errors = []
 	if (req.body['defendant'] === undefined) {
 	  errors.push({
@@ -11,14 +11,14 @@ router.post('/default-judgments/2-defendant', function(req, res) {
 
     if (req.body['submit-button'] === 'continue') {
         if (errors.length === 0) {
-            res.redirect('/default-judgments/3-request-judgment-statements')
+            res.redirect('/damages/default-judgments/3-request-judgment-statements')
         }
         else {
-            res.render('.//default-judgments/2-defendant', { errors: errors })  
+            res.render('.//damages/default-judgments/2-defendant', { errors: errors })  
         }
     }
     else {
-        res.redirect('../')
+        res.redirect('../../')
     }    
 })
 
@@ -48,22 +48,22 @@ router.post('/sps/work-in-progress/how-to-get-tax-letters', (req, res) => {
   })
 
 
-router.post('/default-judgments/3-request-judgment-statements', function(req, res) {
+router.post('/damages/default-judgments/3-request-judgment-statements', function(req, res) {
     if (req.body['submit-button'] === 'continue') {
         if (req.body['certify'] === undefined) {
-            res.redirect('/default-judgments/3a-request-judgment-statements')
+            res.redirect('/damages/default-judgments/3a-request-judgment-statements')
         }
         else {
-            res.redirect('/default-judgments/4-payments-made')
+            res.redirect('/damages/default-judgments/4-payments-made')
         }
     }
     else {
-        res.redirect('/default-judgments/2-defendant')
+        res.redirect('/damages/default-judgments/2-defendant')
     }        
     
 })
 
-router.post('/default-judgments/4-payments-made', function(req, res) {
+router.post('/damages/default-judgments/4-payments-made', function(req, res) {
     if (req.body['payment-made'] === "No") {
         req.session.data.claimAmountPaid = 0
     }
@@ -80,23 +80,23 @@ router.post('/default-judgments/4-payments-made', function(req, res) {
     req.session.data.displayTotalOwed = req.session.data.claimTotalOwed.toLocaleString('en', {useGrouping:true})
 
     if (req.body['submit-button'] === 'continue') {
-        res.redirect('/default-judgments/5-judgment-amount')
+        res.redirect('/damages/default-judgments/5-judgment-amount')
     }
     else {
-        res.redirect('/default-judgments/3-request-judgment-statements')
+        res.redirect('/damages/default-judgments/3-request-judgment-statements')
     }    
 })
 
-router.post('/default-judgments/5-judgment-amount', function(req, res) {
+router.post('/damages/default-judgments/5-judgment-amount', function(req, res) {
     if (req.body['submit-button'] === 'continue') {
-        res.redirect('/default-judgments/6-how-to-pay')
+        res.redirect('/damages/default-judgments/6-how-to-pay')
     }
     else {
-        res.redirect('/default-judgments/4-payments-made')
+        res.redirect('/damages/default-judgments/4-payments-made')
     }    
 })
 
-router.post('/default-judgments/6-how-to-pay', function(req, res) {
+router.post('/damages/default-judgments/6-how-to-pay', function(req, res) {
 
     var month = req.body['paid-by-month']
     req.session.data.paidByDate = req.body['paid-by-day'] + " " + req.session.data.monthName[month] + " " + req.body['paid-by-year']
@@ -104,43 +104,43 @@ router.post('/default-judgments/6-how-to-pay', function(req, res) {
     if (req.body['submit-button'] === 'continue') {
         req.session.data.howToPay = req.body['how-to-pay']
         if (req.body['how-to-pay'] === 'Immediately') {
-            res.redirect('/default-judgments/7-check-your-answers')
+            res.redirect('/damages/default-judgments/7-check-your-answers')
         }
         else if (req.body['how-to-pay'] === 'By a set date'){
-            res.redirect('/default-judgments/7-check-your-answers')
+            res.redirect('/damages/default-judgments/7-check-your-answers')
         }
         else {
-            res.redirect('/default-judgments/6c-repayment-plan')
+            res.redirect('/damages/default-judgments/6c-repayment-plan')
         }
     }
     else {
-        res.redirect('/default-judgments/5-judgment-amount')
+        res.redirect('/damages/default-judgments/5-judgment-amount')
     }        
 })
 
-router.post('/default-judgments/6c-repayment-plan', function(req, res) {
+router.post('/damages/default-judgments/6c-repayment-plan', function(req, res) {
     if (req.body['submit-button'] === 'continue') {
         var month = req.body['start-month']
         req.session.data.paymentStartDate = req.body['start-day'] + " " + req.session.data.monthName[month] + " " + req.body['start-year']
         req.session.data.displayRegularPayment = req.session.data.regularPayment.toLocaleString('en', {useGrouping:true})
     
-        res.redirect('/default-judgments/7-check-your-answers')
+        res.redirect('/damages/default-judgments/7-check-your-answers')
     }
     else {
-        res.redirect('/default-judgments/6-how-to-pay')
+        res.redirect('/damages/default-judgments/6-how-to-pay')
     }    
 })
 
-router.post('/default-judgments/7-check-your-answers', function(req, res) {
+router.post('/damages/default-judgments/7-check-your-answers', function(req, res) {
     if (req.body['submit-button'] === 'continue') {
-        res.redirect('/default-judgments/8-confirmation')
+        res.redirect('/damages/default-judgments/8-confirmation')
     }
     else {
         if (req.session.data.displayRegularPayment === "By a repayment plan") {
-            res.redirect('/default-judgments/6c-repayment-plan')
+            res.redirect('/damages/default-judgments/6c-repayment-plan')
         }
         else {
-            res.redirect('/default-judgments/6-how-to-pay')
+            res.redirect('/damages/default-judgments/6-how-to-pay')
         }
     }    
 })
