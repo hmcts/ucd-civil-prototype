@@ -1,0 +1,115 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  Repayment plan
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/ocmc/default-judgments/6c-repayment-plan" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+              <h1 class="govuk-fieldset__heading">
+                Suggest instalments for {{data['defendant']}}
+              </h1>
+              <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
+            </legend>
+            <!-- <div id="changed-name-hint" class="govuk-hint">
+              A judge will still need to approve this order.
+            </div> -->
+            
+            <p class="govuk-body">Total claim amount is £{{data['displayTotalOwed']}}</p>
+
+            <!-- Regular payments of -->
+            <label class="govuk-label govuk-!-font-weight-bold govuk-!-font-weight-bold govuk-!-margin-top-7" for="weight">
+              Regular payments of 
+            </label>
+            <div id="regular-payments-hint" class="govuk-hint">
+              For example, £10
+            </div>
+            <div class="govuk-input__wrapper">
+              <div class="govuk-input__prefix" aria-hidden="true">£</div>
+              <input class="govuk-input govuk-input--width-5" id="regularPayment" name="regularPayment" type="text" spellcheck="false">
+            </div>
+
+            <!-- How often do you want to receive payments? -->
+            <label class="govuk-label govuk-!-font-weight-bold govuk-!-margin-top-7" for="often-received-payments">
+              How often do you want to receive payments?
+            </label>
+            <div class="govuk-radios govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="every-week" name="frequency" type="radio" value="Every week">
+                <label class="govuk-label govuk-radios__label" for="every-week">
+                  Every week
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="every-2-weeks" name="frequency" type="radio" value="Every 2 weeks">
+                <label class="govuk-label govuk-radios__label" for="every-2-weeks">
+                  Every 2 weeks
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="every-month" name="frequency" type="radio" value="Every month">
+                <label class="govuk-label govuk-radios__label" for="every-month">
+                  Every month
+                </label>
+              </div>
+            </div>
+
+            <!-- Date for first instalment -->
+            <label class="govuk-label govuk-!-font-weight-bold govuk-!-margin-top-7" for="weight">
+              Date for first instalment
+            </label>
+            <div id="regular-payments-hint" class="govuk-hint">
+              This must be after 7 December 2021
+            </div>
+            <div class="govuk-date-input" id="start-date">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-day" name="start-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-month" name="start-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-year" name="start-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              </div>
+            </div>   
+
+            <div class="govuk-inset-text  govuk-!-margin-top-7">
+              The length of the payment plan will be calculated when you click continue. The information will be displayed on the next screen.
+            </div>
+      
+          </fieldset>
+
+          <!-- Buttons -->
+          {% include "../../includes/buttons.html" %}
+
+      </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
