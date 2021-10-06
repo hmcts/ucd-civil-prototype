@@ -12,6 +12,18 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      
+      {% set defendantChoice = '' %}
+  
+      {% if errors | length > 0 %}
+      {{ govukErrorSummary({
+        titleText: "There is a problem",
+        errorList: errors
+      }) }}
+      {% for error in errors %}
+        {% if error.href == '#2-defendant' %}{% set defendantChoice = error.text %}{% endif %}
+      {% endfor %}
+      {% endif %}
 
       <form class="form" action="/default-judgments/2-defendant" method="post">
         <div class="govuk-form-group">
@@ -26,6 +38,14 @@
             <!-- <div id="changed-name-hint" class="govuk-hint">
               A judge will still need to approve this order.
             </div> -->
+            {% if (defendantChoice != '')%}
+              <div class="govuk-form-group--error">
+            {% endif%}
+            {% if defendantChoice != '' %}
+              <span class="govuk-error-message govuk-form">
+                <span class="govuk-visually-hidden">Error:</span> {{ defendantChoice }}
+              </span>
+            {% endif %}
             <div class="govuk-radios govuk-radios">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="defendant1" name="defendant" type="radio" value="Mary Richards">

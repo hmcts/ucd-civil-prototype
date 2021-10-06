@@ -1,13 +1,52 @@
 module.exports = (router) => {
 
 router.post('/default-judgments/2-defendant', function(req, res) {
+	var errors = []
+	if (req.body['defendant'] === undefined) {
+	  errors.push({
+		text: 'Select a defendant - Sam, copy, please',
+		href: '#2-defendant'
+	  })
+	}
+
     if (req.body['submit-button'] === 'continue') {
-        res.redirect('/default-judgments/3-request-judgment-statements')
+        if (errors.length === 0) {
+            res.redirect('/default-judgments/3-request-judgment-statements')
+        }
+        else {
+            res.render('.//default-judgments/2-defendant', { errors: errors })  
+        }
     }
     else {
         res.redirect('../')
     }    
 })
+
+router.post('/sps/work-in-progress/how-to-get-tax-letters', (req, res) => {
+	var errors = []
+	if (req.body['howContacted'] === undefined) {
+	  errors.push({
+		text: 'Select how you want to get your tax letters',
+		href: '#how-to-get-tax-letters'
+	  })
+	}
+	if (errors.length === 0) {
+	  if (req.body['howContacted'] === 'Online') {
+		res.redirect('/sps/work-in-progress/add-email')
+	  } 
+    else {
+        if (req.session.data.route === 'external') {
+          res.redirect('/sps/work-in-progress/confirmation-post-alternative')
+        }
+        else {
+        res.redirect('/sps/work-in-progress/confirmation-post')
+      }
+	  }
+	} else {
+	  res.render('.//sps/work-in-progress/how-toget-tax-letters', { errors: errors })
+	}
+  })
+
 
 router.post('/default-judgments/3-request-judgment-statements', function(req, res) {
     if (req.body['submit-button'] === 'continue') {
