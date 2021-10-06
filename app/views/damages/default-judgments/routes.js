@@ -102,6 +102,7 @@ router.post('/default-judgments/6-how-to-pay', function(req, res) {
     req.session.data.paidByDate = req.body['paid-by-day'] + " " + req.session.data.monthName[month] + " " + req.body['paid-by-year']
 
     if (req.body['submit-button'] === 'continue') {
+        req.session.data.howToPay = req.body['how-to-pay']
         if (req.body['how-to-pay'] === 'Immediately') {
             res.redirect('/default-judgments/7-check-your-answers')
         }
@@ -129,6 +130,21 @@ router.post('/default-judgments/6c-repayment-plan', function(req, res) {
         res.redirect('/default-judgments/6-how-to-pay')
     }    
 })
+
+router.post('/default-judgments/7-check-your-answers', function(req, res) {
+    if (req.body['submit-button'] === 'continue') {
+        res.redirect('/default-judgments/8-confirmation')
+    }
+    else {
+        if (req.session.data.displayRegularPayment === "By a repayment plan") {
+            res.redirect('/default-judgments/6c-repayment-plan')
+        }
+        else {
+            res.redirect('/default-judgments/6-how-to-pay')
+        }
+    }    
+})
+
 
 
 

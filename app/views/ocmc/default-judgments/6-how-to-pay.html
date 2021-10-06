@@ -1,0 +1,102 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  How do you want the Defendant to pay?
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/ocmc/default-judgments/6-how-to-pay" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+              <h1 class="govuk-fieldset__heading">
+                {% if (data['defendant'] === 'Both defendants') %}
+                How do you want the defendants to pay?
+                {% else %}
+                How do you want {{data['defendant']}} to pay?
+                {% endif %}
+
+                
+              </h1>
+              <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
+            </legend>
+            <!-- <div id="changed-name-hint" class="govuk-hint">
+              A judge will still need to approve this order.
+            </div> -->
+          
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately">
+                <label class="govuk-label govuk-radios__label" for="immediately">
+                  Immediately
+                </label>
+              </div>
+
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="by-set-date" name="how-to-pay" type="radio" value="By a set date" data-aria-controls="conditional-date">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  By a set date
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-date">
+                <div class="govuk-form-group">
+                  <div id="regular-payments-hint" class="govuk-hint">
+                    For example, 7 12 2021
+                  </div>
+      
+                  <div class="govuk-date-input" id="paid-by">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="paid-by-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="paid-by-day" name="paid-by-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="paid-by-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="paid-by-month" name="paid-by-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="paid-by-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="paid-by-year" name="paid-by-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                  </div>  
+                  </div>
+        
+              </div>
+        
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="repayment-plan" name="how-to-pay" type="radio" value="By repayment plan">
+                <label class="govuk-label govuk-radios__label" for="by repayment plan">
+                  By repayment plan
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Buttons -->
+          {% include "../../includes/buttons.html" %}
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -6,4 +6,5 @@ const router = express.Router()
 module.exports = router
 
 
-require('./views/default-judgments/routes.js')(router);
+require('./views/ocmc/default-judgments/routes.js')(router);
+require('./views/damages/default-judgments/routes.js')(router);
