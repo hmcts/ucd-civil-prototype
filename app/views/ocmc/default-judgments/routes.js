@@ -18,7 +18,7 @@ router.post('/ocmc/default-judgments/2-defendant', function(req, res) {
         }
     }
     else {
-        res.redirect('../../')
+        res.redirect('/index')
     }    
 })
 
