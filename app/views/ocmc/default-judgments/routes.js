@@ -4,7 +4,7 @@ router.post('/ocmc/default-judgments/2-defendant', function(req, res) {
 	var errors = []
 	if (req.body['defendant'] === undefined) {
 	  errors.push({
-		text: 'Select a defendant - Sam, copy, please',
+		text: 'Select a Defendant',
 		href: '#2-defendant'
 	  })
 	}

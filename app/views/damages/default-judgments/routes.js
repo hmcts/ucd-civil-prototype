@@ -4,7 +4,7 @@ router.post('/damages/default-judgments/2-defendant', function(req, res) {
 	var errors = []
 	if (req.body['defendant'] === undefined) {
 	  errors.push({
-		text: 'Select a defendant - Sam, copy, please',
+		text: 'Select a Defendant',
 		href: '#2-defendant'
 	  })
 	}
@@ -54,7 +54,7 @@ router.post('/damages/default-judgments/3-request-judgment-statements', function
             res.redirect('/damages/default-judgments/3a-request-judgment-statements')
         }
         else {
-            res.redirect('/damages/default-judgments/4-payments-made')
+            res.redirect('/damages/default-judgments/4-make-request-judgment')
         }
     }
     else {
@@ -63,36 +63,22 @@ router.post('/damages/default-judgments/3-request-judgment-statements', function
     
 })
 
-router.post('/damages/default-judgments/4-payments-made', function(req, res) {
-    if (req.body['payment-made'] === "No") {
-        req.session.data.claimAmountPaid = 0
-    }
-    console.log("Defendant", req.session.data.defendant)
-
-    // number formatting to show eg 1200 as 1,200
-    req.session.data.claimSubtotal = req.session.data.claimAmount + req.session.data.claimFee
-    req.session.data.claimTotalOwed = req.session.data.claimSubtotal - req.session.data.claimAmountPaid
-
-    req.session.data.displaySubtotal = Number(req.session.data.claimSubtotal).toLocaleString('en', {useGrouping:true})
-    req.session.data.displayAmount = Number(req.session.data.claimAmount).toLocaleString('en', {useGrouping:true})
-    req.session.data.displayFee = Number(req.session.data.claimFee).toLocaleString('en', {useGrouping:true})
-    req.session.data.displayAmountPaid = Number(req.session.data.claimAmountPaid).toLocaleString('en', {useGrouping:true})
-    req.session.data.displayTotalOwed = Number(req.session.data.claimTotalOwed).toLocaleString('en', {useGrouping:true})
-
-    if (req.body['submit-button'] === 'continue') {
-        res.redirect('/damages/default-judgments/5-judgment-amount')
-    }
-    else {
-        res.redirect('/damages/default-judgments/3-request-judgment-statements')
-    }    
+router.post('/damages/default-judgments/4-make-request-judgment', function(req, res) {
+  if (req.body['submit-button'] === 'continue') {
+    req.session.data.decisionPreference = req.body['decision-preference']
+    res.redirect('/damages/default-judgments/5-hearing-details')
+}
+else {
+    res.redirect('/damages/default-judgments/3-request-judgment-statements')
+}    
 })
 
-router.post('/damages/default-judgments/5-judgment-amount', function(req, res) {
+router.post('/damages/default-judgments/5-hearing-details', function(req, res) {
     if (req.body['submit-button'] === 'continue') {
         res.redirect('/damages/default-judgments/6-how-to-pay')
     }
     else {
-        res.redirect('/damages/default-judgments/4-payments-made')
+        res.redirect('/damages/default-judgments/4-make-request-judgment')
     }    
 })
 
