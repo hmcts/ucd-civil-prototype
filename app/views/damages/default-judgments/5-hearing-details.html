@@ -57,6 +57,7 @@
                     <input class="govuk-input govuk-!-width-two-thirds" id="who-set-up" name="who-set-up" type="text" spellcheck="false"></div>
                 </div>
             </div>
+            </div>
         
               <h2 class="govuk-label-wrapper  govuk-!-margin-top-7"><label class="govuk-label govuk-label--m" for="location">
                 Preferred location
@@ -71,7 +72,7 @@
                 <option value="Bristol">Bristol</option>
                 <option value="Derby">Derby</option>
               </select>
-            </div>
+            
 
             <h2 class="govuk-label-wrapper govuk-!-margin-top-7"><label class="govuk-label govuk-label--m" for="telephone-number">
               Telephone number
@@ -89,10 +90,10 @@
           </div>
 
             <!-- Radio buttons -->
-            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <h2 class="govuk-label-wrapper govuk-!-margin-top-7">
                 <label class="govuk-label govuk-label--m" for="hearing-duration">How long do you estimate the hearing will take?</label>
               </h2>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 
               {% if (data['decisionPreference'] === 'Disposal hearing') %}
               <div class="govuk-radios__item">
@@ -109,46 +110,147 @@
                 </label>
               </div>
               {% else %}
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                 <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="45 minutes" name="hearing-duration" type="radio" value="45 minutes" data-aria-controls="45-minutes">
-                <label class="govuk-label govuk-radios__label" for="45-minutes">
-                  45 minutes
-                </label>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="1-hour" name="hearing-duration" type="radio" value="1 hour" data-aria-controls="1-hour">
-                <label class="govuk-label govuk-radios__label" for="1-hour">
-                  1 hour
-                </label>
-              </div>
-              
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="2-hours" name="hearing-duration" type="radio" value="2 hours" data-aria-controls="2-hours">
-                <label class="govuk-label govuk-radios__label" for="2-hours">
-                  2 hours
-                </label>
-              </div>
-              
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="contact-2" name="hearing-duration" type="radio" value="Other" data-aria-controls="conditional-contact-2">
-                <label class="govuk-label govuk-radios__label" for="contact-2">
-                  Other
-                </label>
-              </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="contact-by-phone">
-                    Other date
+                  <input class="govuk-radios__input" id="45-minutes" name="hearing-duration" type="radio" value="45 minutes" data-aria-controls="conditional-45-minutes">
+                  <label class="govuk-label govuk-radios__label" for="45-minutes">
+                    45 minutes
                   </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel"></div>
-        
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="1-hour" name="hearing-duration" type="radio" value="1 hour" data-aria-controls="conditional-1-hour">
+                  <label class="govuk-label govuk-radios__label" for="1-hour">
+                    1 hour
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="2-hours" name="hearing-duration" type="radio" value="2 hours" data-aria-controls="conditional-2-hours">
+                  <label class="govuk-label govuk-radios__label" for="2-hours">
+                    2 hours
+                  </label>
+                </div>
+  
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="other" name="hearing-duration" type="radio" value="Other" data-aria-controls="other-duration">
+                    <label class="govuk-label govuk-radios__label" for="other">
+                      Other
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="other-duration">
+                    <div class="govuk-form-group">
+
+                      <div class="govuk-date-input" id="other-duration-setup">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="other-duration-days">
+                              Days
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="other-duration-day" name="other-duration-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="other-duration-hours">
+                              Hours
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="other-duration-hours" name="other-duration-hours" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label class="govuk-label govuk-date-input__label" for="other-duration-minutes">
+                              Minutes
+                            </label>
+                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="other-duration-minutes" name="other-duration-minutes" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                        </div>
+                      </div>  
+    
+                  </div>
               </div>
+              </div>
+              
+              </div> 
           
               {% endif %}
+              </div>
+              <h2 class="govuk-label-wrapper govuk-!-margin-top-7">
+                <label class="govuk-label govuk-label--m" for="hearing-duration">Are there any dates when you cannot attend a hearing within the next 3 months</label>
+              </h2>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="yes" name="exclusion-dates" type="radio" value="Yes" data-aria-controls="conditional-yes">
+                  <label class="govuk-label govuk-radios__label" for="yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="date-from">
+                      Date from
+                    </label>
+        
+                    <div class="govuk-date-input" id="date-from">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="date-from-day">
+                            Day
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-from-day" name="date-from-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="date-from-month">
+                            Month
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-from-month" name="date-from-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="date-from-year">
+                            Year
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-from-year" name="date-from-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                    </div>  
 
+                    <label class="govuk-label govuk-!-margin-top-7" for="date-to">
+                      Date to
+                    </label>
+        
+                    <div class="govuk-date-input" id="date-to">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="date-to-day">
+                            Day
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-to-day" name="date-to-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="date-to-month">
+                            Month
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-to-month" name="date-to-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="date-to-year">
+                            Year
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-to-year" name="date-to-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                    </div>  
+                    <button class="govuk-button govuk-!-margin-top-5" data-module="govuk-button" name="submit-button" value="add-new">Add new</button>
+                    </div>
           
-          </div>
+                </div>
+          
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="no" name="exclusion-dates" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="no">
+                    No
+                  </label>
+                </div>
+          
 
           </fieldset>
 
