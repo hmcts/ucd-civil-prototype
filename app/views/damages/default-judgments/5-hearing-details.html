@@ -1,0 +1,165 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  Enter hearing details
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+      <h1 class="govuk-heading-xl">Enter hearing details</h1>
+
+      <form class="form" action="/damages/default-judgments/5-hearing-details" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">            
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">Choose your preferred type of hearing</h2>
+              <div id="decision-preference-hint" class="govuk-hint">
+                A judge will still need to approve the hearing
+              </div>
+            </legend>
+
+            <!-- Radio buttons -->
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="in-person" name="type-hearing" type="radio" value="In person" data-aria-controls="conditional-in-person">
+                <label class="govuk-label govuk-radios__label" for="in-person">
+                  In person
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="videoconference" name="type-hearing" type="radio" value="Video conference hearing" data-aria-controls="conditional-videoconference">
+                <label class="govuk-label govuk-radios__label" for="videoconference">
+                  Video conference hearing
+                </label>
+              </div>
+
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="telephone-hearing" name="type-hearing" type="radio" value="Telephone hearing" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="telephone-hearing">
+                    Telephone hearing
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Who will set up the telephone hearing?
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="who-set-up" name="who-set-up" type="text" spellcheck="false"></div>
+                </div>
+            </div>
+        
+              <h2 class="govuk-label-wrapper  govuk-!-margin-top-7"><label class="govuk-label govuk-label--m" for="location">
+                Preferred location
+                </label>
+              </h2>
+              <div id="location-hint" class="govuk-hint">
+                This is needed if the judge decides to hold the hearing in person.
+              </div>
+              <select class="govuk-select" id="location" name="location">
+                <option value="Select location">Select location</option>
+                <option value="London">London</option>
+                <option value="Bristol">Bristol</option>
+                <option value="Derby">Derby</option>
+              </select>
+            </div>
+
+            <h2 class="govuk-label-wrapper govuk-!-margin-top-7"><label class="govuk-label govuk-label--m" for="telephone-number">
+              Telephone number
+              </label>
+            </h2>
+            <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="text">
+            </div>
+
+            <h2 class="govuk-label-wrapper  govuk-!-margin-top-4"><label class="govuk-label govuk-label--m" for="email-address">
+              Email address
+              </label>
+            </h2>
+            <input class="govuk-input govuk-input--width-20" id="email-address" name="email-address" type="email">
+            </div>
+          </div>
+
+            <!-- Radio buttons -->
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <h2 class="govuk-label-wrapper govuk-!-margin-top-7">
+                <label class="govuk-label govuk-label--m" for="hearing-duration">How long do you estimate the hearing will take?</label>
+              </h2>
+
+              {% if (data['decisionPreference'] === 'Disposal hearing') %}
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="30 minutes" name="hearing-duration" type="radio" value="30 minutes" data-aria-controls="30-minutes">
+                <label class="govuk-label govuk-radios__label" for="30 minutes">
+                  30 minutes
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="15-minutes" name="hearing-duration" type="radio" value="15 minutes" data-aria-controls="15-minutes">
+                <label class="govuk-label govuk-radios__label" for="15-minutes">
+                  15 minutes
+                </label>
+              </div>
+              {% else %}
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="45 minutes" name="hearing-duration" type="radio" value="45 minutes" data-aria-controls="45-minutes">
+                <label class="govuk-label govuk-radios__label" for="45-minutes">
+                  45 minutes
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="1-hour" name="hearing-duration" type="radio" value="1 hour" data-aria-controls="1-hour">
+                <label class="govuk-label govuk-radios__label" for="1-hour">
+                  1 hour
+                </label>
+              </div>
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="2-hours" name="hearing-duration" type="radio" value="2 hours" data-aria-controls="2-hours">
+                <label class="govuk-label govuk-radios__label" for="2-hours">
+                  2 hours
+                </label>
+              </div>
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="contact-2" name="hearing-duration" type="radio" value="Other" data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  Other
+                </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-phone">
+                    Other date
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel" autocomplete="tel"></div>
+        
+              </div>
+          
+              {% endif %}
+
+          
+          </div>
+
+          </fieldset>
+
+          <!-- Buttons -->
+          {% include "../../includes/buttons.html" %}
+
+        </div>
+
+      </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

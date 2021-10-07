@@ -1,0 +1,75 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  Make a request for judgment
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+      <h1 class="govuk-heading-xl">Make a request for judgment</h1>
+
+      <form class="form" action="/damages/default-judgments/4-make-request-judgment" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">            
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">How would you like the court to decide the amount of damages?</h2>
+              <div id="decision-preference-hint" class="govuk-hint">
+                While your preference will be taken into account, the court will make the final decision
+              </div>
+            </legend>
+
+            <!-- Radio buttons -->
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="disposal-hearing" name="decision-preference" type="radio" value="Disposal hearing" data-aria-controls="conditional-paid-yes">
+                <label class="govuk-label govuk-radios__label" for="disposal-hearing">
+                Disposal hearing
+                </label>
+                <div id="disposal-hearing-hint" class="govuk-hint govuk-radios__hint">
+                  No longer than 30 minutes, with no spoken evidence presented.
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="trial" name="decision-preference" type="radio" value="A trial to decide the amount of damage" data-aria-controls="conditional-paid-no">
+                <label class="govuk-label govuk-radios__label" for="trial">
+                  A trial to decide the amount of damage
+                </label>
+                <div id="trial-hint" class="govuk-hint govuk-radios__hint">
+                  At least 30 minutes, with spoken evidence presented if necessary.
+                </div>                
+              </div>
+            </div>
+        
+            <div class="govuk-form-group">
+              <h2 class="govuk-label-wrapper  govuk-!-margin-top-7"><label class="govuk-label govuk-label--m" for="directions">
+                What directions would you like the court to give?
+                </label>
+              </h2>
+              <div id="directions-hint" class="govuk-hint">
+                You can use the court's standard directions as set out here, or you may set out your own preferred directions.
+              </div>
+              <textarea class="govuk-textarea" id="directions" name="directions" rows="8" aria-describedby="directions-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+            </div>
+
+          </fieldset>
+
+          <!-- Buttons -->
+          {% include "../../includes/buttons.html" %}
+
+        </div>
+
+      </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
