@@ -26,6 +26,9 @@ module.exports = {
   "claimSubtotal": 1200,
   "claimAmountPaid": 100,
   "claimTotalOwed": 1100,
+
+  
+  "dateCount": 0,
   
   "monthName": [
     "",
@@ -41,6 +44,22 @@ module.exports = {
     "October",
     "November",
     "December"
-  ]
+  ],
  
+  "shortMonthName": [
+    "",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ]
+
 }
