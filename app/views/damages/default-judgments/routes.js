@@ -73,35 +73,66 @@ else {
 }    
 })
 
-router.post('/damages/default-judgments/5-hearing-details', function(req, res) {
-    if (req.body['submit-button'] === 'continue') {
-        res.redirect('/damages/default-judgments/6-how-to-pay')
-    }
-    else {
-        res.redirect('/damages/default-judgments/4-make-request-judgment')
-    }    
+// for page 5-hearing-details
+router.post('/damages/default-judgments/exclude-hearing-dates', function(req, res) {
+  dateCount = req.session.data.dateCount
+  req.session.data.dayFrom[dateCount] = req.body['date-from-day']
+  req.session.data.monthFrom[dateCount] = req.body['date-from-month']
+  req.session.data.yearFrom[dateCount] = req.body['date-from-year']
+  req.session.data.dayTo[dateCount] = req.body['date-to-day']
+  req.session.data.monthTo[dateCount] = req.body['date-to-month']
+  req.session.data.yearTo[dateCount] = req.body['date-to-year']
+
+  req.session.data.startDate[dateCount] = req.body['date-from-day'] + " " + req.session.data.shortMonthName[req.body['date-from-month']] + " " + req.body['date-from-year']
+  req.session.data.endDate[dateCount] = req.body['date-to-day'] + " " + req.session.data.shortMonthName[req.body['date-to-month']] + " " + req.body['date-to-year']
+
+  console.log("From", req.session.data.startDate[dateCount]);
+  console.log("To", req.session.data.endtDate[dateCount]);
+  console.log("dateCount", req.session.data.dateCount);
+
+  req.session.data.dateCount = dateCount + 1
+  console.log("dateCount", req.session.data.dateCount);
+
+  res.redirect('/damages/default-judgments/5-hearing-details')
 })
 
-router.post('/damages/default-judgments/6-how-to-pay', function(req, res) {
-
-    var month = req.body['paid-by-month']
-    req.session.data.paidByDate = req.body['paid-by-day'] + " " + req.session.data.monthName[month] + " " + req.body['paid-by-year']
-
-    if (req.body['submit-button'] === 'continue') {
-        req.session.data.howToPay = req.body['how-to-pay']
-        if (req.body['how-to-pay'] === 'Immediately') {
-            res.redirect('/damages/default-judgments/7-check-your-answers')
-        }
-        else if (req.body['how-to-pay'] === 'By a set date'){
-            res.redirect('/damages/default-judgments/7-check-your-answers')
-        }
-        else {
-            res.redirect('/damages/default-judgments/6c-repayment-plan')
-        }
+router.post('/damages/default-judgments/5-hearing-details', function(req, res) {
+  req.session.data.unavailable = req.body['exclusion-dates']
+  if (req.body['submit-button'] === 'add') {
+    console.log("dateCount", req.session.data.dateCount)
+    dateCount = req.session.data.dateCount
+    req.session.data.dayFrom = req.body['date-from-day']
+    req.session.data.monthFrom = req.body['date-from-month']
+    req.session.data.yearFrom = req.body['date-from-year']
+    req.session.data.dayTo = req.body['date-to-day']
+    req.session.data.monthTo = req.body['date-to-month']
+    req.session.data.yearTo = req.body['date-to-year']
+  
+    req.session.data.startDate = req.body['date-from-day'] + " " + req.session.data.shortMonthName[req.body['date-from-month']] + " " + req.body['date-from-year']
+    req.session.data.endDate = req.body['date-to-day'] + " " + req.session.data.shortMonthName[req.body['date-to-month']] + " " + req.body['date-to-year']
+  
+    console.log("unavailable", req.session.data.unavailable)
+  
+    req.session.data.dateCount = dateCount + 1
+    console.log("dateCount", req.session.data.dateCount)
+  
+    res.redirect('/damages/default-judgments/5-hearing-details#unavailable-dates')
     }
-    else {
-        res.redirect('/damages/default-judgments/5-judgment-amount')
-    }        
+  else if (req.body['submit-button'] === 'continue') {
+    res.redirect('/damages/default-judgments/6-check-your-answers')
+  }
+  else {
+      res.redirect('/damages/default-judgments/4-make-request-judgment')
+  }    
+})
+
+router.post('/damages/default-judgments/6-check-your-answers', function(req, res) {
+  if (req.body['submit-button'] === 'continue') {
+    res.redirect('/damages/default-judgments/7-confirmation')
+  }
+  else {
+      res.redirect('/damages/default-judgments/5-hearing-details')
+  }    
 })
 
 router.post('/damages/default-judgments/6c-repayment-plan', function(req, res) {
