@@ -186,14 +186,16 @@
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
                   
                   {% if (data['dateCount'] > 0) %}
+                  <label class="govuk-label" for="date-from">
+                    Not available on
+                  </label>
+
+                  {% for id in data['id']|reverse %}
                   
-                    <label class="govuk-label" for="date-from">
-                      Not available on
-                    </label>
                     <dl class="govuk-summary-list govuk-!-margin-bottom-4 ">                    
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
-                          {{data['startDate']}} to {{data['endDate']}}
+                          {{data['startDate'][id]}} to {{data['endDate'][id]}}
                         </dt>
                         <!-- <dd class="govuk-summary-list__actions">
                           <a class="govuk-link" href="#">
@@ -207,6 +209,7 @@
                         </dd>
                       </div>
                     </dl>
+                    {% endfor %}
                   
 
                     <details class="govuk-details" data-module="govuk-details">
