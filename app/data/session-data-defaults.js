@@ -60,6 +60,10 @@ module.exports = {
     "Oct",
     "Nov",
     "Dec"
-  ]
+  ],
+
+  "startDate": [],
+  "endDate": [],
+  "id": []
 
 }
