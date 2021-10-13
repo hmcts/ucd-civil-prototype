@@ -8,3 +8,4 @@ module.exports = router
 
 require('./views/ocmc/default-judgments/routes.js')(router);
 require('./views/damages/default-judgments/routes.js')(router);
+require('./views/ocmc/standard-directions-orders/routes.js')(router);
