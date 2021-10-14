@@ -72,7 +72,7 @@
       </dl>
       {% endif %}
       
-      <h2 class="govuk-heading-m">Payment</h2>
+      <!-- <h2 class="govuk-heading-m">Payment</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
@@ -109,7 +109,7 @@
         </div>
 
         <!-- Paid immediately -->
-        {% if (data['how-to-pay'] === "Immediately") %}
+<!--        {% if (data['how-to-pay'] === "Immediately") %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             How do you want the Defendant to pay?
@@ -126,7 +126,7 @@
         </div>
       
         <!-- Paid by set date-->
-        {% elseif (data['how-to-pay'] === "By a set date") %}
+ <!--       {% elseif (data['how-to-pay'] === "By a set date") %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             How do you want the Defendant to pay?
@@ -219,7 +219,7 @@
         </div>
 
         {% endif %}
-      
+       -->
       </dl>
 
       <form class="form" action="/damages/default-judgments/6-check-your-answers" method="post">

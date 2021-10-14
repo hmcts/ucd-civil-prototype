@@ -1,14 +1,5 @@
 module.exports = (router) => {
 
-// router.post('/ocmc/general-applications/application-submission/1-application', function(req, res) {
-//   if (req.body['submit-button'] === 'continue') {
-//     res.redirect('/ocmc/general-applications/application-submission/2-something')
-//   }
-//   else {
-//       res.redirect('/index')
-//   }    
-// })
-
 router.post('/ocmc/general-applications/application-submission/1-application', function(req, res) {
   if (req.body['submit-button'] === 'add') {
     
@@ -24,10 +15,19 @@ router.post('/ocmc/general-applications/application-submission/1-application', f
     res.redirect('/ocmc/general-applications/application-submission/1-application')
     }
   else if (req.body['submit-button'] === 'continue') {
-    res.redirect('/ocmc/general-applications/application-submission/2-something')
+    res.redirect('/ocmc/general-applications/application-submission/2-respondent-agreement')
   }
   else {
       res.redirect('/index')
+  }    
+})
+
+router.post('/ocmc/general-applications/application-submission/2-respondent-agreement', function(req, res) {
+  if (req.body['submit-button'] === 'continue') {
+    res.redirect('/ocmc/general-applications/application-submission/3-something')
+  }
+  else {
+      res.redirect('/ocmc/general-applications/application-submission/1-application')
   }    
 })
 
