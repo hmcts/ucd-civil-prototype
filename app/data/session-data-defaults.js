@@ -25,10 +25,7 @@ module.exports = {
   "claimFee": 70,
   "claimSubtotal": 1200,
   "claimAmountPaid": 100,
-  "claimTotalOwed": 1100,
-
-  
-  "dateCount": 0,
+  "claimTotalOwed": 1100, 
   
   "monthName": [
     "",
@@ -62,8 +59,14 @@ module.exports = {
     "Dec"
   ],
 
+  "dateCount": 0,
+ 
   "startDate": [],
   "endDate": [],
-  "id": []
+  "id": [],
+
+  "applicationCount": 0,
+  "idApplication": [],
+  "application": []
 
 }
