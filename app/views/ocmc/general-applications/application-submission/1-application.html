@@ -1,7 +1,7 @@
 {% extends "layout-manage-cases.html" %}
 
 {% block pageTitle %}
-  How do you want the Defendant to pay?
+What applications do you want to make?
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,21 +26,21 @@
 
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="unless-order" name="applications" type="checkbox" value="unless-order" data-aria-controls="unless-order">
+                <input class="govuk-checkboxes__input" id="unless-order" name="unless-order" type="checkbox" value="unless-order" data-aria-controls="unless-order">
                 <label class="govuk-label govuk-checkboxes__label" for="Unless order">
                   Unless order
                 </label>
               </div>
 
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="strike-out" name="applications" type="checkbox" value="strike-out" data-aria-controls="strike-out">
+                <input class="govuk-checkboxes__input" id="strike-out" name="strike-out" type="checkbox" value="strike-out" data-aria-controls="strike-out">
                 <label class="govuk-label govuk-checkboxes__label" for="Strike out">
                   Strike out
                 </label>
               </div>
         
               <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="summary-judgment" name="applications" type="checkbox" value="summary-judgment" data-aria-controls="summary-judgment">
+                <input class="govuk-checkboxes__input" id="summary-judgment" name="summary-judgment" type="checkbox" value="summary-judgment" data-aria-controls="summary-judgment">
                 <label class="govuk-label govuk-checkboxes__label" for="Summary judgment">
                   Summary judgment
                 </label>
@@ -48,28 +48,28 @@
 
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="stay-claim" name="applications" type="checkbox" value="stay-claim" data-aria-controls="stay-claim">
+                  <input class="govuk-checkboxes__input" id="stay-claim" name="stay-claim" type="checkbox" value="stay-claim" data-aria-controls="stay-claim">
                   <label class="govuk-label govuk-checkboxes__label" for="Stay a claim">
                     Stay a claim
                   </label>
                 </div>
   
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="extend-time" name="applications" type="checkbox" value="extend-time" data-aria-controls="extend-time">
+                  <input class="govuk-checkboxes__input" id="extend-time" name="extend-time" type="checkbox" value="extend-time" data-aria-controls="extend-time">
                   <label class="govuk-label govuk-checkboxes__label" for="Extend time">
                     Extend time
                   </label>
                 </div>
           
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="set-aside-judgment" name="applications" type="checkbox" value="set-aside-judgment" data-aria-controls="set-aside-judgment">
+                  <input class="govuk-checkboxes__input" id="set-aside-judgment" name="set-aside-judgment" type="checkbox" value="set-aside-judgment" data-aria-controls="set-aside-judgment">
                   <label class="govuk-label govuk-checkboxes__label" for="Set aside judgment">
                     Set aside judgment
                   </label>
                 </div>
   
                 <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="other" name="applications" type="checkbox" value="other" data-aria-controls="other-order" {% if (data['applicationCount'] > 0) %} checked {% endif %}}>
+                <input class="govuk-checkboxes__input" id="other" name="other-application" type="checkbox" value="other" data-aria-controls="other-order" {% if (data['applicationCount'] > 0) %} checked {% endif %}}>
                 <label class="govuk-label govuk-checkboxes__label" for="Any other applications">
                   Any other applications
                 </label>
