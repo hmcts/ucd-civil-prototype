@@ -71,155 +71,79 @@
         </div>
       </dl>
       {% endif %}
+
       
-      <!-- <h2 class="govuk-heading-m">Payment</h2>
+      <h2 class="govuk-heading-m">Hearing details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Has the Defendant paid some of the amount owed?
+            Hearing
           </dt>
           <dd class="govuk-summary-list__value">
-            {{data['payment-made']}}
-            {% if (data['payment-made'] == "Yes") %}
-            <p class="govuk-!-font-weight-bold">Amount already paid</p>
-            <p>£{{data['displayAmountPaid']}}</p>
+            {{data['decision-preference']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="4-make-request-judgment.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> hearing type</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Draft order
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['directions']}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="4-make-request-judgment.html" class="govuk-link govuk-link--no-visited-state">
+              Change
+              <span class="govuk-visually-hidden"> draft order</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Preferred type of hearing
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{data['type-hearing']}}
+            {% if (data['type-hearing'] === "Telephone hearing") %}
+            <p class="govuk-!-font-weight-bold govuk-!-margin-top-2  govuk-!-margin-bottom-0">To be set up by</p>
+            <p>{{data['who-set-up']}}</p>
             {% endif %}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="4-payments-made.html" class="govuk-link govuk-link--no-visited-state">
-              Change
-              <span class="govuk-visually-hidden"> amount already paid</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Total to be paid by the Defendant
-          </dt>
-          <dd class="govuk-summary-list__value">
-            £{{data['displayTotalOwed']}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="#" class="govuk-link govuk-link--no-visited-state">
-              Change
-              <span class="govuk-visually-hidden"> total to be paid by the defendant</span>
-            </a>
-          </dd>
-        </div>
 
-        <!-- Paid immediately -->
-<!--        {% if (data['how-to-pay'] === "Immediately") %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            How do you want the Defendant to pay?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{data['how-to-pay']}}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="6-how-to-pay.html" class="govuk-link govuk-link--no-visited-state">
+            <a href="5-hearing-details.html" class="govuk-link govuk-link--no-visited-state">
               Change
-              <span class="govuk-visually-hidden"> how the defendant should pay</span>
-            </a>
-          </dd>
-        </div>
-      
-        <!-- Paid by set date-->
- <!--       {% elseif (data['how-to-pay'] === "By a set date") %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            How do you want the Defendant to pay?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            By {{data['paidByDate']}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="6-how-to-pay.html" class="govuk-link govuk-link--no-visited-state">
-              Change
-              <span class="govuk-visually-hidden"> how the defendant should pay</span>
-            </a>
-          </dd>
-        </div>
-
-        {% else %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            How do you want the Defendant to pay?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{data['how-to-pay']}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="6-how-to-pay.html" class="govuk-link govuk-link--no-visited-state">
-              Change
-              <span class="govuk-visually-hidden"> how the defendant should pay</span>
+              <span class="govuk-visually-hidden"> preferred type of hearing</span>
             </a>
           </dd>
         </div>
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Regular payments of
+            Preferred location
           </dt>
           <dd class="govuk-summary-list__value">
-            £{{data['displayRegularPayment']}}
+            {{data['location']}}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="6c-repayment-plan.html" class="govuk-link govuk-link--no-visited-state">
+            <a href="5-hearing-details.html" class="govuk-link govuk-link--no-visited-state">
               Change
-              <span class="govuk-visually-hidden"> regular payments amount</span>
+              <span class="govuk-visually-hidden"> preferred location</span>
             </a>
           </dd>
         </div>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            How often do you want to receive payments?
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{data['frequency']}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="6c-repayment-plan.html" class="govuk-link govuk-link--no-visited-state">
-              Change
-              <span class="govuk-visually-hidden"> frequency of payments</span>
-            </a>
-          </dd>
-        </div>
+        
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Date of first instalment
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{data['paymentStartDate']}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="6c-repayment-plan.html" class="govuk-link govuk-link--no-visited-state">
-              Change
-              <span class="govuk-visually-hidden"> date of first instalment</span>
-            </a>
-          </dd>
-        </div>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Length of payment plan
-          </dt>
-          <dd class="govuk-summary-list__value">
-            6 weeks, 4 days
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="6c-repayment-plan.html" class="govuk-link govuk-link--no-visited-state">
-              Change
-              <span class="govuk-visually-hidden"> length of payment plan</span>
-            </a>
-          </dd>
-        </div>
-
-        {% endif %}
-       -->
       </dl>
 
       <form class="form" action="/damages/default-judgments/6-check-your-answers" method="post">

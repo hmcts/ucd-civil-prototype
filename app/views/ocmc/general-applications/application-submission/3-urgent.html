@@ -1,0 +1,92 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+Is this an urgent application?
+{% endblock %}
+
+{% block beforeContent %}
+  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/ocmc/general-applications/application-submission/3-urgent" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="urgent-application">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Is this an urgent application?
+              </h1>
+            </legend>
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="yes" name="urgent" type="radio" value="yes" data-aria-controls="conditional-yes">
+                <label class="govuk-label govuk-radios__label" for="yes">
+                  Yes
+                </label>
+              </div>
+
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="date-urgent">
+                    Enter the date by which this application must be considered by a judge.
+                  </label>
+      
+                  <div class="govuk-date-input" id="date-urgent">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="urgent-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="urgent-day" name="urgent-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="urgent-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="urgent-month" name="urgent-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="urgent-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="urgent-year" name="urgent-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                  </div>
+                  <label class="govuk-label govuk-!-margin-top-6" for="reason-urgent">
+                    Explain why this application is urgent.
+                  </label>
+                  <textarea class="govuk-textarea" id="more-detail" name="reason-urgent" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+                </div>
+              
+              
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="no" name="urgent" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="no">
+                  No
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>        
+          
+
+        <!-- Buttons -->
+        {% include "../../../includes/buttons.html" %}
+
+        
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

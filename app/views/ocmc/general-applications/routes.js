@@ -24,10 +24,19 @@ router.post('/ocmc/general-applications/application-submission/1-application', f
 
 router.post('/ocmc/general-applications/application-submission/2-respondent-agreement', function(req, res) {
   if (req.body['submit-button'] === 'continue') {
-    res.redirect('/ocmc/general-applications/application-submission/3-something')
+    res.redirect('/ocmc/general-applications/application-submission/3-urgent')
   }
   else {
       res.redirect('/ocmc/general-applications/application-submission/1-application')
+  }    
+})
+
+router.post('/ocmc/general-applications/application-submission/3-urgent', function(req, res) {
+  if (req.body['submit-button'] === 'continue') {
+    res.redirect('/ocmc/general-applications/application-submission/4')
+  }
+  else {
+      res.redirect('/ocmc/general-applications/application-submission/2-respondent-agreement')
   }    
 })
 
