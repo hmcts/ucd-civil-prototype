@@ -22,14 +22,77 @@
               <h1 class="govuk-fieldset__heading">What track are you allocating the claim to?</h1>
               <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
             </legend>
-          
+
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+            <p>Do you wish you to enter judgement for a sum of damages to be decided</p>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately" data-aria-controls="conditional-yes">
+                <label class="govuk-label govuk-radios__label" for="immediately">
+                  Yes
+                </label>
+              </div>
+
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
+                <div class="govuk-form-group">
+                  <div id="regular" class="govuk">
+                    Enter deduction
+                  </div>
+                  <div id="regular-payments-hint" class="govuk-hint">
+                    Enter a value between 1 and 99
+                  </div>
+
+
+                </div>
+              </div>
+
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately">
+                <label class="govuk-label govuk-radios__label" for="immediately">
+                  No
+                </label>
+              </div>
+              
+
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+              <p>what track are you allocating the claim to?</p>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately" data-aria-controls="conditional-small">
                 <label class="govuk-label govuk-radios__label" for="immediately">
                   Small claims track
                 </label>
               </div>
+
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-small">
+                <div class="govuk-form-group">
+                  <div id="regular-payments-hint" class="govuk-hint">
+                    Select additional directions, if any (Optional)
+                  </div>
+                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="credit-hire-claim" name="claim-type" type="checkbox" value="credit-hire-claim">
+                      <label class="govuk-label govuk-checkboxes__label" for="credit hire claim">
+                        Credit hire claim
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="housing-disrepair" name="claim-type" type="checkbox" value="housing-disrepair">
+                      <label class="govuk-label govuk-checkboxes__label" for="housing disrepair claim">
+                        Road traffic accident claim
+                      </label>
+                    </div>
+
+                  </div>
+
+                </div>
+                </div>
+
 
 
               <div class="govuk-radios__item">
@@ -103,12 +166,13 @@
 
                   </div>
 
-      
- 
+
+
                 </div>
-        
+
               </div>
-        
+              </div>
+
           </fieldset>
 
           <!-- Buttons -->
