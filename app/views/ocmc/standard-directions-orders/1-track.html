@@ -19,10 +19,11 @@
           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-m">#1522-0584-2506-7027</span>
-              <h1 class="govuk-fieldset__heading">What track are you allocating the claim to?</h1>
+           <h1 class="govuk-fieldset__heading">Directions Order</h1>
               <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
             </legend>
 
+<!--Do you wish you to enter judgement for a sum of damages to be decided -->
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 
             <p>Do you wish you to enter judgement for a sum of damages to be decided</p>
@@ -33,6 +34,7 @@
                   Yes
                 </label>
               </div>
+
 
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
                 <div class="govuk-form-group">
@@ -57,13 +59,15 @@
               </div>
             </div>
 
-
+<!--what track are you allocating the claim to? -->
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 
-              <p>what track are you allocating the claim to?</p>
+              <label class="govuk-label govuk-body govuk-!-margin-top-4" for="dedution-input">
+                what track are you allocating the claim to?
+              </label>
 
-              <div class="govuk-radios__item">
+              <div class="govuk-radios__item govuk-body govuk-!-margin-top-4">
                 <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately" data-aria-controls="conditional-small">
                 <label class="govuk-label govuk-radios__label" for="immediately">
                   Small claims track
@@ -75,27 +79,26 @@
                   <div id="regular-payments-hint" class="govuk-hint">
                     Select additional directions, if any (Optional)
                   </div>
-                  <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="credit-hire-claim" name="claim-type" type="checkbox" value="credit-hire-claim">
-                      <label class="govuk-label govuk-checkboxes__label" for="credit hire claim">
-                        Credit hire claim
-                      </label>
-                    </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="credit-hire-id" name="credit-hire-typee" type="checkbox" value="credit-hire">
+                          <label class="govuk-label govuk-checkboxes__label" for="credit-hire">
+                            Credit Hire
+                          </label>
+                        </div>
 
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="housing-disrepair" name="claim-type" type="checkbox" value="housing-disrepair">
-                      <label class="govuk-label govuk-checkboxes__label" for="housing disrepair claim">
-                        Road traffic accident claim
-                      </label>
-                    </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="Road-Trafic-Accident-id" name="Road-Trafic-Accident-type" type="checkbox" value="Road-Trafic-Accident">
+                          <label class="govuk-label govuk-checkboxes__label" for="Road Trafic Accident">
+                            Road Trafic Accident
+                          </label>
+                        </div>
+
+                      </div>
 
                   </div>
-
                 </div>
-                </div>
-              </div>
 
 
 
@@ -113,60 +116,55 @@
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="personal-injury" name="claim-type" type="checkbox" value="personal-injury">
-                      <label class="govuk-label govuk-checkboxes__label" for="personal injury claim">
-                        Personal injury claim
-                      </label>
-                    </div>
-
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="road-traffic-accident" name="claim-type" type="checkbox" value="road-traffic-accident">
-                      <label class="govuk-label govuk-checkboxes__label" for="road traffic accident claim">
-                        Road traffic accident claim
-                      </label>
-                    </div>
-
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="credit-hire-claim" name="claim-type" type="checkbox" value="credit-hire-claim">
-                      <label class="govuk-label govuk-checkboxes__label" for="credit hire claim">
-                        Credit hire claim
-                      </label>
-                    </div>
-
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="housing-disrepair" name="claim-type" type="checkbox" value="housing-disrepair">
-                      <label class="govuk-label govuk-checkboxes__label" for="housing disrepair claim">
-                        Road traffic accident claim
-                      </label>
-                    </div>
-
-                    <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="building-dispute" name="claim-type" type="checkbox" value="building-dispute">
+                      <input class="govuk-checkboxes__input" id="building-dispute" name="building-dispute-type" type="checkbox" value="building-dispute">
                       <label class="govuk-label govuk-checkboxes__label" for="building dispute claim">
-                        Building dispute claim
+                        Building dispute
                       </label>
                     </div>
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="noise-induced" name="claim-type" type="checkbox" value="noise-induced">
-                      <label class="govuk-label govuk-checkboxes__label" for="noise induced hearing loss claim">
-                        Noise induced hearing loss claim
+                      <input class="govuk-checkboxes__input" id="Clinical-Negligence-id" name="Clinical Negligence-type" type="checkbox" value="Clinical-Negligencek">
+                      <label class="govuk-label govuk-checkboxes__label" for="Clinical Negligence">
+                        Clinical Negligence
                       </label>
                     </div>
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="clinical-negligence" name="claim-type" type="checkbox" value="clinical-negligence">
-                      <label class="govuk-label govuk-checkboxes__label" for="clinical negligence claim">
-                        Clinical negligence claim
+                      <input class="govuk-checkboxes__input" id="credit-hire-id" name="claim-type" type="checkbox" value="credit-hire-claim">
+                      <label class="govuk-label govuk-checkboxes__label" for="credit hire claim">
+                        Credit hire
                       </label>
                     </div>
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="accident-at-work" name="claim-type" type="checkbox" value="accident-at-work">
-                      <label class="govuk-label govuk-checkboxes__label" for="accident at work claim">
-                        Accident at work claim
+                      <input class="govuk-checkboxes__input" id="Employers-Liability-id" name="Employers-Liability-type" type="checkbox" value="Employers-Liability">
+                      <label class="govuk-label govuk-checkboxes__label" for="Employers Liability">
+                        Employers Liability
                       </label>
                     </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="Housing-Disrepair-id" name="Housing-Disrepair-type" type="checkbox" value="Housing-Disrepair">
+                      <label class="govuk-label govuk-checkboxes__label" for="Housing Disrepair">
+                        Housing Disrepair
+                      </label>
+                    </div>
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="Personal-Injury-id" name="Personal-Injury-type" type="checkbox" value="Personal-Injury">
+                      <label class="govuk-label govuk-checkboxes__label" for="Personal Injury">
+                        Personal Injury
+                      </label>
+                    </div>
+
+
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="Road-traffic-accident-id" name="Road-traffic-accident-type" type="checkbox" value="Road-traffic-accident">
+                      <label class="govuk-label govuk-checkboxes__label" for="Road traffic accident">
+                        Road traffic accident
+                      </label>
+                    </div>
+
 
                   </div>
 
@@ -175,10 +173,10 @@
                 </div>
 
               </div>
-
+            </div>
 
           </fieldset>
-  </div>
+        </div>
           <!-- Buttons -->
           {% include "../../includes/buttons.html" %}
 
