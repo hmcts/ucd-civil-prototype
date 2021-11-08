@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+<a class="govuk-back-link" href="/url/of/previous/page">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -36,14 +36,16 @@
 
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
                 <div class="govuk-form-group">
-                  <div id="regular" class="govuk">
+                  <label class="govuk-label" for="dedution-input">
                     Enter deduction
-                  </div>
-                  <div id="regular-payments-hint" class="govuk-hint">
+                  </label>
+
+                  <div id="dedution-input-hint" class="govuk-hint">
                     Enter a value between 1 and 99
                   </div>
-
-
+                    <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                        <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                    </div>
                 </div>
               </div>
 
@@ -53,6 +55,7 @@
                   No
                 </label>
               </div>
+            </div>
 
 
 
@@ -92,6 +95,7 @@
 
                 </div>
                 </div>
+              </div>
 
 
 
@@ -171,14 +175,13 @@
                 </div>
 
               </div>
-              </div>
+
 
           </fieldset>
-
+  </div>
           <!-- Buttons -->
           {% include "../../includes/buttons.html" %}
 
-        </div>
       </form>
     </div>
   </div>
