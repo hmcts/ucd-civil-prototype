@@ -52,11 +52,21 @@
 
               <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="112" data-threshold="75">
                 <div class="govuk-form-group">
-                  <h2 class="govuk-body govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
-                    Alternative dispute resolution</h2>
+
+                        <div class="govuk-grid-row govuk-body govuk-!-margin-top-2">
+                          <div class="govuk-grid-column-two-thirds-from-desktop">
+                            <h2 class="govuk-body govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
+                              Alternative dispute resolution</h2>
+                          </div>
+                          <div class="govuk-grid-column-two-third-from-desktop govuk-!-display-inline">
+                            <!-- Buttons -->
+                            {% include "../../includes/buttons-remove.html" %}
+
+                          </div>
+                        </div>
 
 
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="5" aria-describedby="word-count-info">At all stages the parties must consider setting this litigation by any means of Alternative dispute resolution (including Type another letter into this field after this message to see the threshold feature)</textarea>
+                  <textarea class="govuk-textarea govuk-js-character-count " id="word-count" name="word-count" rows="5" aria-describedby="word-count-info">At all stages the parties must consider setting this litigation by any means of Alternative dispute resolution (including Type another letter into this field after this message to see the threshold feature)</textarea>
                 </div>
 
               </div>
@@ -96,152 +106,153 @@
 
 
                   <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">Each party shall give to every other party disclosure of documents by way of standard disclosure.</textarea>
-                </div>
-              </div>
 
 
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-                  <div id="changed-name-hint" class="govuk-hint">
-                    Select additional directions
-                  </div>
-                  <div class="govuk-radios govuk-radios-">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-                      <label class="govuk-label govuk-radios__label" for="changed-name">
-                        Documents related to damages
-                      </label>
+                    <div class="govuk-form-group govuk-body govuk-!-margin-top-5">
+                      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                        <div id="changed-name-hint" class="govuk-hint">
+                          Select additional directions
+                        </div>
+                        <div class="govuk-radios govuk-radios-">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="changed-name">
+                              Documents related to damages
+                            </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                              Documents related to specific issues
+                            </label>
+                          </div>
+                        </div>
+
+                      </fieldset>
                     </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-                      <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                        Documents related to specific issues
-                      </label>
-                    </div>
-                  </div>
 
-                </fieldset>
-              </div>
-
-              <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="112" data-threshold="75">
-                <div class="govuk-form-group">
-                  <div id="changed-name-hint" class="govuk-hint">
-                    Document date 1
-                  </div>
-
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="1" aria-describedby="word-count-info">List of documents by 4pm on</textarea>
-                </div>
-              </div>
-
-
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-                  <div class="govuk-date-input" id="passport-issued">
-                    <div class="govuk-date-input__item">
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="112" data-threshold="75">
                       <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                          Day
-                        </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                        <div id="changed-name-hint" class="govuk-hint">
+                          Document date 1
+                        </div>
+
+                        <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="1" aria-describedby="word-count-info">List of documents by 4pm on</textarea>
+                      </div>
                     </div>
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="passport-issued-Hours">
-                          Month
-                        </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+
+
+                    <div class="govuk-form-group govuk-body govuk-!-margin-top-5">
+                      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                        <div class="govuk-date-input" id="passport-issued">
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                Day
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-Hours">
+                                Month
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-Minutes">
+                                Year
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                        </div>
+
+                      </fieldset>
                     </div>
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="passport-issued-Minutes">
-                          Year
-                        </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="112" data-threshold="75">
+                      <div class="govuk-form-group govuk-body govuk-!-margin-top-5">
+                        <div id="changed-name-hint" class="govuk-hint">
+                          Document date 2
+                        </div>
+
+                        <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="1" aria-describedby="word-count-info">List of documents by 4pm on</textarea>
+                      </div>
                     </div>
-                  </div>
-
-                </fieldset>
-              </div>
-
-              <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="112" data-threshold="75">
-                <div class="govuk-form-group">
-                  <div id="changed-name-hint" class="govuk-hint">
-                    Document date 2
-                  </div>
-
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="1" aria-describedby="word-count-info">List of documents by 4pm on</textarea>
-                </div>
-              </div>
 
 
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-                  <div class="govuk-date-input" id="passport-issued">
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                          Day
-                        </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    <div class="govuk-form-group govuk-body govuk-!-margin-top-5">
+                      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                        <div class="govuk-date-input" id="passport-issued">
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                Day
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-Hours">
+                                Month
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-Minutes">
+                                Year
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                        </div>
+
+                      </fieldset>
                     </div>
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="passport-issued-Hours">
-                          Month
-                        </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+
+                    <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="112" data-threshold="75">
+                      <div class="govuk-form-group govuk-body govuk-!-margin-top-5">
+                        <div id="changed-name-hint" class="govuk-hint">
+                          Document date 3
+                        </div>
+
+                        <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="1" aria-describedby="word-count-info">List of documents by 4pm on</textarea>
+                      </div>
                     </div>
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="passport-issued-Minutes">
-                          Year
-                        </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+
+
+                    <div class="govuk-form-group govuk-body govuk-!-margin-top-5">
+                      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                        <div class="govuk-date-input" id="passport-issued">
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                Day
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-Hours">
+                                Month
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-Minutes">
+                                Year
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                        </div>
+
+                      </fieldset>
                     </div>
-                  </div>
 
-                </fieldset>
-              </div>
-
-              <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="112" data-threshold="75">
-                <div class="govuk-form-group">
-                  <div id="changed-name-hint" class="govuk-hint">
-                    Document date 3
-                  </div>
-
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="1" aria-describedby="word-count-info">List of documents by 4pm on</textarea>
-                </div>
-              </div>
-
-
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-                  <div class="govuk-date-input" id="passport-issued">
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                          Day
-                        </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-                    </div>
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="passport-issued-Hours">
-                          Month
-                        </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-                    </div>
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="passport-issued-Minutes">
-                          Year
-                        </label>
-                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
-                    </div>
-                  </div>
-
-                </fieldset>
-              </div>
+            </div>
+          </div>
 
 
               <!-- Witness of fact-->
@@ -560,7 +571,7 @@
                         Road Traffic Accident
                     </div>
 
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">fill txt</textarea>
+                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </textarea>
 
               </div>
             </div>
@@ -572,7 +583,8 @@
                   <h2 class="govuk-body govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
                     Trial</h2>
 
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">fill txt</textarea>
+                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="6" aria-describedby="word-count-info">Not more than seven nor less than three clear days before the trial, the Claimant must file at court and serve an indexed and paginated bundle of documents which complies with the requirements of Rule 39.5 Civil Procedure Rules and Practice  Direction 39A. The parties must endeavour to agree the contents of the bundle before it is filed. The  undle will include a case summary and a chronology.
+                  </textarea>
 
               </div>
             </div>
@@ -584,7 +596,7 @@
                   <h2 class="govuk-body govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
                     Trial window and time estimate</h2>
 
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-5" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">fill txt</textarea>
+                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-5" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">(subject to change depending on track alloation) The trial of this case will take place in a window starting on</textarea>
 
                     <div class="govuk-form-group govuk-body govuk-!-margin-top-4">
                       <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
@@ -615,7 +627,7 @@
                       </fieldset>
                     </div>
 
-                    <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-5" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">fill txt</textarea>
+                    <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-5" id="word-count" name="word-count" rows="3" aria-describedby="word-count-info">The time provisionally allowed for the trial. If either party considers that the time estimate is insufficient, they must inform the court within 7 days of the date of this Order</textarea>
 
                       <div class="govuk-form-group govuk-body govuk-!-margin-top-4">
                         <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
@@ -676,12 +688,13 @@
                                 Hearing location
                               </label>
                               <select class="govuk-select" id="sort" name="sort">
-                                <option value="published">other court</option>
-                                <option value="updated" selected>Kings-upon-Hull Combined Court Centre</option>
-                                <option value="views">other court</option>
-                                <option value="comments">other court</option>
+                                <option value="">Select a value</option>
+                                <option value="Kings-upon-Hull Combined Court Centre">Kings-upon-Hull Combined Court Centre</option>
+                                <option value="">Select a value</option>
+                                <option value="">Select a value</option>
                               </select>
                             </div>
+
 
                           </div>
                         </div>
@@ -714,7 +727,7 @@
                   <h2 class="govuk-body govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
                     Application to set aside,varied or stayed</h2>
 
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">fill txt</textarea>
+                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="5" aria-describedby="word-count-info">Because this Order has been made without a hearing, the parties have the order set aside, varied or stayed. A party making such an application must send or deliver the application to the court (together with any appropriate fee) to arrive within seven days of service of this Order</textarea>
 
               </div>
             </div>
@@ -726,7 +739,7 @@
                 <h2 class="govuk-body govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
                   Additional directions</h2>
 
-                <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">fill txt</textarea>
+                <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="6" aria-describedby="word-count-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, </textarea>
 
             </div>
           </div>
