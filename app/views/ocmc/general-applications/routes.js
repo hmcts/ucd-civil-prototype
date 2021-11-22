@@ -32,11 +32,20 @@ router.post('/ocmc/general-applications/application-submission/2-respondent-agre
 })
 
 
-//urgent branching space
+//respondant agreed branching space
 
 
 
 router.post('/ocmc/general-applications/application-submission/4-inform-other-party', function(req, res) {
+  if (req.body['submit-button'] === 'continue') {
+    res.redirect('/ocmc/general-applications/application-submission/5-enter-order')
+  }
+  else {
+      res.redirect('/ocmc/general-applications/application-submission/5-enter-order')
+  }
+})
+
+router.post('/ocmc/general-applications/application-submission/4a-inform-other-party', function(req, res) {
   if (req.body['submit-button'] === 'continue') {
     res.redirect('/ocmc/general-applications/application-submission/5-enter-order')
   }
@@ -54,9 +63,23 @@ router.post('/ocmc/general-applications/application-submission/5-enter-order', f
 
 router.post('/ocmc\general-applications\Responce-journey\6-hearing-details', function(req, res) {
   if (req.body['submit-button'] === 'continue') {
-    res.redirect('/ocmc\general-applications\Responce-journey\6-hearing-details')
+    res.redirect('/ocmc\general-applications\Responce-journey\7-')
   }
 })
+
+router.post('/ocmc\general-applications\Responce-journey\7-', function(req, res) {
+  if (req.body['submit-button'] === 'continue') {
+    res.redirect('/ocmc\general-applications\Responce-journey\8-check-answers')
+  }
+})
+
+router.post('/ocmc\general-applications\Responce-journey\8-check-answers', function(req, res) {
+  if (req.body['submit-button'] === 'continue') {
+    res.redirect('/ocmc\general-applications\Responce-journey\9-confirmation')
+  }
+})
+
+
 
 //Responce journey
 
