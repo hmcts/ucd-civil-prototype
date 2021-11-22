@@ -31,12 +31,30 @@ router.post('/ocmc/general-applications/application-submission/2-respondent-agre
   }
 })
 
-router.post('/ocmc/general-applications/application-submission/3-urgent', function(req, res) {
+
+//urgent branching space
+
+
+
+router.post('/ocmc/general-applications/application-submission/4-inform-other-party', function(req, res) {
   if (req.body['submit-button'] === 'continue') {
-    res.redirect('/ocmc/general-applications/application-submission/4')
+    res.redirect('/ocmc/general-applications/application-submission/5-enter-order')
   }
   else {
-      res.redirect('/ocmc/general-applications/application-submission/2-respondent-agreement')
+      res.redirect('/ocmc/general-applications/application-submission/5-enter-order')
+  }
+})
+
+
+router.post('/ocmc/general-applications/application-submission/5-enter-order', function(req, res) {
+  if (req.body['submit-button'] === 'continue') {
+    res.redirect('/ocmc\general-applications\Responce-journey\6-hearing-details')
+  }
+})
+
+router.post('/ocmc\general-applications\Responce-journey\6-hearing-details', function(req, res) {
+  if (req.body['submit-button'] === 'continue') {
+    res.redirect('/ocmc\general-applications\Responce-journey\6-hearing-details')
   }
 })
 
