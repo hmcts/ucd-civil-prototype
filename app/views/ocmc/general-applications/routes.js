@@ -57,31 +57,31 @@ router.post('/ocmc/general-applications/application-submission/4a-inform-other-p
 
 router.post('/ocmc/general-applications/application-submission/5-enter-order', function(req, res) {
   if (req.body['submit-button'] === 'continue') {
-    res.redirect('/ocmc\general-applications\Responce-journey\6-hearing-details')
+    res.redirect('/ocmc/general-applications/application-submission/6-hearing-details')
   }
 })
 
-router.post('/ocmc\general-applications\Responce-journey\6-hearing-details', function(req, res) {
+router.post('/ocmc\general-applications\application-submission\6-hearing-details', function(req, res) {
   if (req.body['submit-button'] === 'continue') {
-    res.redirect('/ocmc\general-applications\Responce-journey\7-')
+    res.redirect('/ocmc\general-applications\application-submissiony\7-')
   }
 })
 
-router.post('/ocmc\general-applications\Responce-journey\7-', function(req, res) {
+router.post('/ocmc\general-applications\application-submission\7-', function(req, res) {
   if (req.body['submit-button'] === 'continue') {
-    res.redirect('/ocmc\general-applications\Responce-journey\8-check-answers')
+    res.redirect('/ocmc\general-applications\application-submission\8-check-answers')
   }
 })
 
-router.post('/ocmc\general-applications\Responce-journey\8-check-answers', function(req, res) {
+router.post('/ocmc\general-applications\application-submission\8-check-answers', function(req, res) {
   if (req.body['submit-button'] === 'continue') {
-    res.redirect('/ocmc\general-applications\Responce-journey\9-confirmation')
+    res.redirect('/ocmc\general-applications\application-submission\9-confirmation')
   }
 })
 
 
 
-//Responce journey
+//application journey
 
 router.post('/ocmc/general-applications/Responce-journey/1-respond', function(req, res) {
   if (req.body['submit-button'] === 'continue') {
@@ -100,5 +100,7 @@ router.post('/ocmc/general-applications/Responce-journey/3-check-your-answers', 
         res.redirect('/ocmc/general-applications/Responce-journey/4-confirmation')
     }
 })
+
+//judge journey
 
 };
