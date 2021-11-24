@@ -9,6 +9,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+      <form class="form" action="/ocmc/general-applications/application-submission/9-confirmation" method="post">
+
       <div class="govuk-panel govuk-panel--confirmation">
         <h1 class="govuk-panel__title">Application complete</h1>
         <div class="govuk-panel__body">
@@ -17,16 +19,24 @@
       </div>
 
       <p>
-        We have sent you a confirmation email.
+        The Court will make a decision on [this application/ these applications]:
       </p>
 
-      <h2 class="govuk-heading-m">What happens next</h2>
-      <p>We've sent your application to Hackney Electoral Register Office.</p>
-      <p>They will contact you either to confirm your registration, or to ask for more information.</p>
-      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Unless Order</li>
+        <li>Summary judgment</li>
+        <li>Amend defendant details</li>
 
+      </ul>
 
+      <p>As you have marked this application [these applications] as urgent. [it /
+they] will be dealt with as a priority.</p>
+      <p>The other [party’s / partys’] legal representative has been notified [not been notified] that you have submitted this application.</p>
+      <p><a href="https://">View claim event history</a></p>
+
+    </form>
     </div>
   </div>
+
 
 {% endblock %}

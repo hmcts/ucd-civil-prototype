@@ -1,0 +1,80 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  How do you want the Defendant to pay?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/ocmc/general-applications/application-submission/6-hearing-details">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/ocmc/general-applications/application-submission/7-account-number" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+                <h1 class="govuk-fieldset__heading">Make an application</h1>
+              <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
+            </legend>
+
+            <h2 class="govuk-body govuk-!-margin-bottom-2 govuk-!-font-weight-bold">Pay for application with PBA</h2>
+
+            <div class="govuk-form-group govuk-body govuk-!-margin-top-5">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label govuk-!-font-weight-bold" for="more-detail">
+                  Application fee to pay
+                </label>
+              </h2>
+              <div id="more-detail-hint" class="govuk-hint">
+                <£108 without notice> or <£275 with notice>
+              </div>
+
+            </div>
+
+
+              <!-- what Order do you want the court to make? -->
+
+
+                    <div class="govuk-form-group">
+                      <h2 class="govuk-label-wrapper">
+                        <label class="govuk-label govuk-label govuk-!-font-weight-bold" for="PBA-detail">
+                          Select your payment by account number (PBA)
+                        </label>
+                      </h2>
+                        <select class="govuk-select govuk-!-width-one-half" id="sort" name="sort">
+                          <option value="published">PBA8939704</option>
+                          <option value="updated" selected>Select PBA number</option>
+                          <option value="views">PBA5869704</option>
+                          <option value="comments">PBA1729704</option>
+                        </select>
+                      </div>
+
+
+
+              <div class="govuk-form-group">
+                <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label govuk-!-font-weight-bold" for="more-detail">
+                    Enter a reference for your PBA account statements (optional)
+                  </label>
+                </h2>
+                <div id="event-name-hint" class="govuk-hint">
+                  This should be your own unique reference to identify the case. it will appear on your statements.
+                </div>
+                <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+              </div>
+
+          </fieldset>
+
+          <!-- Buttons -->
+          {% include "../../../includes/buttons.html" %}
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

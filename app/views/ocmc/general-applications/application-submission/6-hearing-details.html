@@ -16,7 +16,7 @@
       <span class="govuk-caption-m">#1522-0584-2506-7027</span>
       <h1 class="govuk-heading-xl">Make an application</h1>
 
-      <form class="form" action="/ocmc\general-applications\Responce-journey\6-hearing-details" method="post">
+      <form class="form" action="/ocmc/general-applications/application-submission/6-hearing-details" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -297,12 +297,27 @@
                     </label>
                     <input class="govuk-input govuk-!-width-two-thirds" id="who-set-up" name="who-set-up" type="text" spellcheck="false"></div>
                 </div>
+              </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="paper-application" name="type-paper-application" type="radio" value="paper application" data-aria-controls="conditional-videoconference">
+                  <label class="govuk-label govuk-radios__label" for="paper application">
+                    By paper application
+                  </label>
+                </div>
+
             </div>
+
+            <div class="govuk-form-group govuk-!-margin-top-7">
+              <label class="govuk-label govuk-label--m" for="more-detail">
+                Why would you prefer this type of hearing
+              </label>
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
             </div>
 
             <!-- How long do you estimate the hearing will take? -->
 
-              <h2 class="govuk-label-wrapper  govuk-!-margin-top-7"><label class="govuk-label govuk-label--m" for="location">
+              <h2 class="govuk-label-wrapper  govuk-!-margin-top-7">
+                <label class="govuk-label govuk-label--m" for="location">
                 Preferred location
                 </label>
               </h2>
@@ -382,12 +397,12 @@
                 </div>
 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="other" name="hearing-duration" type="radio" value="Other" data-aria-controls="other-duration">
+                  <input class="govuk-radios__input" id="other" name="hearing-duration" type="radio" value="Other" data-aria-controls="conditional-other">
                   <label class="govuk-label govuk-radios__label" for="other">
                     Other
                   </label>
                 </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="other-duration">
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-other">
                   <div class="govuk-form-group">
 
                     <div class="govuk-date-input" id="other-duration-setup">
@@ -528,6 +543,7 @@
 
                       <button class="govuk-button govuk-!-margin-top-5" data-module="govuk-button" name="submit-button" value="add">Add</button>
                       </div>
+
                     {% if (data['dateCount'] > 0) %}
                     </div>
                   </details>
