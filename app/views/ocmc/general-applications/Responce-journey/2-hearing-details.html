@@ -301,7 +301,7 @@
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="paper-application" name="type-paper-application" type="radio" value="paper application" data-aria-controls="conditional-videoconference">
                   <label class="govuk-label govuk-radios__label" for="paper application">
-                    By paper application
+                    Without a hearing
                   </label>
                 </div>
 
@@ -309,7 +309,7 @@
 
             <div class="govuk-form-group govuk-!-margin-top-7">
               <label class="govuk-label govuk-label--m" for="more-detail">
-                Why would you prefer this type of hearing
+                Why would you prefer this type of hearing?
               </label>
               <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
             </div>
@@ -557,6 +557,34 @@
                   </label>
                 </div>
                 <!-- End of unavailable dates -->
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <h2 class="govuk-label-wrapper govuk-!-margin-top-7" id="unavailable-dates">
+                      <label class="govuk-label govuk-label--m" for="exclusion-dates">Do you have details of the fixed trial date or period</label>
+                    </h2>
+                    <div id="changed-name-hint" class="govuk-hint">
+                      This includes changing your last name or spelling your name differently.
+                    </div>
+                    <div class="govuk-radios govuk-radios--inline">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="changed-name">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+
+                  </fieldset>
+                </div>
+
+                <!-- Hearing support requirements  -->
 
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
