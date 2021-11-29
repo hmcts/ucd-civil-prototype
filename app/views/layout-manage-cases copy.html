@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+
+{% block headIcons %}
+  <link rel="shortcut icon" href="{{ asset_path }}images/unbranded.ico?0.18.3" type="image/x-icon" />
+{% endblock %}
+
+{% block head %}
+
+
+<header class="hmcts-header" role="banner">
+
+  <div class="hmcts-header__container">
+  
+  <div class="hmcts-header__logo">
+    <a class="hmcts-header__link" href="#">Manage cases</a>
+  </div>
+  
+  <div class="hmcts-header__content">
+  
+    <nav class="hmcts-header__navigation" aria-label="Account navigation">
+  
+      <ul class="hmcts-header__navigation-list">
+  
+        <li class="hmcts-header__navigation-item">
+          <a class="hmcts-header__navigation-link" href="#1">
+            Sign out
+          </a>
+        </li>
+  
+        <li class="hmcts-header__navigation-item">
+          <a class="hmcts-header__navigation-link" href="#1">
+            Find case
+          </a>
+        </li>
+  
+      </ul>
+  
+    </nav>
+  
+  </div>
+  
+  </div>
+  <div class="hmcts-primary-navigation">
+
+    <div class="hmcts-primary-navigation__container">
+    
+    <div class="hmcts-primary-navigation__nav">
+    
+      <nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+    
+        <ul class="hmcts-primary-navigation__list">
+    
+          <!-- <li class="hmcts-primary-navigation__item">
+            <a class="hmcts-primary-navigation__link" aria-current="page" href="/index.html">
+              Case list
+            </a>
+          </li> -->
+    
+          <li class="hmcts-primary-navigation__item">
+            <a class="hmcts-primary-navigation__link" href="/index.html">
+              Case list
+            </a>
+          </li>
+    
+          <li class="hmcts-primary-navigation__item">
+            <a class="hmcts-primary-navigation__link" href="#2">
+              Create cases
+            </a>
+          </li>
+    
+          <!-- <li class="hmcts-primary-navigation__item">
+            <a class="hmcts-primary-navigation__link" href="#3">
+              Nav item 3
+            </a>
+          </li> -->
+    
+        </ul>
+    
+      </nav>
+    
+    </div>
+    
+    </div>
+    
+    </div>  
+  </div>
+  
+  </header> 
+
+
+<!-- <header class="hmcts-header" role="banner">
+  <div class="hmcts-header__container">
+  <div class="govuk-header__logo">
+    <a href="#" class="govuk-header__link govuk-header__link--homepage">
+      <span class="govuk-header__logotype">
+        <span class="govuk-header__logotype-text">
+          MyHMCTS
+        </span>
+      </span>
+    </a>
+  </div>
+  <a class="hmcts-header__link" href="#">Manage cases</a>
+  
+  <div class="hmcts-header__content">
+    <nav class="hmcts-header__navigation" aria-label="Account navigation">
+      <ul class="hmcts-header__navigation-list">
+  
+        <li class="hmcts-header__navigation-item">
+          <a class="hmcts-header__navigation-link" href="#1">
+            Sign out
+          </a>
+        </li>
+  
+        <li class="hmcts-header__navigation-item">
+          <a class="hmcts-header__navigation-link" href="#1">
+            Find case
+          </a>
+        </li>
+  
+      </ul>
+    </nav>
+  </div>
+  <div class="hmcts-primary-navigation">
+
+    <div class="hmcts-primary-navigation__container">
+    
+    <div class="hmcts-primary-navigation__nav">
+    
+      <nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+    
+        <ul class="hmcts-primary-navigation__list">
+    
+          <!-- <li class="hmcts-primary-navigation__item">
+            <a class="hmcts-primary-navigation__link" aria-current="page" href="#1">
+              Case list
+            </a>
+          </li> -->
+    
+          <!-- <li class="hmcts-primary-navigation__item">
+            <a class="hmcts-primary-navigation__link" href="#2">
+              Case list
+            </a>
+          </li>
+    
+          <li class="hmcts-primary-navigation__item">
+            <a class="hmcts-primary-navigation__link" href="#2">
+              Create cases
+            </a>
+          </li> -->
+    
+          <!-- <li class="hmcts-primary-navigation__item">
+            <a class="hmcts-primary-navigation__link" href="#3">
+              Nav item 3
+            </a>
+          </li> -->
+    
+        <!-- </ul>
+    
+      </nav>
+    
+    </div>
+    
+    </div>
+    
+    </div>  
+  </div>
+  </header>  --> 
+  <!-- <div style="padding-top:0px;" class="govuk-width-container govuk-phase-banner">
+  <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--orange "> PROTOTYPE
+    </strong><span class="govuk-phase-banner__text"> This is for design and user testing  </span></p>
+</div> -->
+
+  <!--[if lte IE 8]><link href="/public/stylesheets/unbranded-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if gt IE 8]><!--><link href="/public/stylesheets/unbranded.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+
+  {% for stylesheetUrl in extensionConfig.stylesheets %}
+    <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+  {% endfor %}
+{% endblock %}
+{% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
+{% block header %}    {% include "includes/scripts.html" %}{% endblock %}
+{% if useAutoStoreData %}
+  {% block footer %}
+
+    {{ 
+      
+      govukFooter ({
+   
+    })
+  
+  
+  }}
+  <div class="govuk-grid-row">
+    <form style="background-color: #dee0e2;" method="post" action="#" class="govuk-grid-column-full">
+      <br>
+     <a style=" margin-left:1%;" class="govuk-button govuk-button--warning" href="/prototype-admin/clear-data">Clear data</a>
+    </form>
+    
+    </div>
+  {% endblock %}
+  
+{% endif %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}

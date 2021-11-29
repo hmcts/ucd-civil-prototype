@@ -1,0 +1,163 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Choose outcome of application
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase-banner.html" %}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-caption-m">#1522-0584-2506-7027</h1>
+      <h1 class="govuk-heading-l">Choose outcome of application</h1>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-heading-m">
+                Make an order
+              </h1>
+            </legend>
+            
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                Judge's recital
+              </label>
+
+
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Upon the application of [party] dated [date] and upon considering the information provided by the parties</textarea>
+
+
+
+          </div>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Make an order in the form requested by the applicant
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      Draft order content
+                    </label>
+                    <textarea class="govuk-textarea" id="contact-by-email" name="contact-by-email" rows="5" aria-describedby="contact-by-email-hint"></textarea>
+
+                  </div>
+          
+                </div>
+
+
+                
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    Dismiss the application
+                  </label>
+                </div>
+
+                
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-3">
+                  <label class="govuk-label govuk-radios__label" for="contact-3">
+                    Make directions
+                  </label>
+                </div>
+                
+
+
+          
+                </div>
+              </div>
+
+
+              <div class="govuk-form-group">
+                <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                    Reasons for decision
+                  </label>
+                </h1>
+  
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+              </div>
+  
+
+
+
+
+            <div class="govuk-inset-text">
+              This application is cloaked
+            </div>
+
+          
+
+        
+
+
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  Change application status
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+  
+                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                          Make application visible to all parties
+                        </label>
+                      </div>
+                    </div>
+              </div>
+            </details>
+
+
+
+
+
+
+
+          </fieldset>
+        </div>
+
+
+
+        <div class="govuk-button-group">
+
+          
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Cancel</a>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

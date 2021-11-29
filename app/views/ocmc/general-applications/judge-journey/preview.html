@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Preview order document
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase-banner.html" %}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-caption-m">#1522-0584-2506-7027</h1>
+      <h1 class="govuk-heading-l">Preview order document</h1>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-heading-m">
+                Draw a General Order
+              </h1>
+            </legend>
+            
+
+            <h3 class="govuk-label govuk-label--s">Open order document</h3>
+            <p>
+              <a href="#">generalOrder_Judge_DATE.pdf (Opens in a new tab)</a>
+            </p>
+
+
+
+
+
+
+
+          </fieldset>
+        </div>
+
+
+
+        <div class="govuk-button-group">
+
+          
+          <button class="govuk-button" data-module="govuk-button">
+            Submit
+          </button>
+          <a class="govuk-link" href="#">Cancel</a>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
