@@ -16,7 +16,7 @@
       <span class="govuk-caption-m">#1522-0584-2506-7027</span>
       <h1 class="govuk-heading-xl">Make an application</h1>
 
-      <form class="form" action="/ocmc\general-applications\Responce-journey\2-hearing-details" method="post">
+      <form class="form" action="/ocmc/general-applications/Responce-journey/2-hearing-details" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -43,7 +43,7 @@
 
 
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hearing">
-                  <div id="dedution-input-hint" class="govuk-hint">
+                  <div id="dedution-input" class="govuk-label">
                     What's the date of the hearing?
                   </div>
                   <div class="govuk-form-group govuk-body govuk-!-margin-top-5">
@@ -297,7 +297,21 @@
                     </label>
                     <input class="govuk-input govuk-!-width-two-thirds" id="who-set-up" name="who-set-up" type="text" spellcheck="false"></div>
                 </div>
+              </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="paper-application" name="type-paper-application" type="radio" value="paper application" data-aria-controls="conditional-videoconference">
+                  <label class="govuk-label govuk-radios__label" for="paper application">
+                    Without a hearing
+                  </label>
+                </div>
+
             </div>
+
+            <div class="govuk-form-group govuk-!-margin-top-7">
+              <label class="govuk-label govuk-label--m" for="more-detail">
+                Why would you prefer this type of hearing?
+              </label>
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
             </div>
 
             <!-- How long do you estimate the hearing will take? -->
@@ -544,10 +558,13 @@
                 </div>
                 <!-- End of unavailable dates -->
 
+              
+                <!-- Hearing support requirements  -->
+
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
                       <h2 class="govuk-heading-m govuk-!-margin-top-7">
-                        Hearing support requirements (optional)
+                        Support requirements (optional)
                       </h2>
                     <div id="waste-hint" class="govuk-hint">
                       Select any support you, your client and any experts or witnesses you would require for a court hearing.

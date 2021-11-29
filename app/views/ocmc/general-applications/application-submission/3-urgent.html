@@ -5,7 +5,7 @@ Is this an urgent application?
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/ocmc/general-applications/application-submission/2-espondent-agreement">Back</a>
+  <a class="govuk-back-link" href="/ocmc/general-applications/application-submission/2-respondent-agreement">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -62,9 +62,24 @@ Is this an urgent application?
                     </div>
                   </div>
                   <label class="govuk-label govuk-!-margin-top-6" for="reason-urgent">
-                    Explain why this application is urgent.
+                    Reasons for urgency. Disclose all relevant information to the Court, including any information that may undermine the need for urgency.
                   </label>
                   <textarea class="govuk-textarea" id="more-detail" name="reason-urgent" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                      <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                          <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                            I certify that use of the urent procedure is justified and i know that the Court may apply an adverse sanction in the event of inappropriate use of the urgent procedure.
+                          </label>
+                        </div>
+                      </div>
+
+                    </fieldset>
+                  </div>
+
                 </div>
                 </div>
 

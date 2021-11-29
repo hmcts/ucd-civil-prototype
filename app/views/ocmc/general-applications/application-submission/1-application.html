@@ -20,7 +20,7 @@ What applications do you want to make?
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <span class="govuk-caption-m">#1522-0584-2506-7027</span>
               <h1 class="govuk-fieldset__heading">
-                What applications do you want to make?
+                What type of applications do you want to make?
               </h1>
             </legend>
 
@@ -38,7 +38,7 @@ What applications do you want to make?
                   Strike out
                 </label>
               </div>
-        
+
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="summary-judgment" name="summary-judgment" type="checkbox" value="summary-judgment" data-aria-controls="summary-judgment">
                 <label class="govuk-label govuk-checkboxes__label" for="Summary judgment">
@@ -53,22 +53,22 @@ What applications do you want to make?
                     Stay a claim
                   </label>
                 </div>
-  
+
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="extend-time" name="extend-time" type="checkbox" value="extend-time" data-aria-controls="extend-time">
                   <label class="govuk-label govuk-checkboxes__label" for="Extend time">
                     Extend time
                   </label>
                 </div>
-          
+
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="set-aside-judgment" name="set-aside-judgment" type="checkbox" value="set-aside-judgment" data-aria-controls="set-aside-judgment">
                   <label class="govuk-label govuk-checkboxes__label" for="Set aside judgment">
                     Set aside judgment
                   </label>
                 </div>
-  
-                <div class="govuk-checkboxes__item">
+
+              <!--  <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="other" name="other-application" type="checkbox" value="other" data-aria-controls="other-order" {% if (data['applicationCount'] > 0) %} checked {% endif %}}>
                 <label class="govuk-label govuk-checkboxes__label" for="Any other applications">
                   Any other applications
@@ -78,8 +78,8 @@ What applications do you want to make?
                   {% if (data['applicationCount'] > 0) %}
 
                   {% for id in data['idApplication']|reverse %}
-                  
-                    <dl class="govuk-summary-list govuk-!-margin-bottom-4 ">                    
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-4 ">
                       <div class="govuk-summary-list__row">
                         <dt class="govuk-summary-list__key">
                           {{data['application'][id]}}
@@ -92,7 +92,7 @@ What applications do you want to make?
                       </div>
                     </dl>
                     {% endfor %}
-                  
+
                     <details class="govuk-details" data-module="govuk-details">
                       <summary class="govuk-details__summary">
                         <span class="govuk-details__summary-text">
@@ -100,7 +100,7 @@ What applications do you want to make?
                         </span>
                       </summary>
                       <div class="govuk-details__text">
-                      
+
                       {% endif %}
 
                       <div class="govuk-form-group">
@@ -111,11 +111,12 @@ What applications do you want to make?
                       </div>
                         <button class="govuk-button govuk-!-margin-top-5" data-module="govuk-button" name="submit-button" value="add">Add</button>
                     </details>
-                  </div>       
+                  </div> -->
+
                 </div>
 
               </div>
-        
+
           </fieldset>
 
           <!-- Buttons -->
