@@ -1,0 +1,558 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Choose outcome of application
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase-banner.html" %}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-caption-m">#1522-0584-2506-7027</h1>
+      <h1 class="govuk-heading-l">Choose outcome of application</h1>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-heading-m">
+                Written representation
+              </h1>
+            </legend>
+            
+            
+
+
+
+
+
+
+        
+
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="disclosure-hint">
+
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="disclosure" name="disclosure" type="radio" value="sequential-disclosure" data-aria-controls="conditional-disclosure"">
+                    <label class="govuk-label govuk-radios__label" for="disclosure">
+                      Sequential disclosure
+                    </label>
+                  </div>
+
+
+                    
+
+
+
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-disclosure"">
+                     
+                     
+                     
+                      <!--Sequential disclosure radios - SERVE-->
+                     
+                     
+                     
+                      <div class="govuk-form-group">
+                      <label class="govuk-label" for="conditional-disclosure">
+                        The Respondent must serve any written representations by 4pm in:
+                      </label>
+                
+                      
+                
+                
+                
+                
+
+
+                      <div class="govuk-form-group">
+
+
+
+
+                        <fieldset class="govuk-fieldset" aria-describedby="serve-hint">
+                      
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+                      
+                      
+                          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                      
+                      
+                      
+                      
+                      
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="serve" name="serve" type="radio" value="email" data-aria-controls="conditional-serve">
+                              <label class="govuk-label govuk-radios__label" for="serve">
+                                2 days
+                              </label>
+                            </div>
+                      
+
+                      
+                      
+                      
+                      
+                      
+                      
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="serve-2" name="serve" type="radio" value="phone" data-aria-controls="conditional-serve-2">
+                              <label class="govuk-label govuk-radios__label" for="serve-2">
+                                5 days
+                              </label>
+                            </div>
+                      
+
+                      
+                      
+                      
+                      
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="serve-3" name="serve" type="radio" value="phone" data-aria-controls="conditional-serve-3">
+                              <label class="govuk-label govuk-radios__label" for="serve-3">
+                                10 days
+                              </label>
+                            </div>
+                      
+
+                      
+                      
+                      
+                      
+                      
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="serve-4" name="serve" type="radio" value="text" data-aria-controls="conditional-serve-4">
+                              <label class="govuk-label govuk-radios__label" for="serve-4">
+                                Other
+                              </label>
+                            </div>
+                      
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-serve-4">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label" for="serve-by-text">
+                                  Enter number of days
+                                </label>
+                                <input class="govuk-input govuk-input--width-4" id="serve-by-text" name="serve-by-text" type="tel" autocomplete="tel">
+                              </div>
+                            </div>
+                      
+                      
+                      
+                      
+                      
+                      
+                          </div>
+
+
+
+                          
+                      
+                      
+                        </fieldset>
+                      
+                      
+                      </div>
+                
+                      
+                
+                
+                
+                
+                
+                      </div>
+                
+
+
+
+
+
+                      <!--Sequential disclosure radios - RESPOND-->
+
+
+
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="conditional-disclosure">
+                          Once the Respondent has replied, the Applicant must respond in:
+                        </label>
+                  
+                        
+                  
+                  
+                  
+                  
+
+
+                        <div class="govuk-form-group">
+
+
+
+
+                          <fieldset class="govuk-fieldset" aria-describedby="respond-hint">
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                        
+                        
+                        
+                        
+                        
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="respond" name="respond" type="radio" value="email" data-aria-controls="conditional-respond">
+                                <label class="govuk-label govuk-radios__label" for="respond">
+                                  2 days
+                                </label>
+                              </div>
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="respond-2" name="respond" type="radio" value="phone" data-aria-controls="conditional-respond-2">
+                                <label class="govuk-label govuk-radios__label" for="respond-2">
+                                  5 days
+                                </label>
+                              </div>
+                        
+
+                        
+                        
+                        
+                        
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="respond-3" name="respond" type="radio" value="phone" data-aria-controls="conditional-respond-3">
+                                <label class="govuk-label govuk-radios__label" for="respond-3">
+                                  10 days
+                                </label>
+                              </div>
+                        
+
+                        
+                        
+                        
+                        
+                        
+                              <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="respond-4" name="respond" type="radio" value="text" data-aria-controls="conditional-respond-4">
+                                <label class="govuk-label govuk-radios__label" for="respond-4">
+                                  Other
+                                </label>
+                              </div>
+                        
+                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-respond-4">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label" for="respond-by-text">
+                                    Enter number of days
+                                  </label>
+                                  <input class="govuk-input govuk-input--width-4" id="respond-by-text" name="respond-by-text" type="tel" autocomplete="tel">
+                                </div>
+                              </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                            </div>
+
+
+
+                            
+                        
+                        
+                          </fieldset>
+                        
+                        
+                        </div>
+                  
+                        
+                  
+                  
+                  
+                  
+                  
+                      </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="disclosure-2" name="disclosure" type="radio" value="concurrent-disclosure" data-aria-controls="conditional-disclosure-2">
+                    <label class="govuk-label govuk-radios__label" for="disclosure-2">
+                      Concurrent disclosure
+                    </label>
+                  </div>
+
+
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-disclosure-2"">
+                     
+                     
+                     
+                    <!--Sequential disclosure radios - SERVE-->
+                   
+                   
+                   
+                    <div class="govuk-form-group">
+                    <label class="govuk-label" for="conditional-disclosure-2">
+                      Any written representations must be served in:
+                    </label>
+              
+                    
+              
+              
+              
+              
+
+
+                    <div class="govuk-form-group">
+
+
+
+
+                      <fieldset class="govuk-fieldset" aria-describedby="concurrent-serve-hint">
+                    
+                    
+                    
+                    
+
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    
+                    
+                        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                    
+                    
+                    
+                    
+                    
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="concurrent-serve" name="concurrent-serve" type="radio" value="7-days" data-aria-controls="conditional-concurrent-serve">
+                            <label class="govuk-label govuk-radios__label" for="concurrent-serve">
+                              7 days
+                            </label>
+                          </div>
+                    
+
+                    
+                    
+                    
+                    
+                    
+                    
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="concurrent-serve-2" name="concurrent-serve" type="radio" value="14-days" data-aria-controls="conditional-concurrent-serve-2">
+                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-2">
+                              14 days
+                            </label>
+                          </div>
+                    
+
+                    
+                    
+                    
+                    
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="concurrent-serve-3" name="concurrent-serve" type="radio" value="21-days" data-aria-controls="conditional-concurrent-serve-3">
+                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-3">
+                              21 days
+                            </label>
+                          </div>
+                  
+
+                    
+                    
+                    
+                    
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="concurrent-serve-4" name="concurrent-serve" type="radio" value="28-days" data-aria-controls="conditional-concurrent-serve-4">
+                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-4">
+                              28 days
+                            </label>
+                          </div>
+                    
+
+                    
+                    
+                    
+                    
+                    
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="concurrent-serve-5" name="concurrent-serve" type="radio" value="text" data-aria-controls="conditional-concurrent-serve-5">
+                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-5">
+                              Other
+                            </label>
+                          </div>
+                    
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-concurrent-serve-5">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="concurrent-serve-by-text">
+                                Enter number of days
+                              </label>
+                              <input class="govuk-input govuk-input--width-4" id="concurrent-serve-by-text" name="concurrent-serve-by-text" type="tel" autocomplete="tel">
+                            </div>
+                          </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                        </div>
+
+
+
+                        
+                    
+                    
+                      </fieldset>
+                    
+                    
+                    </div>
+              
+                    
+              
+              
+              
+              
+              
+                    </div>
+              
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+
+
+
+                  
+
+                </div>
+
+
+
+              </fieldset>
+            </div>
+
+
+
+            
+
+
+
+          
+   
+      
+              </fieldset>
+            </div>
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+          </fieldset>
+        </div>
+
+
+
+        <div class="govuk-button-group">
+
+          
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Cancel</a>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

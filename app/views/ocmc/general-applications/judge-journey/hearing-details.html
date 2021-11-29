@@ -1,0 +1,275 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Choose outcome of application
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase-banner.html" %}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-caption-m">#1522-0584-2506-7027</h1>
+      <h1 class="govuk-heading-l">Choose outcome of application</h1>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-heading-m">
+                How do you want to list for a hearing?
+              </h1>
+            </legend>
+            
+            
+
+
+
+
+
+
+        
+
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="hearing-hint">
+
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hearing" name="hearing" type="radio" value="in-person" data-aria-controls="conditional-hearing">
+                    <label class="govuk-label govuk-radios__label" for="hearing">
+                      In person
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hearing">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="conditional-hearing">
+                        Hearing location
+                      </label>
+                      <div class="govuk-form-group">
+
+                        <select class="govuk-select" id="sort" name="sort">
+                          <option value="published" selected>Select location</option>
+                          <option value="location1">Location 1</option>
+                          <option value="location2">Location 2</option>
+                          <option value="location3">Location 3</option>
+
+                        </select>
+                      </div>
+                    </div>
+            
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hearing-2" name="hearing" type="radio" value="video" data-aria-controls="conditional-hearing-2">
+                    <label class="govuk-label govuk-radios__label" for="hearing-2">
+                      Video conference hearing
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="hearing-3" name="hearing" type="radio" value="telephone" data-aria-controls="conditional-hearing-3">
+                    <label class="govuk-label govuk-radios__label" for="hearing-3">
+                      Telephone hearing
+                    </label>
+                  </div>
+
+                </div>
+
+              </fieldset>
+            </div>
+
+
+            <h3 class="govuk-label govuk-label--s">Preferred telephone number</h3>
+            <p>
+              07897 869594
+            </p>
+          
+            <h3 class="govuk-label govuk-label--s">Preferred email</h3>
+            <p>
+              johnsmith@gmail.com
+            </p>
+          
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    How long do you estimate the hearing will take?
+                  </h1>
+                </legend>
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how long-1" name="how-long" type="radio" value="15-minutes">
+                    <label class="govuk-label govuk-radios__label" for="how-long-1">
+                      15 minutes
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-long-2" name="how-long" type="radio" value="30-minutes">
+                    <label class="govuk-label govuk-radios__label" for="how-long-2">
+                      30 minutes
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-long-3" name="how-long" type="radio" value="45-minutes">
+                    <label class="govuk-label govuk-radios__label" for="how-long-3">
+                      45 minutes
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-long-4" name="how-long" type="radio" value="1-hour">
+                    <label class="govuk-label govuk-radios__label" for="how-long-4">
+                      1 hour
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-long-5" name="how-long" type="radio" value="2-hours">
+                    <label class="govuk-label govuk-radios__label" for="how-long-5">
+                      2 hours
+                    </label>
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="how-long-6" name="how-long" type="radio" value="other" data-aria-controls="conditional-how-long-6">
+                    <label class="govuk-label govuk-radios__label" for="how-long-6">
+                    Other
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-long-6">
+
+
+
+                    <div class="govuk-date-input" id="passport-issued">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                            Day(s)
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                            Hours(s)
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                            Minutes(s)
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                    </div>
+                    
+                  </div>
+            </div>
+      
+              </fieldset>
+            </div>
+
+
+
+
+
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="hearing-support-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Hearing support requirements (optional)
+                  </h1>
+                </legend>
+                <div id="hearing-support-hint" class="govuk-hint">
+                  Select any support you, your client and any experts or witnesses you would require for a court hearing (optional)
+                </div>
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="hearing-support" name="hearing-support" type="checkbox" value="disabled-access">
+                    <label class="govuk-label govuk-checkboxes__label" for="hearing-support">
+                      Disabled access
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="hearing-support-2" name="hearing-support" type="checkbox" value="hearing-loop">
+                    <label class="govuk-label govuk-checkboxes__label" for="hearing-support-2">
+                      Hearing loop
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="hearing-support-3" name="hearing-support" type="checkbox" value="sign-language-interpreter">
+                    <label class="govuk-label govuk-checkboxes__label" for="hearing-support-3">
+                      Sign language interpreter
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="hearing-support-3" name="hearing-support" type="checkbox" value="language-interpreter">
+                    <label class="govuk-label govuk-checkboxes__label" for="hearing-support-3">
+                      Language interpreter
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="hearing-support-3" name="hearing-support" type="checkbox" value="other-support">
+                    <label class="govuk-label govuk-checkboxes__label" for="hearing-support-3">
+                      Other support
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+        
+
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+                  Additional information for court staff (optional)
+                </label>
+              </h1>
+
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+            </div>
+
+
+
+
+
+
+
+          </fieldset>
+        </div>
+
+
+
+        <div class="govuk-button-group">
+
+          
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Cancel</a>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

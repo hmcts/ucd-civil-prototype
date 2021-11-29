@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Choose outcome of application
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/phase-banner.html" %}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-caption-m">#1522-0584-2506-7027</h1>
+      <h1 class="govuk-heading-l">Choose outcome of application</h1>
+
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-heading-m">
+                Draw a General Order
+              </h1>
+            </legend>
+            
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                Judge's recital
+              </label>
+
+
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Upon the application of [party] dated [date] and upon considering the information provided by the parties</textarea>
+
+
+
+          </div>
+
+
+        
+
+            <div class="govuk-inset-text">
+              <h3 class="govuk-heading-s">Hearing type</h3>
+              In person, Nottingham
+            </div>
+
+          
+
+            <div class="govuk-inset-text">
+              <h3 class="govuk-heading-s">Estimated hearing</h3>
+              15 minutes
+            </div>
+
+          
+
+            <div class="govuk-inset-text">
+              <h3 class="govuk-heading-s">Hearing requirements</h3>
+              Disabled access
+            </div>
+
+          
+
+        
+
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                  Additional information needed (optional)
+                </label>
+              </h1>
+
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+            </div>
+
+
+
+
+
+
+
+          </fieldset>
+        </div>
+
+
+
+        <div class="govuk-button-group">
+
+          
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Cancel</a>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
