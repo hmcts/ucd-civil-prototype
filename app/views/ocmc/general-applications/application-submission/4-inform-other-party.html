@@ -20,24 +20,34 @@ Has the Respondent agreed to the order that you want the judge to make?
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Has the Respondent agreed to the order that you want the judge to make?
+                Do you want the court to inform the other party of this application?
               </h1>
             </legend>
-            <div id="Judges-hint" class="govuk-hint">
-              If you do not want the court to inform the other party, this is known as making an application without notice – you can only do this within the conditions of rule X.Y.Z
+            <div class="govuk-inset-text">
+              If you select 'No', this is known as making an application without notice – you can only do this if it's permitted by a rule practice direction or court order
             </div>
-            <div class="govuk-radios govuk-radios">
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="yes" name="agreement" type="radio" value="yes">
+                <input class="govuk-radios__input" id="yes" name="inform" type="radio" value="yes">
                 <label class="govuk-label govuk-radios__label" for="yes">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="no" name="agreement" type="radio" value="no">
+                <input class="govuk-radios__input" id="no" name="inform" type="radio" value="no" data-aria-controls="conditional-inform">
                 <label class="govuk-label govuk-radios__label" for="no">
                   No
                 </label>
+              </div>
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-inform">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="inform-reason-text">
+                    Why do you not want the court to inform the other party?
+                  </label>
+                  <textarea class="govuk-textarea" id="inform-reason" name="inform-reason" rows="5"></textarea>
+
+                </div>
+
               </div>
             </div>
           </fieldset>

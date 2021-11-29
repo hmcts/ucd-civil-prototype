@@ -12,20 +12,18 @@ Has the Respondent agreed to the order that you want the judge to make?
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-
       <form class="form" action="/ocmc/general-applications/application-submission/2-respondent-agreement" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                has the respondent agreed to the Order that you want the judge to make?
+                Has the respondent agreed to the order that you want the judge to make?
               </h1>
             </legend>
-            <div id="Judges-hint" class="govuk-hint">
-              A judge will still need to approve this Order
-            </div>
+            <p>
+              A judge will still need to approve this order
+            </p>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="yes" name="agreement" type="radio" value="yes">
@@ -42,12 +40,9 @@ Has the Respondent agreed to the order that you want the judge to make?
             </div>
           </fieldset>
           </div>
-
-
         <!-- Buttons -->
         {% include "../../../includes/buttons.html" %}
-
-
+        
       </form>
     </div>
   </div>

@@ -5,7 +5,7 @@ What applications do you want to make?
 {% endblock %}
 
 {% block beforeContent %}
-  <!-- <a class="govuk-back-link" href="/url/of/previous/page">Back</a> -->
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -18,30 +18,24 @@ What applications do you want to make?
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="applications">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <span class="govuk-caption-m">#1522-0584-2506-7027</span>
               <h1 class="govuk-fieldset__heading">
                 What type of applications do you want to make?
               </h1>
             </legend>
 
             <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="unless-order" name="unless-order" type="checkbox" value="unless-order" data-aria-controls="unless-order">
-                <label class="govuk-label govuk-checkboxes__label" for="Unless order">
-                  Unless order
-                </label>
-              </div>
+
 
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="strike-out" name="strike-out" type="checkbox" value="strike-out" data-aria-controls="strike-out">
-                <label class="govuk-label govuk-checkboxes__label" for="Strike out">
+                <label class="govuk-label govuk-checkboxes__label" for="strike-out">
                   Strike out
                 </label>
               </div>
 
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="summary-judgment" name="summary-judgment" type="checkbox" value="summary-judgment" data-aria-controls="summary-judgment">
-                <label class="govuk-label govuk-checkboxes__label" for="Summary judgment">
+                <label class="govuk-label govuk-checkboxes__label" for="summary-judgment">
                   Summary judgment
                 </label>
               </div>
@@ -49,75 +43,34 @@ What applications do you want to make?
               <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="stay-claim" name="stay-claim" type="checkbox" value="stay-claim" data-aria-controls="stay-claim">
-                  <label class="govuk-label govuk-checkboxes__label" for="Stay a claim">
-                    Stay a claim
+                  <label class="govuk-label govuk-checkboxes__label" for="stay-claim">
+                    Stay the claim
                   </label>
                 </div>
 
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="extend-time" name="extend-time" type="checkbox" value="extend-time" data-aria-controls="extend-time">
-                  <label class="govuk-label govuk-checkboxes__label" for="Extend time">
+                  <label class="govuk-label govuk-checkboxes__label" for="extend-time">
                     Extend time
                   </label>
                 </div>
 
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="set-aside-judgment" name="set-aside-judgment" type="checkbox" value="set-aside-judgment" data-aria-controls="set-aside-judgment">
-                  <label class="govuk-label govuk-checkboxes__label" for="Set aside judgment">
+                  <label class="govuk-label govuk-checkboxes__label" for="set-aside-judgment">
                     Set aside judgment
                   </label>
                 </div>
-
-              <!--  <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="other" name="other-application" type="checkbox" value="other" data-aria-controls="other-order" {% if (data['applicationCount'] > 0) %} checked {% endif %}}>
-                <label class="govuk-label govuk-checkboxes__label" for="Any other applications">
-                  Any other applications
-                </label>
-                </div>
-                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="other-order">
-                  {% if (data['applicationCount'] > 0) %}
-
-                  {% for id in data['idApplication']|reverse %}
-
-                    <dl class="govuk-summary-list govuk-!-margin-bottom-4 ">
-                      <div class="govuk-summary-list__row">
-                        <dt class="govuk-summary-list__key">
-                          {{data['application'][id]}}
-                        </dt>
-                        <dd class="govuk-summary-list__actions">
-                          <a class="govuk-link" href="#">
-                            Remove<span class="govuk-visually-hidden"> application</span>
-                          </a>
-                        </dd>
-                      </div>
-                    </dl>
-                    {% endfor %}
-
-                    <details class="govuk-details" data-module="govuk-details">
-                      <summary class="govuk-details__summary">
-                        <span class="govuk-details__summary-text">
-                          Add another application
-                        </span>
-                      </summary>
-                      <div class="govuk-details__text">
-
-                      {% endif %}
-
-                      <div class="govuk-form-group">
-                        <label class="govuk-label" for="other">
-                          What other order are you seeking?
-                        </label>
-                        <input class="govuk-input govuk-!-width-two-thirds" id="order" name="order" type="text">
-                      </div>
-                        <button class="govuk-button govuk-!-margin-top-5" data-module="govuk-button" name="submit-button" value="add">Add</button>
-                    </details>
-                  </div> -->
 
                 </div>
 
               </div>
 
           </fieldset>
+
+          <div class="govuk-inset-text">
+            To make an application not shown on this list, you'll need to submit a paper application to the court.
+          </div>
 
           <!-- Buttons -->
           {% include "../../../includes/buttons.html" %}

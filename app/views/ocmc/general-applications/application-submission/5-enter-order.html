@@ -12,29 +12,21 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
+      <h1 class="govuk-heading-l">Make a request for order</h1>
 
       <form class="form" action="/ocmc/general-applications/application-submission/5-enter-order" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <span class="govuk-caption-m">#1522-0584-2506-7027</span>
-                <h1 class="govuk-fieldset__heading">Make an application</h1>
-              <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
-            </legend>
-
-            
-
               <!-- what Order do you want the court to make? -->
 
 
                     <div class="govuk-form-group">
-                      <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label govuk-!-font-weight-bold" for="more-detail">
-                          What Order do you want the court to make?
+                      <h2 class="govuk-fieldset__heading"><label class="govuk-label govuk-label" for="more-detail">
+                        What order do you want the court to make?
                         </label>
                       </h2>
                       <div id="more-detail-hint" class="govuk-hint">
-                        This is the draft Order that you are requesting from Court.
+                        This is the draft order that you are requesting from the court
                       </div>
                       <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
                     </div>
@@ -43,41 +35,56 @@
               <!-- Reason for making this Order-->
 
               <div class="govuk-form-group">
-                <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label govuk-!-font-weight-bold" for="more-detail">
-                    Reason for making this Order
+                <h2 class="govuk-fieldset__heading">
+                  <label class="govuk-label govuk-label" for="more-detail">
+                    Reasons for requesting this order 
                   </label>
                 </h2>
 
                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
               </div>
+              {% if showUpload == true %}
 
-              <h2 class="govuk-body govuk govuk-!-font-weight-bold">Upload any evidence that supports your application (optional)</h2>
 
-              <ul class="govuk-list govuk-list--bullet">
+              <!-- <ul class="govuk-list govuk-list--bullet">
                 <li>files must be no more than 100MB in size</li>
                 <li>you can upload jpg, png, svg, gif, doc and PDF files</li>
                 <li>before uploading a file, give it a meaningful name. For example claimnumber.document-type.doc</li>
 
-              </ul>
+              </ul> -->
 
               <div class="govuk-form-group">
-                <label class="govuk-label" for="file-upload-1">
-                  Upload a file
-                </label>
+                <h2 class="govuk-fieldset__heading">
+                  <label class="govuk-label" for="file-upload-1">
+                    Upload any evidence that supports your application (optional)
+                  </label>
+                  <span class="govuk-hint">Before uploading a file, give it a meaningful name. For example claimnumber.document-type.doc</span>
+                </h2>
+
                 <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
               </div>
+              {% endif %}
 
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h1 class="govuk-fieldset__heading">
-                  Statement of truth
-                </h1>
-              </legend>
-              <div id="Judges-hint" class="govuk-hint">
-                I understand that proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement in a document verified by a statement of thruth without an honest belief in its truth.
-              </div>
+
+              {% if showSoT == true %}
+              
+              
 
               <div class="govuk-form-group">
+                
+                
+                
+
                 <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h2 class="govuk-fieldset__heading">
+                      Statement of truth
+                    </h2>
+                    
+                  </legend>
+                  <p>
+                    I understand that proceedings for contempt of court may be brought against anyone who makes, or causes to be made, a false statement in a document verified by a statement of thruth without an honest belief in its truth.
+                  </p>
                   <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
@@ -90,27 +97,28 @@
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
                       <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                        The Applicant believes that the facts stated above are true. I am authorised by the applicant to sign this statement.
+                        The applicant believes that the facts stated above are true. I am authorised by the applicant to sign this statement.
                       </label>
                     </div>
                   </div>
 
                 </fieldset>
               </div>
+              
 
               <div class="govuk-form-group">
                 <label class="govuk-label" for="event-name">
                   Name
                 </label>
-              <input class="govuk-input" id="event-name" name="event-name" type="text">
+                <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
             </div>
             <div class="govuk-form-group">
                 <label class="govuk-label" for="event-name">
                   Role
                 </label>
-              <input class="govuk-input" id="event-name" name="event-name" type="text">
+              <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="text">
             </div>
-
+            {% endif %}
 
 
 

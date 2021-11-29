@@ -13,24 +13,20 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <span class="govuk-caption-m">#1522-0584-2506-7027</span>
-      <h1 class="govuk-heading-xl">Make an application</h1>
+      <h1 class="govuk-heading-l">Enter hearing details</h1>
 
       <form class="form" action="/ocmc/general-applications/application-submission/6-hearing-details" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h2 class="govuk-fieldset__heading">Enter hearing details</h2>
-            </legend>
 
             <!-- Do you Have a hearing scheduled -->
 
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-              <h2 class="govuk-label-wrapper govuk-!-margin-top-7" id="hearing-scheduled">
-                <label class="govuk-label govuk-label--m" for="exclusion-dates">Do you Have a hearing scheduled
+              <h2 class="govuk-label-wrapper" id="hearing-scheduled">
+                <label class="govuk-label">Do you have a hearing scheduled?
                 </label>
               </h2>
 
@@ -97,7 +93,7 @@
 
 
               <h2 class="govuk-label-wrapper" id="hearing-scheduled">
-                <label class="govuk-label govuk-label--m" for="exclusion-dates">Is your case reserved to a judge?
+                <label class="govuk-label" for="exclusion-dates">Is your case reserved to a judge?
                 </label>
               </h2>
 
@@ -134,7 +130,7 @@
 
             <!-- Do you know when the fixed trial will be? -->
             <h2 class="govuk-label-wrapper govuk-!-margin-top-7" id="fixed-trial">
-              <label class="govuk-label govuk-label--m" for="exclusion-dates">Do you know when the fixed trial will be?
+              <label class="govuk-label" for="exclusion-dates">Do you know when the fixed trial will be?
               </label>
             </h2>
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -263,11 +259,11 @@
             <!-- Choose your preferred type of hearing -->
 
             <h2 class="govuk-label-wrapper govuk-!-margin-top-7" id="fixed-trial">
-              <label class="govuk-label govuk-label--m" for="exclusion-dates">Choose your preferred type of hearing
+              <label class="govuk-label" for="exclusion-dates">Choose your preferred type of hearing
               </label>
-              <label class="govuk-label govuk-!-margin-top-3" for="sort">
+              <div class="govuk-hint">
                 A judge will still need to approve the hearing
-              </label>
+              </div>
             </h2>
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -309,7 +305,7 @@
             </div>
 
             <div class="govuk-form-group govuk-!-margin-top-7">
-              <label class="govuk-label govuk-label--m" for="more-detail">
+              <label class="govuk-label" for="more-detail">
                 Why would you prefer this type of hearing
               </label>
               <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
@@ -318,7 +314,7 @@
             <!-- How long do you estimate the hearing will take? -->
 
               <h2 class="govuk-label-wrapper  govuk-!-margin-top-7">
-                <label class="govuk-label govuk-label--m" for="location">
+                <label class="govuk-label" for="location">
                 Preferred location
                 </label>
               </h2>
@@ -333,7 +329,7 @@
               </select>
 
 
-            <h2 class="govuk-label-wrapper govuk-!-margin-top-7"><label class="govuk-label govuk-label--m" for="telephone-number">
+            <h2 class="govuk-label-wrapper govuk-!-margin-top-7"><label class="govuk-label" for="telephone-number">
               Preferred telephone number
               </label>
               <label class="govuk-label govuk-!-margin-top-3" for="sort">
@@ -343,7 +339,7 @@
             <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="text">
             </div>
 
-            <h2 class="govuk-label-wrapper  govuk-!-margin-top-4"><label class="govuk-label govuk-label--m" for="email-address">
+            <h2 class="govuk-label-wrapper  govuk-!-margin-top-4"><label class="govuk-label" for="email-address">
               Preferred email
               </label>
               <label class="govuk-label govuk-!-margin-top-3" for="sort">
@@ -356,7 +352,7 @@
 
             <!-- How long do you estimate the hearing will take? -->
               <h2 class="govuk-label-wrapper govuk-!-margin-top-7">
-                <label class="govuk-label govuk-label--m" for="hearing-duration">How long do you estimate the hearing will take?</label>
+                <label class="govuk-label" for="hearing-duration">How long do you estimate the hearing will take?</label>
               </h2>
               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 
@@ -436,7 +432,7 @@
 
               <!-- Unavailable dates for hearing -->
               <h2 class="govuk-label-wrapper govuk-!-margin-top-7" id="unavailable-dates">
-                <label class="govuk-label govuk-label--m" for="exclusion-dates">Are there any dates when you cannot attend a hearing within the next 3 months?</label>
+                <label class="govuk-label" for="exclusion-dates">Are there any dates when you cannot attend a hearing within the next 3 months?</label>
               </h2>
               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                 <div class="govuk-radios__item">
