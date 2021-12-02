@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "includes/phase-banner.html" %}
+{% include "./includes/phase-banner.html" %}
 <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
@@ -20,7 +20,7 @@
       <h1 class="govuk-heading-l">Decision on application</h1>
 
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" form action="/ocmc/general-applications/judge-journey/initial-decision" method="post" novalidate>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
@@ -31,26 +31,26 @@
             </legend>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                <input class="govuk-radios__input" id="application-decision-make-order" name="application-decision" type="radio" value="make-order">
+                <label class="govuk-label govuk-radios__label" for="application-decision-make-order">
                   Make an order
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                <input class="govuk-radios__input" id="application-decision-request-more-information" name="application-decision" type="radio" value="request-more-information">
+                <label class="govuk-label govuk-radios__label" for="application-decision-request-more-information">
                   Request more information
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                <input class="govuk-radios__input" id="application-decision-list-hearing" name="application-decision" type="radio" value="list-hearing">
+                <label class="govuk-label govuk-radios__label" for="application-decision-list-hearing">
                   List for a hearing
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
-                <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+                <input class="govuk-radios__input" id="application-decision-make-directions" name="application-decision" type="radio" value="make-directions">
+                <label class="govuk-label govuk-radios__label" for="application-decision-make-directions">
                   Make directions to determine without a hearing
                 </label>
               </div>
@@ -59,7 +59,7 @@
           </fieldset>
         </div>
         <div class="govuk-button-group">
-          <button class="govuk-button" data-module="govuk-button">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
             Continue
           </button>
         

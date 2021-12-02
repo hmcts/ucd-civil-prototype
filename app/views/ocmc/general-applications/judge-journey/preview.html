@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "includes/phase-banner.html" %}
+{% include "./includes/phase-banner.html" %}
 
 <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
@@ -22,7 +22,7 @@
       <h1 class="govuk-heading-l">Preview order document</h1>
 
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" action="/ocmc/general-applications/judge-journey/preview" method="post" novalidate>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">

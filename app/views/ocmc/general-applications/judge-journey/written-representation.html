@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "includes/phase-banner.html" %}
+{% include "./includes/phase-banner.html" %}
 
 <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
@@ -22,7 +22,7 @@
       <h1 class="govuk-heading-l">Choose outcome of application</h1>
 
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" action="/ocmc/general-applications/judge-journey/draw-general-order-representation" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
@@ -47,8 +47,8 @@
 
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="disclosure" name="disclosure" type="radio" value="sequential-disclosure" data-aria-controls="conditional-disclosure"">
-                    <label class="govuk-label govuk-radios__label" for="disclosure">
+                    <input class="govuk-radios__input" id="sequential-disclosure" name="disclosure-type" type="radio" value="sequential-disclosure" data-aria-controls="conditional-sequential-disclosure"">
+                    <label class="govuk-label govuk-radios__label" for="sequential-disclosure">
                       Sequential disclosure
                     </label>
                   </div>
@@ -58,7 +58,7 @@
 
 
 
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-disclosure"">
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sequential-disclosure"">
                      
                      
                      
@@ -67,7 +67,7 @@
                      
                      
                       <div class="govuk-form-group">
-                      <label class="govuk-label" for="conditional-disclosure">
+                      <label class="govuk-label" for="conditional-sequential-disclosure">
                         The Respondent must serve any written representations by 4pm in:
                       </label>
                 
@@ -83,7 +83,7 @@
 
 
 
-                        <fieldset class="govuk-fieldset" aria-describedby="serve-hint">
+                        <fieldset class="govuk-fieldset">
                       
                       
                       
@@ -105,8 +105,8 @@
                       
                       
                             <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="serve" name="serve" type="radio" value="email" data-aria-controls="conditional-serve">
-                              <label class="govuk-label govuk-radios__label" for="serve">
+                              <input class="govuk-radios__input" id="sequential-respondent-serve-2-days" name="sequential-respondent-serve" type="radio" value="2-days" data-aria-controls="conditional-serve">
+                              <label class="govuk-label govuk-radios__label" for="sequential-respondent-serve-2-days">
                                 2 days
                               </label>
                             </div>
@@ -119,8 +119,8 @@
                       
                       
                             <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="serve-2" name="serve" type="radio" value="phone" data-aria-controls="conditional-serve-2">
-                              <label class="govuk-label govuk-radios__label" for="serve-2">
+                              <input class="govuk-radios__input" id="sequential-respondent-serve-5-days" name="sequential-respondent-serve" type="radio" value="5-days" data-aria-controls="conditional-serve-2">
+                              <label class="govuk-label govuk-radios__label" for="sequential-respondent-serve-5-days">
                                 5 days
                               </label>
                             </div>
@@ -131,8 +131,8 @@
                       
                       
                             <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="serve-3" name="serve" type="radio" value="phone" data-aria-controls="conditional-serve-3">
-                              <label class="govuk-label govuk-radios__label" for="serve-3">
+                              <input class="govuk-radios__input" id="sequential-respondent-serve-10-days" name="sequential-respondent-serve" type="radio" value="10-days" data-aria-controls="conditional-serve-3">
+                              <label class="govuk-label govuk-radios__label" for="sequential-respondent-serve-10-days">
                                 10 days
                               </label>
                             </div>
@@ -144,18 +144,18 @@
                       
                       
                             <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="serve-4" name="serve" type="radio" value="text" data-aria-controls="conditional-serve-4">
-                              <label class="govuk-label govuk-radios__label" for="serve-4">
+                              <input class="govuk-radios__input" id="sequential-respondent-serve-other" name="sequential-respondent-serve" type="radio" value="other" data-aria-controls="conditional-sequential-respondent-serve-other">
+                              <label class="govuk-label govuk-radios__label" for="sequential-respondent-serve-other">
                                 Other
                               </label>
                             </div>
                       
-                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-serve-4">
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sequential-respondent-serve-other">
                               <div class="govuk-form-group">
-                                <label class="govuk-label" for="serve-by-text">
-                                  Enter number of days
+                                <label class="govuk-label" for="sequential-respondent-serve-other-days">
+                                  Day(s)
                                 </label>
-                                <input class="govuk-input govuk-input--width-4" id="serve-by-text" name="serve-by-text" type="tel" autocomplete="tel">
+                                <input class="govuk-input govuk-input--width-4" id="sequential-respondent-serve-other-days" name="sequential-respondent-serve-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
                               </div>
                             </div>
                       
@@ -210,7 +210,7 @@
 
 
 
-                          <fieldset class="govuk-fieldset" aria-describedby="respond-hint">
+                          <fieldset class="govuk-fieldset">
                         
                         
                         
@@ -232,8 +232,8 @@
                         
                         
                               <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="respond" name="respond" type="radio" value="email" data-aria-controls="conditional-respond">
-                                <label class="govuk-label govuk-radios__label" for="respond">
+                                <input class="govuk-radios__input" id="sequential-applicant-respond-2-days" name="sequential-applicant-respond" type="radio" value="2-days">
+                                <label class="govuk-label govuk-radios__label" for="applicant-respond-2-days">
                                   2 days
                                 </label>
                               </div>
@@ -246,8 +246,8 @@
                         
                         
                               <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="respond-2" name="respond" type="radio" value="phone" data-aria-controls="conditional-respond-2">
-                                <label class="govuk-label govuk-radios__label" for="respond-2">
+                                <input class="govuk-radios__input" id="sequential-applicant-respond-5-days" name="sequential-applicant-respond" type="radio" value="5-days">
+                                <label class="govuk-label govuk-radios__label" for="sequential-applicant-respond-5-days">
                                   5 days
                                 </label>
                               </div>
@@ -258,8 +258,8 @@
                         
                         
                               <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="respond-3" name="respond" type="radio" value="phone" data-aria-controls="conditional-respond-3">
-                                <label class="govuk-label govuk-radios__label" for="respond-3">
+                                <input class="govuk-radios__input" id="sequential-applicant-respond-10-days" name="sequential-applicant-respond" type="radio" value="10-days">
+                                <label class="govuk-label govuk-radios__label" for="sequential-applicant-respond-10-days">
                                   10 days
                                 </label>
                               </div>
@@ -271,18 +271,18 @@
                         
                         
                               <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="respond-4" name="respond" type="radio" value="text" data-aria-controls="conditional-respond-4">
-                                <label class="govuk-label govuk-radios__label" for="respond-4">
+                                <input class="govuk-radios__input" id="sequential-applicant-respond-other" name="sequential-applicant-respond" type="radio" value="text" data-aria-controls="conditional-sequential-applicant-respond-other">
+                                <label class="govuk-label govuk-radios__label" for="sequential-applicant-respond-other">
                                   Other
                                 </label>
                               </div>
                         
-                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-respond-4">
+                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sequential-applicant-respond-other">
                                 <div class="govuk-form-group">
-                                  <label class="govuk-label" for="respond-by-text">
-                                    Enter number of days
+                                  <label class="govuk-label" for="sequential-applicant-respond-other-days">
+                                    Day(s)
                                   </label>
-                                  <input class="govuk-input govuk-input--width-4" id="respond-by-text" name="respond-by-text" type="tel" autocomplete="tel">
+                                  <input class="govuk-input govuk-input--width-4" id="sequential-applicant-respond-other-days" name="sequential-applicant-respond-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
                                 </div>
                               </div>
                         
@@ -332,14 +332,14 @@
 
 
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="disclosure-2" name="disclosure" type="radio" value="concurrent-disclosure" data-aria-controls="conditional-disclosure-2">
-                    <label class="govuk-label govuk-radios__label" for="disclosure-2">
+                    <input class="govuk-radios__input" id="concurrent-disclosure" name="disclosure-type" type="radio" value="concurrent-disclosure" data-aria-controls="conditional-concurrent-disclosure">
+                    <label class="govuk-label govuk-radios__label" for="concurrent-disclosure">
                       Concurrent disclosure
                     </label>
                   </div>
 
 
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-disclosure-2"">
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-concurrent-disclosure">
                      
                      
                      
@@ -348,7 +348,7 @@
                    
                    
                     <div class="govuk-form-group">
-                    <label class="govuk-label" for="conditional-disclosure-2">
+                    <label class="govuk-label" for="conditional-concurrent-disclosure">
                       Any written representations must be served in:
                     </label>
               
@@ -364,7 +364,7 @@
 
 
 
-                      <fieldset class="govuk-fieldset" aria-describedby="concurrent-serve-hint">
+                      <fieldset class="govuk-fieldset">
                     
                     
                     
@@ -386,8 +386,8 @@
                     
                     
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="concurrent-serve" name="concurrent-serve" type="radio" value="7-days" data-aria-controls="conditional-concurrent-serve">
-                            <label class="govuk-label govuk-radios__label" for="concurrent-serve">
+                            <input class="govuk-radios__input" id="concurrent-serve-7-days" name="concurrent-serve" type="radio" value="7-days">
+                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-7-days">
                               7 days
                             </label>
                           </div>
@@ -400,8 +400,8 @@
                     
                     
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="concurrent-serve-2" name="concurrent-serve" type="radio" value="14-days" data-aria-controls="conditional-concurrent-serve-2">
-                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-2">
+                            <input class="govuk-radios__input" id="concurrent-serve-14-days" name="concurrent-serve" type="radio" value="14-days">
+                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-14-days">
                               14 days
                             </label>
                           </div>
@@ -412,8 +412,8 @@
                     
                     
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="concurrent-serve-3" name="concurrent-serve" type="radio" value="21-days" data-aria-controls="conditional-concurrent-serve-3">
-                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-3">
+                            <input class="govuk-radios__input" id="concurrent-serve-21-days" name="concurrent-serve" type="radio" value="21-days">
+                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-21-days">
                               21 days
                             </label>
                           </div>
@@ -424,8 +424,8 @@
                     
                     
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="concurrent-serve-4" name="concurrent-serve" type="radio" value="28-days" data-aria-controls="conditional-concurrent-serve-4">
-                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-4">
+                            <input class="govuk-radios__input" id="concurrent-serve-28-days" name="concurrent-serve" type="radio" value="28-days">
+                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-28-days">
                               28 days
                             </label>
                           </div>
@@ -437,16 +437,16 @@
                     
                     
                           <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="concurrent-serve-5" name="concurrent-serve" type="radio" value="text" data-aria-controls="conditional-concurrent-serve-5">
-                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-5">
+                            <input class="govuk-radios__input" id="concurrent-serve-other" name="concurrent-serve" type="radio" value="text" data-aria-controls="conditional-concurrent-serve-other">
+                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-other">
                               Other
                             </label>
                           </div>
                     
-                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-concurrent-serve-5">
+                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-concurrent-serve-other">
                             <div class="govuk-form-group">
                               <label class="govuk-label" for="concurrent-serve-by-text">
-                                Enter number of days
+                                Day(s)
                               </label>
                               <input class="govuk-input govuk-input--width-4" id="concurrent-serve-by-text" name="concurrent-serve-by-text" type="tel" autocomplete="tel">
                             </div>

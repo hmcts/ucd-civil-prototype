@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "includes/phase-banner.html" %}
+{% include "./includes/phase-banner.html" %}
 <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
@@ -20,7 +20,7 @@
       <h1 class="govuk-heading-l">Request more information</h1>
 
 
-      <form class="form" action="/url/of/next/page" method="post">
+      <form class="form" form action="/ocmc/general-applications/judge-journey/request-more-information" method="post" novalidate>
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
@@ -41,28 +41,28 @@
 
 
             <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <fieldset class="govuk-fieldset">
 
                 <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-                    <label class="govuk-label govuk-radios__label" for="contact">
+                    <input class="govuk-radios__input" id="request-more-information-more-needed" name="request-more-information" type="radio" value="more-needed" data-aria-controls="conditional-request-more-information-more-needed">
+                    <label class="govuk-label govuk-radios__label" for="request-more-information-more-needed">
                       Request more information
                     </label>
                   </div>
-                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-request-more-information-more-needed">
                     <div class="govuk-form-group">
-                      <label class="govuk-label" for="contact-by-email">
+                      <label class="govuk-label" for="request-more-information-more-needed-information">
                         Enter the information required
                       </label>
-                      <textarea class="govuk-textarea" id="contact-by-email" name="contact-by-email" rows="5" aria-describedby="contact-by-email-hint"></textarea>
+                      <textarea class="govuk-textarea" id="request-more-information-more-needed-information" name="request-more-information-more-needed-information" rows="5"></textarea>
 
                     </div>
             
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-                    <label class="govuk-label govuk-radios__label" for="contact-2">
+                    <input class="govuk-radios__input" id="request-more-information-send-application" name="request-more-information" type="radio" value="send-application">
+                    <label class="govuk-label govuk-radios__label" for="request-more-information-send-application">
                       Send application to other party and request hearing details
                     </label>
                   </div>
@@ -84,7 +84,7 @@
           </fieldset>
         </div>
         <div class="govuk-button-group">
-          <button class="govuk-button" data-module="govuk-button">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
             Continue
           </button>
         

@@ -134,5 +134,111 @@ router.post('/ocmc/general-applications/Responce-journey/3-check-answers', funct
 
 //judge journey
 
+
+
+
+router.post('/ocmc/general-applications/judge-journey/initial-decision', function (req, res) {
+
+  var applicationDecision = req.session.data['application-decision']
+
+   if (applicationDecision == "make-order"){
+     res.redirect('./make-order')
+    } else if (applicationDecision == "request-more-information") {
+      res.redirect('./request-more-information')
+    } else if (applicationDecision == "list-hearing") {
+      res.redirect('./hearing-details')
+       } else {
+     res.redirect('./written-representation')
+   }
+
+})
+
+
+
+
+
+
+
+router.post('/ocmc/general-applications/judge-journey/request-more-information', function (req, res) {
+
+  var requestMoreInformation = req.session.data['request-more-information']
+
+   if (requestMoreInformation == "more-needed"){
+     res.redirect('./notification-sent-request-more-info')
+    } else {
+     res.redirect('./notification-sent-request-response')
+   }
+
+})
+
+
+
+
+
+
+
+
+
+
+
+router.post('/ocmc/general-applications/judge-journey/draw-general-order', function (req, res) {
+
+  var drawGeneralOrder = req.session.data['draw-general-order']
+
+   if (drawGeneralOrder == "draw-general-order"){
+     res.redirect('./draw-general-order')
+    } else {
+     res.redirect('./draw-general-order')
+   }
+
+})
+
+
+
+router.post('/ocmc/general-applications/judge-journey/draw-general-order-representation', function (req, res) {
+
+  var drawGeneralOrderRepresentation = req.session.data['draw-general-order-representation']
+
+   if (drawGeneralOrderRepresentation == "draw-general-order-representation"){
+     res.redirect('./draw-general-order-representation')
+    } else {
+     res.redirect('./draw-general-order-representation')
+   }
+
+})
+
+
+
+
+
+router.post('/ocmc/general-applications/judge-journey/make-order', function (req, res) {
+
+  var makeOrder = req.session.data['make-order']
+
+   if (makeOrder == "make-order"){
+     res.redirect('./preview')
+    } else {
+     res.redirect('./preview')
+   }
+
+})
+
+
+
+
+router.post('/ocmc/general-applications/judge-journey/preview', function (req, res) {
+
+  var previewOrder = req.session.data['preview-order']
+
+   if (previewOrder == "preview"){
+     res.redirect('./confirmation-order-issued')
+    } else {
+     res.redirect('./confirmation-order-issued')
+   }
+
+})
+
+
+
 };
 
