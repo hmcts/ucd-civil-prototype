@@ -84,15 +84,14 @@
           
 
         
-            <h3 class="govuk-label govuk-label--s">Additional information needed (optional)</h3>
-            <p>
-              Wheelchair access is required for a witness.
-              <!--
-                {{ data['additional-info'] }}
-              -->
-              
-              
-            </p>
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                  Additional information needed (optional)
+                </label>
+              </h1>
+
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+            </div>
     
 
 
