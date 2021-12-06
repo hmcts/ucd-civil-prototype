@@ -10,16 +10,30 @@
 
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l govuk-!-width-three-quarters">Check your answers before sending your application</h1>
 
       <form class="form" action="/ocmc/general-applications/application-submission/8-check-answers" method="post">
 
-          <span class="govuk-caption-m">#1522-0584-2506-7027</span>
-          <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
+      <dl class="govuk-summary-list">
 
-      <h2 class="govuk-heading-m">Application details</h2>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Type of application
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Summary judgement</li>
+            </ul>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/ocmc/general-applications/application-submission/1-application">
+              Change
+              <span class="govuk-visually-hidden"> Application by consen</span>
+            </a>
+          </dd>
+        </div>
 
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Application by consent
@@ -34,20 +48,7 @@
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Immediate judicial review
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/ocmc/general-applications/application-submission/2-respondent-agreement">
-              Change
-              <span class="govuk-visually-hidden"> Immediate judicial review</span>
-            </a>
-          </dd>
-        </div>
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
           Urgent application
@@ -78,30 +79,9 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-              Remain confidential
-          </dt>
-          <dd class="govuk-summary-list__value">
-            No
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/ocmc/general-applications/application-submission/4-inform-other-party">
-              Change
-              <span class="govuk-visually-hidden"> Remain confidential</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
             Order and reason for application
           </dt>
           <dd class="govuk-summary-list__value">
-            <ul class="govuk-list govuk-list--bullet">
-              <li>Unless Order</li>
-              <li>Summary judgment</li>
-              <li>Amend defendant details</li>
-
-            </ul>
-
             <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label govuk-!-font-weight-bold" for="more-detail">
                 Draft order
               </label>
@@ -121,22 +101,7 @@
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-              Consent Order
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <a href="*">
-              Consent or draft Order.PDF
-            </a>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/ocmc/general-applications/application-submission/6-hearing-details">
-              Change
-              <span class="govuk-visually-hidden"> Consent Order</span>
-            </a>
-          </dd>
-        </div>
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
               Supporting evidence
@@ -222,9 +187,8 @@
 
 
 
-      <h2 class="govuk-heading-m">Now send your application</h2>
 
-      <p>By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+      <p class="govuk-!-width-three-quarters">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
 
 
       <!-- Buttons Accept and send-->

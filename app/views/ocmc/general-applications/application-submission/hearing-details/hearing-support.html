@@ -1,0 +1,75 @@
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="hd-support-hint">
+      <legend class="govuk-fieldset__legend">
+        Support requirements (optional)
+      </legend>
+      <div id="hd-support-hint" class="govuk-hint">
+        Select any support you, your client and any experts or witnesses you would require for a court hearing
+      </div>
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="hd-support-1" name="hd-support" type="checkbox" value="Disabled access">
+          <label class="govuk-label govuk-checkboxes__label" for="hd-support-1">
+            Disabled access
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="hd-support-2" name="hd-support" type="checkbox" value="Hearing loop">
+          <label class="govuk-label govuk-checkboxes__label" for="hd-support-2">
+            Hearing loop
+          </label>
+        </div>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="hd-support-3" name="hd-support" type="checkbox" value="Sign language interpreter" data-aria-controls="conditional-sign-language">
+            <label class="govuk-label govuk-checkboxes__label" for="hd-support-3">
+                Sign language interpreter
+            </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-sign-language">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="sign-language">
+                    Sign language
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="sign-language" name="sign-language">
+                </div>
+            </div>
+         </div>
+
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="hd-support-4" name="hd-support" type="checkbox" value="Language interpreter" data-aria-controls="conditional-language">
+                <label class="govuk-label govuk-checkboxes__label" for="hd-support-4">
+                Language interpreter
+                </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-language">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="language">
+                    Language
+                  </label>
+                  <input class="govuk-input govuk-input--width-10" id="language" name="language">
+                </div>
+            </div>
+        </div>
+        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="hd-support-5" name="hd-support" type="checkbox" value="Other support" data-aria-controls="conditional-other">
+                <label class="govuk-label govuk-checkboxes__label" for="hd-support-5">
+                Other support
+                </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-other">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="support-needed">
+                    Support needed
+                  </label>
+                  <textarea class="govuk-textarea" id="support-needed" name="support-needed" rows="5"></textarea>
+                </div>
+            </div>
+        </div>
+
+      </div>
+  
+    </fieldset>
+  </div>

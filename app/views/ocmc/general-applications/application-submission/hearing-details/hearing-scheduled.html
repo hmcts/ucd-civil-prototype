@@ -1,0 +1,63 @@
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend">
+        Do you have a hearing scheduled?
+      </legend>
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="hd-hearing-scheduled-yes" name="hd-hearing-scheduled" type="radio" value="Yes" data-aria-controls="conditional-hd-hearing-scheduled-yes">
+          <label class="govuk-label govuk-radios__label" for="hd-hearing-scheduled-yes">
+            Yes
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hd-hearing-scheduled-yes">
+
+
+          <!-- start -->
+          
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" role="group">
+              <legend class="govuk-fieldset__legend">
+                What is the date of the hearing?
+              </legend>
+              <div class="govuk-date-input" id="hd-hearing-date">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="hd-hearing-date-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hd-hearing-date-day" name="hd-hearing-date-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="hd-hearing-date-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hd-hearing-date-month" name="hd-hearing-date-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="hd-hearing-date-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="hd-hearing-date-year" name="hd-hearing-date-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <!-- end -->
+
+
+
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="hd-hearing-scheduled-no" name="hd-hearing-scheduled" type="radio" value="No">
+          <label class="govuk-label govuk-radios__label" for="hd-hearing-scheduled-no">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>

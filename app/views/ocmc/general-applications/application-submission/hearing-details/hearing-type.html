@@ -1,0 +1,91 @@
+<div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend">
+        Choose your preferred type of hearing
+      </legend>
+      <div class="govuk-body">A judge will still need to approve the hearing</div>
+
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="hd-hearing-type-in-person" name="hd-hearing-type" type="radio" value="In person">
+          <label class="govuk-label govuk-radios__label" for="hd-hearing-type-in-person">
+            In person
+          </label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="hd-hearing-type-video" name="hd-hearing-type" type="radio" value="Video">
+          <label class="govuk-label govuk-radios__label" for="hd-hearing-type-video">
+            Video conference hearing
+          </label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="hd-hearing-type-telephone" name="hd-hearing-type" type="radio" value="Telephone" data-aria-controls="conditional-hd-hearing-type-telephone">
+          <label class="govuk-label govuk-radios__label" for="hd-hearing-type-telephone">
+            Telephone hearing
+          </label>
+        </div>
+
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hd-hearing-type-telephone">
+          <!-- start -->
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="contact-person">
+              Who will set up the telephone hearing?
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="contact-person" name="contact-person">
+          </div>
+          <!-- end -->
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="hd-hearing-type-without-hearing" name="hd-hearing-type" type="radio" value="Without hearing">
+          <label class="govuk-label govuk-radios__label" for="hd-hearing-type-without-hearing">
+            Without a hearing
+          </label>
+        </div>
+
+
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="hd-reason">
+      Why would you prefer this type of hearing?
+    </label>
+    <textarea class="govuk-textarea" id="hd-reason" name="hd-reason" rows="5"></textarea>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="preferred-location">
+      Preferred location
+    </label>
+    <div class="govuk-body" id="preferred-location-hint">
+      This is needed if the judge decides to hold the hearing in person
+    </div>
+    <select class="govuk-select govuk-!-width-one-half" id="preferred-location" name="preferred-location" aria-describedby="preferred-location-hint">
+      <option value="location1">Location 1</option>
+      <option value="location2">Location 2</option>
+    </select>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="preferred-tel-number">
+      Preferred telephone number
+    </label>
+    <div class="govuk-body" id="preferred-tel-number-hint">
+      This is needed if the judge decides to hold the telephone hearing
+    </div>
+    <input class="govuk-input govuk-input--width-10" id="preferred-tel-number" name="preferred-tel-number" type="text" aria-describedby="preferred-tel-number-hint">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="preferred-email">
+      Preferred email
+    </label>
+    <div class="govuk-body" id="preferred-email-hint">
+      This is needed if the judge decides to hold the video conference hearing
+    </div>
+    <input class="govuk-input govuk-input--width-20" id="preferred-email" name="preferred-email" type="text" aria-describedby="preferred-email-hint">
+  </div>
