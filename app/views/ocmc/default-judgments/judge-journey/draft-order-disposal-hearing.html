@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Claimant proposed order
+{% endblock %}
+
+{% block beforeContent %}
+{% include "./includes/phase-banner.html" %}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">#1522-0584-2506-7027</span>
+      <h1 class="govuk-heading-l">Claimant proposed order</h1>
+
+
+      <form class="form" action="/ocmc/default-judgments/judge-journey/confirmation-order-issued-disposal-hearing" method="post" novalidate>
+
+        <div class="govuk-form-group">
+            <h3 class="govuk-label govuk-label--m">Their details (Defendant)</h3>
+            <h3 class="govuk-label govuk-label--s">Defendant's details</h3>
+            <p>
+              Mary Richards
+            </p>
+ 
+
+            <div class="govuk-form-group">
+              <h3 class="govuk-label govuk-label--m">Claimant proposed order</h3>
+              <h3 class="govuk-label govuk-label--s">Draft order</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+
+
+
+
+
+        </div>
+
+
+
+        <div class="govuk-button-group">
+
+<!--          
+          <button class="govuk-button" data-module="govuk-button">
+            Submit
+          </button>
+-->
+
+          <a class="govuk-link" href="javascript:window.close()">Cancel</a>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

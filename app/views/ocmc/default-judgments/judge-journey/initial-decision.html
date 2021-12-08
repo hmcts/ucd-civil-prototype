@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Directions order
+{% endblock %}
+
+{% block beforeContent %}
+{% include "./includes/phase-banner.html" %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">#1522-0584-2506-7027</span>
+      <h1 class="govuk-heading-l">Directions order</h1>
+
+
+      <form class="form" method="post" novalidate>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-heading-m">
+                What order would you like to make?
+              </h1>
+            </legend>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-decision-disposal-hearing" name="application-decision" type="radio" value="disposal-hearing">
+                <label class="govuk-label govuk-radios__label" for="application-decision-disposal-hearing">
+                  Disposal hearing
+                  <div id="hd-support-hint" class="govuk-hint">
+                    This is a hearing that lasts a maximum of 30 minutes, where information is presented only on paper, with no spoken evidence.
+                  </div>
+                </label>
+
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="application-decision-trial" name="application-decision" type="radio" value="trial">
+                <label class="govuk-label govuk-radios__label" for="application-decision-trial">
+                  A trial to decide the amount of damages
+                  <div id="hd-support-hint" class="govuk-hint">
+                    This is a hearing that lasts longer than 30 minutes, where the court will receive evidence on paper and listen to any spoken evidence that you wish to consider when deciding the amount of damages.
+                  </div>
+                </label>
+              </div>
+
+            </div>
+        
+          </fieldset>
+        </div>
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        
+          <a class="govuk-link" href="#">Cancel</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
