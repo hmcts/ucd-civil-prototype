@@ -199,4 +199,27 @@ router.post('/sps/work-in-progress/how-to-verify', function(req, res) {
         res.render('.//sps/work-in-progress/how-toget-tax-letters', { errors: errors })
       }
 })
+
+
+
+
+
+
+  // default-judgments/judge-journey
+  router.post('/ocmc/default-judgments/judge-journey/initial-decision', function (req, res) {
+
+    var applicationDecision = req.session.data['application-decision']
+  
+     if (applicationDecision == "disposal-hearing"){
+       res.redirect('./disposal-hearing')
+         } else {
+       res.redirect('./trial')
+     }
+  
+  })
+
+
+
+
+
 };

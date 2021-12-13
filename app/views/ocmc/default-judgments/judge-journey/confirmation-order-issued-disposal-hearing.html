@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Order issued
+{% endblock %}
+
+{% block beforeContent %}
+{% include "./includes/phase-banner.html" %}
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">#1522-0584-2506-7027</span>
+      <h1 class="govuk-heading-l">Directions order issued</h1>
+
+
+      <form class="form" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+
+            <div class="govuk-panel govuk-panel--confirmation">
+              <h1 class="govuk-panel__title">
+                Your order has been issued
+              </h1>
+              <div class="govuk-panel__body">
+                Your reference number<br><strong>HDJ2123F</strong>
+              </div>
+            </div>        
+
+            <p>
+              A notification has also been sent.
+            </p>            <p>
+              <a href="#">Return to case overview</a>
+            </p>
+
+
+
+
+
+
+
+          </fieldset>
+        </div>
+
+
+
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

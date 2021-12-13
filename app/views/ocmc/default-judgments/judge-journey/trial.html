@@ -1,0 +1,793 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Generate directions order
+{% endblock %}
+
+{% block beforeContent %}
+{% include "./includes/phase-banner.html" %}
+
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">#1522-0584-2506-7027</span>
+      <h1 class="govuk-heading-l">Generate directions order</h1>
+
+
+      <form class="form" action="/ocmc/default-judgments/judge-journey/preview-trial" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+
+            </legend>
+            
+            
+
+
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+                Judge's recital
+              </label>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Before District Judge Jane Smith sitting at the Kingston-upon-Hull Combined Court Centre, the court has considered the statements of case and the directions questionnaires IT IS ORDERED THAT...</textarea>
+          </div>            
+            
+
+
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+              Other directions to follow
+            </label>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </textarea>
+        </div>
+
+
+
+
+        <!-- SECTION BREAK-->
+        {% include "./includes/section-break.html" %}
+        <!-- SECTION BREAK-->
+
+
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-heading-m">
+                  Hearing method
+                </h1>
+              </legend>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="hearing-type-in-person" name="hearing-type" type="radio" value="In person" data-aria-controls="conditional-hearing-type-in-person">
+                  <label class="govuk-label govuk-radios__label" for="hearing-type-in-person">
+                    In person
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hearing-type-in-person">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="hearing-location">
+                      Hearing location
+                    </label>
+                    <div class="govuk-form-group">
+
+                      <select class="govuk-select" id="hearing-location-list" name="hearing-location-list">
+                        <option value="Select location" selected>Select location</option>
+                        <option value="Luton">Luton</option>
+                        <option value="Nottingham">Nottingham</option>
+                        <option value="Peterborough">Peterborough</option>
+
+                      </select>
+                    </div>
+                  </div>
+          
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="hearing-type-video" name="hearing-type" type="radio" value="Video conference hearing">
+                  <label class="govuk-label govuk-radios__label" for="hearing-type-video">
+                    Video conference hearing
+                  </label>
+                </div>
+
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="hearing-type-telephone" name="hearing-type" type="radio" value="Telephone hearing">
+                  <label class="govuk-label govuk-radios__label" for="hearing-type-telephone">
+                    Telephone hearing
+                  </label>
+                </div>
+
+              </div>
+
+            </fieldset>
+          </div>
+
+  
+          
+
+        
+
+        <!-- SECTION BREAK-->
+        {% include "./includes/section-break.html" %}
+        <!-- SECTION BREAK-->
+
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-heading-m">
+                  Trial window
+                </h1>
+              </legend>
+              <h3 class="govuk-label govuk-label--s">
+                Window start date
+              </h3>
+              <div id="hearing-support-hint" class="govuk-hint">
+                The trial on this case will take place in a window starting on
+              </div>
+
+
+              <div class="govuk-date-input" id="hearing-length-other-dhm">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-days">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-days" name="hearing-length-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-hours">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-hours" name="hearing-length-other-hours" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-minutes">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="hearing-length-other-dhm-minutes" name="hearing-length-other-minutes" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+              </div>
+
+
+
+              <h3 class="govuk-label govuk-label--s">
+                Trial time estimate
+              </h3>
+
+              <div id="hearing-support-hint" class="govuk-hint">
+                The time provisionally allocated for the trial
+              </div>
+
+              <div class="govuk-date-input" id="hearing-length-other-dhm">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-days">
+                      Day(s)
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-days" name="hearing-length-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-hours">
+                      Hour(s)
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-hours" name="hearing-length-other-hours" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-minutes">
+                      Minutes(s)
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-minutes" name="hearing-length-other-minutes" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+              </div>
+
+
+
+            </fieldset>
+          </div>
+
+
+
+
+
+
+        <!-- SECTION BREAK-->
+        {% include "./includes/section-break.html" %}
+        <!-- SECTION BREAK-->
+
+
+
+ 
+
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Disclosure of documents
+              </h1>
+            </legend>
+
+            <p>
+              Each party shall give to every other party disclosure of documents by way of standard disclosure.
+            </p>
+
+            <h3 class="govuk-label govuk-label--s">
+              Select additional directions
+            </h3>
+
+
+
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="hearing-length-15-mins" name="hearing-length" type="radio" value="15 minutes">
+                <label class="govuk-label govuk-radios__label" for="hearing-length-15-mins">
+                  Documents relating to damage
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="hearing-length-30-mins" name="hearing-length" type="radio" value="30 minutes">
+                <label class="govuk-label govuk-radios__label" for="hearing-length-30-mins">
+                  Documents relating to a specific issue
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="hearing-length-45-mins" name="hearing-length" type="radio" value="45 minutes">
+                <label class="govuk-label govuk-radios__label" for="hearing-length-45-mins">
+                  No additional documents needed
+                </label>
+              </div>
+
+        </div>
+  
+          </fieldset>
+        </div>
+
+
+
+
+
+
+
+        <h3 class="govuk-label govuk-label--s">
+          Documents
+        </h3>
+        <div id="hearing-support-hint" class="govuk-hint">
+          Documents are required by 4pm on this date
+        </div>
+
+
+        <div class="govuk-date-input" id="hearing-length-other-dhm">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-days">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-days" name="hearing-length-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-hours">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-hours" name="hearing-length-other-hours" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-minutes">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="hearing-length-other-dhm-minutes" name="hearing-length-other-minutes" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- SECTION BREAK-->
+    {% include "./includes/section-break.html" %}
+    <!-- SECTION BREAK-->
+
+
+
+
+
+    
+ 
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+           Witness of fact
+          </h1>
+        </legend>
+
+        <p>
+          Each party shall give to every other party disclosure of documents by way of standard disclosure.
+        </p>
+
+        <h3 class="govuk-label govuk-label--s">
+          Witnesses
+        </h3>
+        <div id="hearing-support-hint" class="govuk-hint">
+          Witnesses limited as follows
+        </div>
+
+
+
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="hearing-length-15-mins" name="hearing-length" type="radio" value="15 minutes">
+            <label class="govuk-label govuk-radios__label" for="hearing-length-15-mins">
+              Each party shall have the same number of witnesses
+            </label>
+          </div>
+
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="hearing-length-30-mins" name="hearing-length" type="radio" value="30 minutes">
+            <label class="govuk-label govuk-radios__label" for="hearing-length-30-mins">
+              Each party shall have a different number of witnesses
+            </label>
+          </div>
+
+
+
+    </div>
+
+      </fieldset>
+    </div>
+
+
+
+
+
+
+
+    <h3 class="govuk-label govuk-label--s">
+      Statement exchange dates
+    </h3>
+    <div id="hearing-support-hint" class="govuk-hint">
+      There shall be a simultaneous exchange of such statements by 4pm on
+    </div>
+
+
+    <div class="govuk-date-input" id="hearing-length-other-dhm">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-days">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-days" name="hearing-length-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-hours">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-hours" name="hearing-length-other-hours" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-minutes">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="hearing-length-other-dhm-minutes" name="hearing-length-other-minutes" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+    </div>
+
+
+
+
+    <h3 class="govuk-label govuk-label--s">
+      Lorem
+    </h3>
+    <div id="hearing-support-hint" class="govuk-hint">
+      Lorem ipsum
+    </div>
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="hearing-support-access" name="hearing-support" type="checkbox" value="Disabled access">
+        <label class="govuk-label govuk-checkboxes__label" for="hearing-support-access">
+          There shall be sequential service of witness statements
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="hearing-support-loop" name="hearing-support" type="checkbox" value="Hearing loop">
+        <label class="govuk-label govuk-checkboxes__label" for="hearing-support-loop">
+          Oral evidence will not be permitted at trial
+        </label>
+      </div>
+
+
+
+
+
+
+
+<!-- SECTION BREAK-->
+{% include "./includes/section-break.html" %}
+<!-- SECTION BREAK-->
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="more-detail">
+      Schedules of loss
+    </label>
+  </h1>  
+
+ 
+
+
+
+
+
+  <h3 class="govuk-label govuk-label--s">
+    Claimant
+  </h3>
+  <div id="hearing-support-hint" class="govuk-hint">
+    The claimant shall serve an updated schedule of loss on the defendant(s) by 4pm on
+  </div>
+
+
+  <div class="govuk-date-input" id="hearing-length-other-dhm">
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-days">
+          Day
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-days" name="hearing-length-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
+      </div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-hours">
+          Month
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-hours" name="hearing-length-other-hours" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-minutes">
+          Year
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="hearing-length-other-dhm-minutes" name="hearing-length-other-minutes" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+    </div>
+  </div> 
+
+
+
+
+
+  <h3 class="govuk-label govuk-label--s">
+    Defendant
+  </h3>
+  <div id="hearing-support-hint" class="govuk-hint">
+    The defendant(s) counter schedule of loss on the claimant(s) by 4pm on
+  </div>
+
+
+  <div class="govuk-date-input" id="hearing-length-other-dhm">
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-days">
+          Day
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-days" name="hearing-length-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
+      </div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-hours">
+          Month
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-hours" name="hearing-length-other-hours" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-minutes">
+          Year
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="hearing-length-other-dhm-minutes" name="hearing-length-other-minutes" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+            
+            
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+    Lorem
+  </label>
+<textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+</div>  
+
+
+<div class="govuk-date-input" id="hearing-length-other-dhm">
+  <div class="govuk-date-input__item">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-days">
+        Day
+      </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-days" name="hearing-length-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
+    </div>
+  </div>
+  <div class="govuk-date-input__item">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-hours">
+        Month
+      </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="hearing-length-other-dhm-hours" name="hearing-length-other-hours" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+  </div>
+  <div class="govuk-date-input__item">
+    <div class="govuk-form-group">
+      <label class="govuk-label govuk-date-input__label" for="hearing-length-other-dhm-minutes">
+        Year
+      </label>
+      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="hearing-length-other-dhm-minutes" name="hearing-length-other-minutes" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+  </div>
+</div>
+
+
+
+
+<!-- SECTION BREAK-->
+{% include "./includes/section-break.html" %}
+<!-- SECTION BREAK-->
+
+
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Expert evidence
+            </h1>
+
+          </legend>
+          <p>No party has permission to rely upon expert evidence.</p>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hearing-length-15-mins" name="hearing-length" type="radio" value="15 minutes">
+              <label class="govuk-label govuk-radios__label" for="hearing-length-15-mins">
+                Report served with statements of case
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hearing-length-30-mins" name="hearing-length" type="radio" value="30 minutes">
+              <label class="govuk-label govuk-radios__label" for="hearing-length-30-mins">
+                Joint experts
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hearing-length-45-mins" name="hearing-length" type="radio" value="45 minutes">
+              <label class="govuk-label govuk-radios__label" for="hearing-length-45-mins">
+                A party having own experts
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hearing-length-1-hour" name="hearing-length" type="radio" value="1 hour">
+              <label class="govuk-label govuk-radios__label" for="hearing-length-1-hour">
+                Joint statement(s) of experts
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hearing-length-2-hours" name="hearing-length" type="radio" value="2 hours">
+              <label class="govuk-label govuk-radios__label" for="hearing-length-2-hours">
+                Experts - general orders
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="hearing-length-other" name="hearing-length" type="radio" value="Other" data-aria-controls="conditional-hearing-length-other">
+              <label class="govuk-label govuk-radios__label" for="hearing-length-other">
+              Experts - permission for oral expert evidence at trial
+              </label>
+            </div>
+
+
+
+
+
+              
+          </div>
+        </fieldset>
+
+      </div>
+
+      </div>
+
+      </fieldset>
+    </div>
+
+
+
+      
+<!-- SECTION BREAK-->
+{% include "./includes/section-break.html" %}
+<!-- SECTION BREAK-->
+
+
+
+    
+
+
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+    Court bundle
+  </label>
+<textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</textarea>
+</div>
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+      
+<!-- SECTION BREAK-->
+{% include "./includes/section-break.html" %}
+<!-- SECTION BREAK-->
+
+
+
+    
+
+
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+    Application to set aside, varied or stayed
+  </label>
+<textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</textarea>
+</div>
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+      
+<!-- SECTION BREAK-->
+{% include "./includes/section-break.html" %}
+<!-- SECTION BREAK-->
+
+
+
+    
+
+
+
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="more-detail">
+      Claim type
+    </label>
+  </h1>  
+
+
+  <h3 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--s" for="more-detail">
+      RTA
+    </label>
+  </h3>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+
+  <h3 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--s" for="more-detail">
+      Noise induced hearing loss
+    </label>
+  </h3>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</textarea>
+</div>
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+        
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+        <div class="govuk-button-group">
+
+          
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="#">Cancel</a>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
