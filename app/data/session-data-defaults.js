@@ -21,12 +21,12 @@ module.exports = {
 
   // Insert values here
   "defendant": "Mary Richards",
-  "claimAmount": 10000,
+  "claimAmount": 1200,
   "claimFee": 70,
   "claimSubtotal": 1200,
   "claimAmountPaid": 100,
-  "claimTotalOwed": 1100, 
-  
+  "claimTotalOwed": 1100,
+
   "monthName": [
     "",
     "January",
@@ -42,7 +42,7 @@ module.exports = {
     "November",
     "December"
   ],
- 
+
   "shortMonthName": [
     "",
     "Jan",
@@ -60,7 +60,7 @@ module.exports = {
   ],
 
   "dateCount": 0,
- 
+
   "startDate": [],
   "endDate": [],
   "id": [],

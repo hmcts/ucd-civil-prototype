@@ -10,16 +10,27 @@
     <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">Default judgment requested</h1>
+        <h1 class="govuk-panel__title">Default judgment
+          {% if (data['defendant'] === 'Both defendants') %}
+           granted
+        {% else %}
+          requested
+        {% endif %}
+      </h1>
         <div class="govuk-panel__body">
-          Case number<br><strong>#1522-0584-2506-7027</strong>
+          <strong>#1522-0584-2506-7027</strong>
         </div>
       </div>
 
+{% if data['defendant'] === "Both defendants" %}
+<p>
+  <a href="/">Download default judgment</a> <br> The defendant will be served the Default Judgment.
+</p>
+{% else %}
       <p>
-        Copy to be reviewed. There's a note about it on Miro.
+        A default Judgment has been sent to {{data['defendant']}}. The claim will now progress offline (on paper)
       </p>
-
+{% endif %}
       <!-- <h2 class="govuk-heading-m">What happens next</h2>
       <p>We've sent your application to Hackney Electoral Register Office.</p>
       <p>They will contact you either to confirm your registration, or to ask for more information.</p> -->
@@ -28,5 +39,6 @@
 
     </div>
   </div>
+
 
 {% endblock %}

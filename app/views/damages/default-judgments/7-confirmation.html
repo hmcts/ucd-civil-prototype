@@ -10,15 +10,22 @@
     <div class="govuk-grid-column-two-thirds">
 
       <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">Judgment for damages to decided requested</h1>
+        <h1 class="govuk-panel__title">Judgment for damages to be decided requested</h1>
         <div class="govuk-panel__body">
-          Case number<br><strong>#1522-0584-2506-7027</strong>
+          <strong>#1522-0584-2506-7027</strong>
         </div>
       </div>
 
+      
+      {% if data['defendant'] === "Both defendants" %}
       <p>
-        Copy to be reviewed. There's a note about it on Miro. 
+        <a href="/">Download interim judgment</a> <br> Judgment has been entered and your case will be referred to a judge for directions.
       </p>
+      {% else %}
+      <p>
+        Your request will be refered to a judge and we will contact you and tell you what happens next.
+      </p>
+      {% endif %}
 
       <!-- <h2 class="govuk-heading-m">What happens next</h2>
       <p>We've sent your application to Hackney Electoral Register Office.</p>
