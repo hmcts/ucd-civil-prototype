@@ -18,6 +18,8 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
+
+
       <h1 class="govuk-caption-m">#1522-0584-2506-7027</h1>
       <h1 class="govuk-heading-l">Choose outcome of application</h1>
 
@@ -31,6 +33,27 @@
                 Make an order
               </h1>
             </legend>
+
+            <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+              <div class="govuk-notification-banner__header">
+                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                  Important
+                </h2>
+              </div>
+              <div class="govuk-notification-banner__content">
+                <p class="govuk-notification-banner__heading">
+                  This application is cloaked
+                </p>
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="cloaked" name="cloaked" type="checkbox" value="cloaked">
+                    <label class="govuk-label govuk-checkboxes__label" for="cloaked">
+                      Make application visible to all parties
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
             
 
             <div class="govuk-form-group">
@@ -53,40 +76,47 @@
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="judges-decision-make-order" name="judges-decision" type="radio" value="make-order" data-aria-controls="conditional-judges-decision-make-order">
                   <label class="govuk-label govuk-radios__label" for="judges-decision-make-order">
-                    Make an order in the form requested by the applicant
+                    Approve or edit the order requested by the applicant
                   </label>
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-judges-decision-make-order">
                   <div class="govuk-form-group">
                     <label class="govuk-label" for="judges-decision-make-order-content">
-                      Draft order content
+                      Order
                     </label>
-                    <textarea class="govuk-textarea" id="judges-decision-make-order-content" name="judges-decision-make-order-content" rows="5""></textarea>
-
+                    <textarea class="govuk-textarea" id="judges-decision-make-order-content" name="judges-decision-make-order-content" rows="5">[This is the order requested by the applicant]</textarea>
                   </div>
-          
                 </div>
 
 
                 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="judges-decision-dismiss-application" name="judges-decision" type="radio" value="dismiss-application">
+                  <input class="govuk-radios__input" id="judges-decision-dismiss-application" name="judges-decision" type="radio" value="dismiss-application" data-aria-controls="conditional-dismiss-application">
                   <label class="govuk-label govuk-radios__label" for="judges-decision-dismiss-application">
                     Dismiss the application
                   </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-dismiss-application">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="dismiss-application-content">
+                      Dismissal order
+                    </label>
+                    <textarea class="govuk-textarea" id="dismiss-application-content" name="dismiss-application-content" rows="5">This application is dismissed. 
+
+[Any other order, including in relation to costs]
+
+A person who was not notified of the application before this order was made may apply to have the order set aside or varied. Any application under this paragraph must be made within 7 days after notification of the order.</textarea>
+                  </div>
                 </div>
 
                 
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="judges-decision-make-directions" name="judges-decision" type="radio" value="make-directions">
                   <label class="govuk-label govuk-radios__label" for="judges-decision-make-directions">
-                    Make directions
+                    Give directions
                   </label>
                 </div>
-                
-
-
-          
+        
                 </div>
               </div>
 
@@ -97,49 +127,8 @@
                   </label>
                 </h1>
   
-                <textarea class="govuk-textarea" id="reasons-for-decision" name="reasons-for-decision" rows="10""></textarea>
+                <textarea class="govuk-textarea" id="reasons-for-decision" name="reasons-for-decision" rows="10"></textarea>
               </div>
-  
-
-
-
-
-            <div class="govuk-inset-text">
-              This application is cloaked
-            </div>
-
-          
-
-        
-
-
-            <details class="govuk-details" data-module="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  Change application status
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset">
-  
-                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="application-status-visibility" name="application-status" type="checkbox" value="visibility">
-                        <label class="govuk-label govuk-checkboxes__label" for="application-status-visibility">
-                          Make application visible to all parties
-                        </label>
-                      </div>
-                    </div>
-              </div>
-            </details>
-
-
-
-
-
-
-
           </fieldset>
         </div>
 
