@@ -1,19 +1,23 @@
 {% extends "layout-manage-cases.html" %}
 
 {% block pageTitle %}
-  Enter hearing details
+Do you agree that the court should make the order that the applicant has requested?
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/ocmc/general-applications/application-submission/5-enter-order">Back</a>
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Enter hearing details</h1>
-      <form class="form" action="/ocmc/general-applications/application-submission/6-hearing-details" method="post">
+
+      <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+      <h1 class="govuk-heading-xl">Respond to application</h1>
+
+
+      <form class="form" action="/ocmc/general-applications/Responce-journey/2-hearing-details" method="post">
         {% include "includes/hearing-details/hearing-scheduled.html" %}
         {% include "includes/hearing-details/reserved-to-judge.html" %}
         {% include "includes/hearing-details/trial-date.html" %}
@@ -21,7 +25,6 @@
         {% include "includes/hearing-details/hearing-estimate.html" %}
         {% include "includes/hearing-details/unavailable-dates.html" %}
         {% include "includes/hearing-details/hearing-support.html" %}
-
         {% include "../../../includes/buttons.html" %}
       </form>
     </div>
