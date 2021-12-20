@@ -28,7 +28,7 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-heading-m">
-                Written representation
+                Make an order for written representations
               </h1>
             </legend>
             
@@ -49,7 +49,7 @@
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="sequential-disclosure" name="disclosure-type" type="radio" value="sequential-disclosure" data-aria-controls="conditional-sequential-disclosure"">
                     <label class="govuk-label govuk-radios__label" for="sequential-disclosure">
-                      Sequential disclosure
+                      Sequential representations
                     </label>
                   </div>
 
@@ -58,269 +58,46 @@
 
 
 
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sequential-disclosure"">
-                     
-                     
-                     
-                      <!--Sequential disclosure radios - SERVE-->
-                     
-                     
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sequential-disclosure">
                      
                       <div class="govuk-form-group">
-                      <label class="govuk-label" for="conditional-sequential-disclosure">
-                        The Respondent must serve any written representations by 4pm in:
-                      </label>
-                
-                      
-                
-                
-                
-                
-
-
-                      <div class="govuk-form-group">
-
-
-
-
-                        <fieldset class="govuk-fieldset">
-                      
-                      
-                      
-                      
-
-                      
-                      
-                      
-
-                      
-                      
-                      
-                      
-                      
-                          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                      
-                      
-                      
-                      
-                      
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="sequential-respondent-serve-2-days" name="sequential-respondent-serve" type="radio" value="2-days" data-aria-controls="conditional-serve">
-                              <label class="govuk-label govuk-radios__label" for="sequential-respondent-serve-2-days">
-                                2 days
-                              </label>
-                            </div>
-                      
-
-                      
-                      
-                      
-                      
-                      
-                      
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="sequential-respondent-serve-5-days" name="sequential-respondent-serve" type="radio" value="5-days" data-aria-controls="conditional-serve-2">
-                              <label class="govuk-label govuk-radios__label" for="sequential-respondent-serve-5-days">
-                                5 days
-                              </label>
-                            </div>
-                      
-
-                      
-                      
-                      
-                      
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="sequential-respondent-serve-10-days" name="sequential-respondent-serve" type="radio" value="10-days" data-aria-controls="conditional-serve-3">
-                              <label class="govuk-label govuk-radios__label" for="sequential-respondent-serve-10-days">
-                                10 days
-                              </label>
-                            </div>
-                      
-
-                      
-                      
-                      
-                      
-                      
-                            <div class="govuk-radios__item">
-                              <input class="govuk-radios__input" id="sequential-respondent-serve-other" name="sequential-respondent-serve" type="radio" value="other" data-aria-controls="conditional-sequential-respondent-serve-other">
-                              <label class="govuk-label govuk-radios__label" for="sequential-respondent-serve-other">
-                                Other
-                              </label>
-                            </div>
-                      
-                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sequential-respondent-serve-other">
+                        <fieldset class="govuk-fieldset" role="group">
+                          <legend class="govuk-fieldset__legend">
+                            The respondent may upload any written representations by 4pm on
+                          </legend>
+                          <div class="govuk-date-input" id="sequential-rep-upload">
+                            <div class="govuk-date-input__item">
                               <div class="govuk-form-group">
-                                <label class="govuk-label" for="sequential-respondent-serve-other-days">
-                                  Day(s)
+                                <label class="govuk-label govuk-date-input__label" for="sequential-rep-upload-day">
+                                  Day
                                 </label>
-                                <input class="govuk-input govuk-input--width-4" id="sequential-respondent-serve-other-days" name="sequential-respondent-serve-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
-                              </div>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sequential-rep-upload-day" name="sequential-rep-upload-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
                             </div>
-                      
-                      
-                      
-                      
-                      
-                      
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="sequential-rep-upload-month">
+                                  Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sequential-rep-upload-month" name="sequential-rep-upload-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="sequential-rep-upload-year">
+                                  Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="sequential-rep-upload-year" name="sequential-rep-upload-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                            </div>
                           </div>
-
-
-
-                          
-                      
                       
                         </fieldset>
-                      
-                      
                       </div>
-                
-                      
-                
-                
-                
-                
-                
-                      </div>
-                
 
-
-
-
-
-                      <!--Sequential disclosure radios - RESPOND-->
-
-
-
-                      <div class="govuk-form-group">
-                        <label class="govuk-label" for="conditional-disclosure">
-                          Once the Respondent has replied, the Applicant must respond in:
+                      <div class="govuk-form-group govuk-body">
+                        <label class="govuk-label" for="respond-within">
+                          Once the respondent has uploaded written representations, the applicant must respond within
                         </label>
-                  
-                        
-                  
-                  
-                  
-                  
-
-
-                        <div class="govuk-form-group">
-
-
-
-
-                          <fieldset class="govuk-fieldset">
-                        
-                        
-                        
-                        
-
-                        
-                        
-                        
-
-                        
-                        
-                        
-                        
-                        
-                            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                        
-                        
-                        
-                        
-                        
-                              <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="sequential-applicant-respond-2-days" name="sequential-applicant-respond" type="radio" value="2-days">
-                                <label class="govuk-label govuk-radios__label" for="applicant-respond-2-days">
-                                  2 days
-                                </label>
-                              </div>
-                        
-
-                        
-                        
-                        
-                        
-                        
-                        
-                              <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="sequential-applicant-respond-5-days" name="sequential-applicant-respond" type="radio" value="5-days">
-                                <label class="govuk-label govuk-radios__label" for="sequential-applicant-respond-5-days">
-                                  5 days
-                                </label>
-                              </div>
-                        
-
-                        
-                        
-                        
-                        
-                              <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="sequential-applicant-respond-10-days" name="sequential-applicant-respond" type="radio" value="10-days">
-                                <label class="govuk-label govuk-radios__label" for="sequential-applicant-respond-10-days">
-                                  10 days
-                                </label>
-                              </div>
-                        
-
-                        
-                        
-                        
-                        
-                        
-                              <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="sequential-applicant-respond-other" name="sequential-applicant-respond" type="radio" value="text" data-aria-controls="conditional-sequential-applicant-respond-other">
-                                <label class="govuk-label govuk-radios__label" for="sequential-applicant-respond-other">
-                                  Other
-                                </label>
-                              </div>
-                        
-                              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-sequential-applicant-respond-other">
-                                <div class="govuk-form-group">
-                                  <label class="govuk-label" for="sequential-applicant-respond-other-days">
-                                    Day(s)
-                                  </label>
-                                  <input class="govuk-input govuk-input--width-4" id="sequential-applicant-respond-other-days" name="sequential-applicant-respond-other-days" type="text" pattern="[0-9]*" inputmode="numeric">
-                                </div>
-                              </div>
-                        
-                        
-                        
-                        
-                        
-                        
-                            </div>
-
-
-
-                            
-                        
-                        
-                          </fieldset>
-                        
-                        
-                        </div>
-                  
-                        
-                  
-                  
-                  
-                  
-                  
+                        <input class="govuk-input govuk-input--width-3" id="respond-within" name="respond-within" type="text"> day(s)
                       </div>
-                
-
-
-
-
-
-
-
-
-
-
 
                     </div>
 
@@ -334,165 +111,43 @@
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="concurrent-disclosure" name="disclosure-type" type="radio" value="concurrent-disclosure" data-aria-controls="conditional-concurrent-disclosure">
                     <label class="govuk-label govuk-radios__label" for="concurrent-disclosure">
-                      Concurrent disclosure
+                      Concurrent representations
                     </label>
                   </div>
 
 
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-concurrent-disclosure">
-                     
-                     
-                     
-                    <!--Sequential disclosure radios - SERVE-->
-                   
-                   
-                   
                     <div class="govuk-form-group">
-                    <label class="govuk-label" for="conditional-concurrent-disclosure">
-                      Any written representations must be served in:
-                    </label>
-              
-                    
-              
-              
-              
-              
-
-
-                    <div class="govuk-form-group">
-
-
-
-
-                      <fieldset class="govuk-fieldset">
-                    
-                    
-                    
-                    
-
-                    
-                    
-                    
-
-                    
-                    
-                    
-                    
-                    
-                        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                    
-                    
-                    
-                    
-                    
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="concurrent-serve-7-days" name="concurrent-serve" type="radio" value="7-days">
-                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-7-days">
-                              7 days
-                            </label>
-                          </div>
-                    
-
-                    
-                    
-                    
-                    
-                    
-                    
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="concurrent-serve-14-days" name="concurrent-serve" type="radio" value="14-days">
-                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-14-days">
-                              14 days
-                            </label>
-                          </div>
-                    
-
-                    
-                    
-                    
-                    
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="concurrent-serve-21-days" name="concurrent-serve" type="radio" value="21-days">
-                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-21-days">
-                              21 days
-                            </label>
-                          </div>
-                  
-
-                    
-                    
-                    
-                    
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="concurrent-serve-28-days" name="concurrent-serve" type="radio" value="28-days">
-                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-28-days">
-                              28 days
-                            </label>
-                          </div>
-                    
-
-                    
-                    
-                    
-                    
-                    
-                          <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="concurrent-serve-other" name="concurrent-serve" type="radio" value="text" data-aria-controls="conditional-concurrent-serve-other">
-                            <label class="govuk-label govuk-radios__label" for="concurrent-serve-other">
-                              Other
-                            </label>
-                          </div>
-                    
-                          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-concurrent-serve-other">
+                      <fieldset class="govuk-fieldset" role="group">
+                        <legend class="govuk-fieldset__legend">
+                          Any written representations and any further witness statements may be uploaded by 4pm on
+                        </legend>
+                        <div class="govuk-date-input" id="concurrent-rep-upload">
+                          <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
-                              <label class="govuk-label" for="concurrent-serve-by-text">
-                                Day(s)
+                              <label class="govuk-label govuk-date-input__label" for="concurrent-rep-upload-day">
+                                Day
                               </label>
-                              <input class="govuk-input govuk-input--width-4" id="concurrent-serve-by-text" name="concurrent-serve-by-text" type="tel" autocomplete="tel">
-                            </div>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="concurrent-rep-upload-day" name="concurrent-rep-upload-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
                           </div>
-                    
-                    
-                    
-                    
-                    
-                    
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="concurrent-rep-upload-month">
+                                Month
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="concurrent-rep-upload-month" name="concurrent-rep-upload-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="concurrent-rep-upload-year">
+                                Year
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="concurrent-rep-upload-year" name="concurrent-rep-upload-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
                         </div>
-
-
-
-                        
-                    
                     
                       </fieldset>
-                    
-                    
                     </div>
-              
-                    
-              
-              
-              
-              
-              
-                    </div>
-              
-
-
-
-
-              
-
-
-
-
-
-
-
-
-
-
-
                   </div>
 
 
@@ -514,9 +169,6 @@
 
           
    
-      
-              </fieldset>
-            </div>
 
 
 
