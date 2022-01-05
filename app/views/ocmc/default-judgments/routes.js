@@ -14,12 +14,12 @@ router.post('/ocmc/default-judgments/2-defendant', function(req, res) {
             res.redirect('/ocmc/default-judgments/3-request-judgment-statements')
         }
         else {
-            res.render('.//ocmc/default-judgments/2-defendant', { errors: errors })  
+            res.render('.//ocmc/default-judgments/2-defendant', { errors: errors })
         }
     }
     else {
         res.redirect('/index')
-    }    
+    }
 })
 
 router.post('/sps/work-in-progress/how-to-get-tax-letters', (req, res) => {
@@ -33,7 +33,7 @@ router.post('/sps/work-in-progress/how-to-get-tax-letters', (req, res) => {
 	if (errors.length === 0) {
 	  if (req.body['howContacted'] === 'Online') {
 		res.redirect('/sps/work-in-progress/add-email')
-	  } 
+	  }
     else {
         if (req.session.data.route === 'external') {
           res.redirect('/sps/work-in-progress/confirmation-post-alternative')
@@ -59,8 +59,8 @@ router.post('/ocmc/default-judgments/3-request-judgment-statements', function(re
     }
     else {
         res.redirect('/ocmc/default-judgments/2-defendant')
-    }        
-    
+    }
+
 })
 
 router.post('/ocmc/default-judgments/4-payments-made', function(req, res) {
@@ -68,7 +68,7 @@ router.post('/ocmc/default-judgments/4-payments-made', function(req, res) {
         req.session.data.claimAmountPaid = 0
     }
     console.log("Defendant", req.session.data.defendant)
-    
+
 
     // number formatting to show eg 1200 as 1,200
     req.session.data.claimSubtotal = req.session.data.claimAmount + req.session.data.claimFee
@@ -81,11 +81,20 @@ router.post('/ocmc/default-judgments/4-payments-made', function(req, res) {
     req.session.data.displayTotalOwed = Number(req.session.data.claimTotalOwed).toLocaleString('en', {useGrouping:true})
 
     if (req.body['submit-button'] === 'continue') {
-        res.redirect('/ocmc/default-judgments/5-judgment-amount')
+        res.redirect('/ocmc/default-judgments/4e-fixed-cost')
     }
     else {
         res.redirect('/ocmc/default-judgments/3-request-judgment-statements')
-    }    
+    }
+})
+
+router.post('/ocmc/default-judgments/4e-fixed-cost', function(req, res) {
+    if (req.body['submit-button'] === 'continue') {
+        res.redirect('/ocmc/default-judgments/5-judgment-amount')
+    }
+    else {
+        res.redirect('/ocmc/default-judgments/4-payments-made')
+    }
 })
 
 router.post('/ocmc/default-judgments/5-judgment-amount', function(req, res) {
@@ -94,7 +103,7 @@ router.post('/ocmc/default-judgments/5-judgment-amount', function(req, res) {
     }
     else {
         res.redirect('/ocmc/default-judgments/4-payments-made')
-    }    
+    }
 })
 
 router.post('/ocmc/default-judgments/6-how-to-pay', function(req, res) {
@@ -116,7 +125,7 @@ router.post('/ocmc/default-judgments/6-how-to-pay', function(req, res) {
     }
     else {
         res.redirect('/ocmc/default-judgments/5-judgment-amount')
-    }        
+    }
 })
 
 router.post('/ocmc/default-judgments/6c-repayment-plan', function(req, res) {
@@ -124,12 +133,12 @@ router.post('/ocmc/default-judgments/6c-repayment-plan', function(req, res) {
         var month = req.body['start-month']
         req.session.data.paymentStartDate = req.body['start-day'] + " " + req.session.data.monthName[month] + " " + req.body['start-year']
         req.session.data.displayRegularPayment = Number(req.session.data.regularPayment).toLocaleString('en', {useGrouping:true})
-    
+
         res.redirect('/ocmc/default-judgments/7-check-your-answers')
     }
     else {
         res.redirect('/ocmc/default-judgments/6-how-to-pay')
-    }    
+    }
 })
 
 router.post('/ocmc/default-judgments/7-check-your-answers', function(req, res) {
@@ -143,7 +152,7 @@ router.post('/ocmc/default-judgments/7-check-your-answers', function(req, res) {
         else {
             res.redirect('/ocmc/default-judgments/6-how-to-pay')
         }
-    }    
+    }
 })
 
 
@@ -164,7 +173,7 @@ router.post('/sps/work-in-progress/how-to-verify', function(req, res) {
       if (req.body['verifyOrChange'] === 'verify') {
           res.redirect('/sps/work-in-progress/confirmation-email-sent')
       } else {
-        if (req.session.data.route === 'external' || req.session.data.route === 'current-bouncing' || req.session.data.route === 'current-unverified') { 
+        if (req.session.data.route === 'external' || req.session.data.route === 'current-bouncing' || req.session.data.route === 'current-unverified') {
           res.redirect('/sps/work-in-progress/how-to-verify')
         }
         else {
@@ -173,7 +182,7 @@ router.post('/sps/work-in-progress/how-to-verify', function(req, res) {
       }
       }
   })
-  
+
   // Error messages on how-to-get-tax-letters
   router.post('/sps/work-in-progress/how-to-get-tax-letters', (req, res) => {
       var errors = []
@@ -186,7 +195,7 @@ router.post('/sps/work-in-progress/how-to-verify', function(req, res) {
       if (errors.length === 0) {
         if (req.body['howContacted'] === 'Online') {
           res.redirect('/sps/work-in-progress/add-email')
-        } 
+        }
       else {
           if (req.session.data.route === 'external') {
             res.redirect('/sps/work-in-progress/confirmation-post-alternative')
@@ -209,13 +218,13 @@ router.post('/sps/work-in-progress/how-to-verify', function(req, res) {
   router.post('/ocmc/default-judgments/judge-journey/initial-decision', function (req, res) {
 
     var applicationDecision = req.session.data['application-decision']
-  
+
      if (applicationDecision == "disposal-hearing"){
        res.redirect('./disposal-hearing')
          } else {
        res.redirect('./trial')
      }
-  
+
   })
 
 

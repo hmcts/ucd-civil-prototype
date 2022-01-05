@@ -12,11 +12,14 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
+      <form class="form" action="/ocmc/default-judgments/7-check-your-answers" method="post">
+
+
       <span class="govuk-caption-m">#1522-0584-2506-7027</span>
       <h1 class="govuk-heading-l">Check your answers</h1>
-      
+
       <!-- Multiple defendants -->
-      {% if (data['defendant'] === 'Both defendants') %}      
+      {% if (data['defendant'] === 'Both defendants') %}
       <h2 class="govuk-heading-m">Defendants' details</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -49,7 +52,7 @@
           </dd>
         </div>
       </dl>
-      
+
       <!-- One defendant -->
       {% else %}
       <h2 class="govuk-heading-m">Defendant's details</h2>
@@ -71,7 +74,7 @@
         </div>
       </dl>
       {% endif %}
-      
+
       <h2 class="govuk-heading-m">Payment</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -124,7 +127,7 @@
             </a>
           </dd>
         </div>
-      
+
         <!-- Paid by set date-->
         {% elseif (data['how-to-pay'] === "By a set date") %}
         <div class="govuk-summary-list__row">
@@ -219,14 +222,15 @@
         </div>
 
         {% endif %}
-      
+
       </dl>
 
-      <form class="form" action="/ocmc/default-judgments/7-check-your-answers" method="post">
+
+
       <!-- Buttons -->
       {% include "../../includes/buttons.html" %}
+      </div>
       </form>
-
-    </div>
+  </div>
   </div>
 {% endblock %}
