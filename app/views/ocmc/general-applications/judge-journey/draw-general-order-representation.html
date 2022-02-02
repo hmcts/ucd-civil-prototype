@@ -7,7 +7,6 @@
 {% block beforeContent %}
 {% include "./includes/phase-banner.html" %}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
 {% endblock %}
 
@@ -18,56 +17,37 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-caption-m">#1522-0584-2506-7027</h1>
-      <h1 class="govuk-heading-l">Choose outcome of application</h1>
+      <h1 class="govuk-heading-l">
+        Draw a General Order
+        <span class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold claim-number-title">#1344-0992-2231-9776</span>
+      </h1>
 
 
       <form class="form" action="/ocmc/general-applications/judge-journey/make-order" method="post">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-heading-m">
-                Draw a General Order
-              </h1>
-            </legend>
+
             
 
-            <div class="govuk-form-group">
-              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+          <div class="govuk-form-group">
+              <label class="govuk-label" for="judge-recital">
                 Judge's recital
               </label>
-
-
-            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Upon the application of [party] dated [date] and upon considering the information provided by the parties</textarea>
-
-
-
+            <textarea class="govuk-textarea" id="judge-recital" name="judge-recital" rows="5" aria-describedby="more-detail-hint">Upon the application of [party] dated [date] and upon considering the information provided by the parties</textarea>
           </div>
 
-
-        
-
-            <div class="govuk-inset-text">
-              <h3 class="govuk-heading-s">The respondent may upload any written representations by 4pm on</h3>
-              [entered date]
-            </div>
-
+          <ul class="govuk-list govuk-list--bullet">
+            <li>The respondent may upload any written representations by 4pm on [entered date]</li>
+            <li>Once the respondent has uploaded written representations, the applicant must respond within [entered date]</li>
+          </ul>
           
 
-            <div class="govuk-inset-text">
-              <h3 class="govuk-heading-s">Once the respondent has uploaded written representations, the applicant must respond within</h3>
-              [entered date]
-            </div>
-
-
             <div class="govuk-form-group">
-              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail">
+              <label class="govuk-label" for="directions">
                 Directions in relation to hearing
                 </label>
-              </h1>
 
-              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint">A person who was not notified of the application before this order was made may apply to have the order set aside or varied. Any application under this paragraph must be made within 7 days after notification of the order.
+              <textarea class="govuk-textarea" id="directions" name="directions" rows="10" aria-describedby="more-detail-hint">A person who was not notified of the application before this order was made may apply to have the order set aside or varied. Any application under this paragraph must be made within 7 days after notification of the order.
               </textarea>
             </div>
 
@@ -77,20 +57,8 @@
 
 
 
-          </fieldset>
-        </div>
 
-
-
-        <div class="govuk-button-group">
-
-          
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-          <a class="govuk-link" href="#">Cancel</a>
-
-        </div>
+        {% include "../../../includes/buttons.html" %}
 
       </form>
 

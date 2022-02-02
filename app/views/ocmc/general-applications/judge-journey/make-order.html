@@ -7,7 +7,6 @@
 {% block beforeContent %}
 {% include "./includes/phase-banner.html" %}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
 {% endblock %}
 
@@ -20,58 +19,47 @@
 
 
 
-      <h1 class="govuk-caption-m">#1522-0584-2506-7027</h1>
-      <h1 class="govuk-heading-l">Choose outcome of application</h1>
-
+      <h1 class="govuk-heading-l">
+        Choose outcome of application
+        <span class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold claim-number-title">#1344-0992-2231-9776</span>
+      </h1>
 
       <form class="form" action="/ocmc/general-applications/judge-journey/make-order" method="post" novalidate>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-heading-m">
-                Make an order
-              </h1>
-            </legend>
 
-            <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-              <div class="govuk-notification-banner__header">
-                <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-                  Important
-                </h2>
-              </div>
-              <div class="govuk-notification-banner__content">
-                <p class="govuk-notification-banner__heading">
-                  This application is cloaked
-                </p>
-                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="cloaked" name="cloaked" type="checkbox" value="cloaked">
-                    <label class="govuk-label govuk-checkboxes__label" for="cloaked">
-                      Make application visible to all parties
-                    </label>
-                  </div>
-                </div>
-              </div>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Important
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            This application is cloaked
+          </p>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="cloaked" name="cloaked" type="checkbox" value="cloaked">
+              <label class="govuk-label govuk-checkboxes__label" for="cloaked">
+                Make application visible to all parties
+              </label>
             </div>
-            
+          </div>
+        </div>
+      </div>
+
 
             <div class="govuk-form-group">
-              <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="judges-recital">
-                Judge's recital
-              </label>
+                <label class="govuk-label" for="judges-recital">
+                  Judge's recital
+                </label>
 
 
-            <textarea class="govuk-textarea" id="judges-recital" name="judges-recital" rows="5">Upon the application of [party] dated [date] and upon considering the information provided by the parties</textarea>
-
-
-
-          </div>
+              <textarea class="govuk-textarea" id="judges-recital" name="judges-recital" rows="5">Upon the application of [party] dated [date] and upon considering the information provided by the parties</textarea>
+            </div>
 
 
           <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-
               <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="judges-decision-make-order" name="judges-decision" type="radio" value="make-order" data-aria-controls="conditional-judges-decision-make-order">
@@ -111,38 +99,69 @@ A person who was not notified of the application before this order was made may 
 
                 
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="judges-decision-make-directions" name="judges-decision" type="radio" value="make-directions">
+                  <input class="govuk-radios__input" id="judges-decision-make-directions" name="judges-decision" type="radio" value="make-directions" data-aria-controls="conditional-make-directions">
                   <label class="govuk-label govuk-radios__label" for="judges-decision-make-directions">
-                    Give directions
+                    Give directions without listing for a hearing
                   </label>
                 </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-make-directions">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="dismiss-application-content">
+                      Enter directions
+                    </label>
+                    <textarea class="govuk-textarea" id="make-directions-content" name="make-directions-content" rows="5"></textarea>
+                </div>
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" role="group">
+                    <legend class="govuk-fieldset__legend">
+                      Respond by 4pm on
+                    </legend>
+                    <div class="govuk-date-input" id="sequential-rep-upload">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="sequential-rep-upload-day">
+                            Day
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sequential-rep-upload-day" name="sequential-rep-upload-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="sequential-rep-upload-month">
+                            Month
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="sequential-rep-upload-month" name="sequential-rep-upload-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="sequential-rep-upload-year">
+                            Year
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="sequential-rep-upload-year" name="sequential-rep-upload-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                      </div>
+                    </div>
+                
+                  </fieldset>
+                </div>
+
         
                 </div>
               </div>
+          </div>
 
 
               <div class="govuk-form-group">
-                <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="reasons-for-decision">
+                <label class="govuk-label" for="reasons-for-decision">
                     Reasons for decision
                   </label>
-                </h1>
-  
+                
                 <textarea class="govuk-textarea" id="reasons-for-decision" name="reasons-for-decision" rows="10"></textarea>
               </div>
-          </fieldset>
-        </div>
 
 
 
-        <div class="govuk-button-group">
 
-          
-          <button type="submit" class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-          <a class="govuk-link" href="#">Cancel</a>
-
-        </div>
+              {% include "../../../includes/buttons.html" %}
 
       </form>
 

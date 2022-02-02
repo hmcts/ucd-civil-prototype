@@ -6,7 +6,6 @@ Request information needed
 
 {% block beforeContent %}
 {% include "./includes/phase-banner.html" %}
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 
@@ -14,158 +13,141 @@ Request information needed
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-caption-m">#1522-0584-2506-7027</h1>
-    <h1 class="govuk-heading-l">Request more information</h1>
+    <h1 class="govuk-heading-l">
+      Request more information
+      <span class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold claim-number-title">#1344-0992-2231-9776</span>
+    </h1>
 
 
     <form class="form" form action="/ocmc/general-applications/judge-journey/request-more-information" method="post"
       novalidate>
 
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-heading-m">
-              More infomation needed
-            </h1>
-          </legend>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="request-more-information-more-needed"
+                name="request-more-information" type="radio" value="more-needed"
+                data-aria-controls="conditional-request-more-information-more-needed">
+              <label class="govuk-label govuk-radios__label" for="request-more-information-more-needed">
+                Request more information
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="conditional-request-more-information-more-needed">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="request-more-information-more-needed-information">
+                  Enter the information required
+                </label>
+                <textarea class="govuk-textarea" id="request-more-information-more-needed-information"
+                  name="request-more-information-more-needed-information" rows="5"></textarea>
 
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-
-              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="request-more-information-more-needed"
-                    name="request-more-information" type="radio" value="more-needed"
-                    data-aria-controls="conditional-request-more-information-more-needed">
-                  <label class="govuk-label govuk-radios__label" for="request-more-information-more-needed">
-                    Request more information
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                  id="conditional-request-more-information-more-needed">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label" for="request-more-information-more-needed-information">
-                      Enter the information required
-                    </label>
-                    <textarea class="govuk-textarea" id="request-more-information-more-needed-information"
-                      name="request-more-information-more-needed-information" rows="5"></textarea>
-
-                  </div>
-
-                  <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" role="group">
-                      <legend class="govuk-fieldset__legend">
-                        Applicant must respond by 4pm on
-                      </legend>
-                      <div class="govuk-date-input" id="info-request">
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="info-request-day">
-                              Day
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
-                              id="info-request-day" name="info-request-day" type="text" pattern="[0-9]*"
-                              inputmode="numeric">
-                          </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="info-request-month">
-                              Month
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
-                              id="info-request-month" name="info-request-month" type="text" pattern="[0-9]*"
-                              inputmode="numeric">
-                          </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="info-request-year">
-                              Year
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-4"
-                              id="info-request-year" name="info-request-year" type="text" pattern="[0-9]*"
-                              inputmode="numeric">
-                          </div>
-                        </div>
-                      </div>
-
-                    </fieldset>
-                  </div>
-
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="request-more-information-send-application"
-                    name="request-more-information" type="radio" value="send-application"
-                    data-aria-controls="conditional-send-application">
-                  <label class="govuk-label govuk-radios__label" for="request-more-information-send-application">
-                    Send application to other party and request hearing details
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                  id="conditional-send-application">
-                  <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" role="group">
-                      <legend class="govuk-fieldset__legend">
-                        Parties must respond by 4pm on
-                      </legend>
-                      <div class="govuk-date-input" id="send-application">
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="send-application-day">
-                              Day
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
-                              id="send-application-day" name="send-application-day" type="text" pattern="[0-9]*"
-                              inputmode="numeric">
-                          </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="send-application-month">
-                              Month
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-2"
-                              id="send-application-month" name="send-application-month" type="text" pattern="[0-9]*"
-                              inputmode="numeric">
-                          </div>
-                        </div>
-                        <div class="govuk-date-input__item">
-                          <div class="govuk-form-group">
-                            <label class="govuk-label govuk-date-input__label" for="send-application-year">
-                              Year
-                            </label>
-                            <input class="govuk-input govuk-date-input__input govuk-input--width-4"
-                              id="send-application-year" name="send-application-year" type="text" pattern="[0-9]*"
-                              inputmode="numeric">
-                          </div>
-                        </div>
-                      </div>
-
-                    </fieldset>
-                  </div>
-
-                </div>
               </div>
+
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group">
+                  <legend class="govuk-fieldset__legend">
+                    Applicant must respond by 4pm on
+                  </legend>
+                  <div class="govuk-date-input" id="info-request">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="info-request-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                          id="info-request-day" name="info-request-day" type="text" pattern="[0-9]*"
+                          inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="info-request-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                          id="info-request-month" name="info-request-month" type="text" pattern="[0-9]*"
+                          inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="info-request-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                          id="info-request-year" name="info-request-year" type="text" pattern="[0-9]*"
+                          inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="request-more-information-send-application"
+                name="request-more-information" type="radio" value="send-application"
+                data-aria-controls="conditional-send-application">
+              <label class="govuk-label govuk-radios__label" for="request-more-information-send-application">
+                Send application to other party and request hearing details
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+              id="conditional-send-application">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group">
+                  <legend class="govuk-fieldset__legend">
+                    Parties must respond by 4pm on
+                  </legend>
+                  <div class="govuk-date-input" id="send-application">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="send-application-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                          id="send-application-day" name="send-application-day" type="text" pattern="[0-9]*"
+                          inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="send-application-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2"
+                          id="send-application-month" name="send-application-month" type="text" pattern="[0-9]*"
+                          inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="send-application-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4"
+                          id="send-application-year" name="send-application-year" type="text" pattern="[0-9]*"
+                          inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
+
+            </div>
           </div>
-        </fieldset>
-      </div>
+        </div>
 
 
-      </fieldset>
+      {% include "../../../includes/buttons.html" %}
+
+    </form>
+
   </div>
-  <div class="govuk-button-group">
-    <button type="submit" class="govuk-button" data-module="govuk-button">
-      Continue
-    </button>
-
-    <a class="govuk-link" href="#">Cancel</a>
-  </div>
-  </form>
-
-</div>
 </div>
 
 {% endblock %}

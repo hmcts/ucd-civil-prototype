@@ -4,24 +4,24 @@
 Is this an urgent application?
 {% endblock %}
 
-{% block beforeContent %}
-  <a class="govuk-back-link" href="/ocmc/general-applications/application-submission/2-respondent-agreement">Back</a>
-{% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
+      <h1 class="govuk-heading-l">
+        Make an application
+        <span class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold claim-number-title">#1344-0992-2231-9776</span>
+      </h1>
 
       <form class="form" action="/ocmc/general-applications/application-submission/3-urgent" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="urgent-application">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-fieldset__heading">
+              <h2 class="govuk-heading-m govuk-!-margin-bottom-0">
                 Is this an urgent application?
-              </h1>
+              </h2>
             </legend>
 
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
@@ -35,7 +35,7 @@ Is this an urgent application?
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="date-urgent">
-                    Enter the date by which this application must be considered by a judge.
+                    Enter the date by which this application must be considered by a judge
                   </label>
 
                   <div class="govuk-date-input" id="date-urgent">
@@ -62,8 +62,10 @@ Is this an urgent application?
                     </div>
                   </div>
                   <label class="govuk-label govuk-!-margin-top-6" for="reason-urgent">
-                    Reasons for urgency. Disclose all relevant information to the court, including any information that may undermine the need for urgency.
+                    Reasons for urgency. 
                   </label>
+                  <div class="govuk-hint">Disclose all relevant information to the court, including any information that may undermine the need for urgency</div>
+
                   <textarea class="govuk-textarea" id="more-detail" name="reason-urgent" rows="5" aria-describedby="more-detail-hint"></textarea>
 
                   <div class="govuk-form-group">

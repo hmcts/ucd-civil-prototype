@@ -7,8 +7,6 @@
 {% block beforeContent %}
 {% include "./includes/phase-banner.html" %}
 
-<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-
 {% endblock %}
 
 
@@ -17,29 +15,15 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Make an order for written representations
+        <span class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold claim-number-title">#1344-0992-2231-9776</span>
+      </h1>
 
-      <h1 class="govuk-caption-m">#1522-0584-2506-7027</h1>
-      <h1 class="govuk-heading-l">Choose outcome of application</h1>
 
 
       <form class="form" action="/ocmc/general-applications/judge-journey/draw-general-order-representation" method="post">
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <h1 class="govuk-heading-m">
-                Make an order for written representations
-              </h1>
-            </legend>
-            
-            
-
-
-
-
-
-
-        
 
 
             <div class="govuk-form-group">
@@ -163,44 +147,7 @@
 
 
 
-            
-
-
-
-          
-   
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-          </fieldset>
-        </div>
-
-
-
-        <div class="govuk-button-group">
-
-          
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-          <a class="govuk-link" href="#">Cancel</a>
-
-        </div>
+            {% include "../../../includes/buttons.html" %}
 
       </form>
 

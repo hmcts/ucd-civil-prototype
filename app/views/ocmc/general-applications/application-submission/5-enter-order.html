@@ -4,19 +4,21 @@
   How do you want the Defendant to pay?
 {% endblock %}
 
-{% block beforeContent %}
-  <a class="govuk-back-link" href="/ocmc/general-applications/application-submission/4-inform-other-party">Back</a>
-{% endblock %}
+
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Make a request for order</h1>
+      <h1 class="govuk-heading-l">
+        Make an application
+        <span class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold claim-number-title">#1344-0992-2231-9776</span>
+      </h1>
+      
 
       <form class="form" action="/ocmc/general-applications/application-submission/5-enter-order" method="post">
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <fieldset class="govuk-fieldset">
               <!-- what Order do you want the court to make? -->
 
 
@@ -54,14 +56,14 @@
               </ul> -->
 
               <div class="govuk-form-group">
-                <h2 class="govuk-fieldset__heading">
-                  <label class="govuk-label" for="file-upload-1">
-                    Upload any evidence that supports your application (optional)
-                  </label>
-                  <span class="govuk-hint">Before uploading a file, give it a meaningful name. For example claimnumber.document-type.doc</span>
-                </h2>
 
-                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                <label class="govuk-label" for="file-upload-1">
+                  Upload any evidence that supports your application (optional)
+                </label>
+                <div class="govuk-hint">Before uploading a file, give it a meaningful name. For example claimnumber.document-type.doc</div>
+              
+                <button class="govuk-button">Add new</button>
+                <!-- <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file"> -->
               </div>
               {% endif %}
 
@@ -71,10 +73,6 @@
               
 
               <div class="govuk-form-group">
-                
-                
-                
-
                 <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                     <h2 class="govuk-fieldset__heading">

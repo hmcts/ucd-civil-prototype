@@ -4,9 +4,7 @@
   Check your answers
 {% endblock %}
 
-{% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
+
 
 {% block content %}
 <div class="govuk-grid-row">
@@ -120,17 +118,57 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-              Hearing requirements
+              Hearing details
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>Hearing req</p>
-            <p>Hearing req</p>
-            <p>Hearing req</p>
-            <p>Hearing req</p>
-            <p>Hearing req</p>
-            <p>Hearing req</p>
-            <p>Hearing req</p>
-
+            <ul class="govuk-list govuk-list--spaced">
+              <li>
+                <span class="govuk-!-font-weight-bold">Do you have a hearing scheduled?</span>
+                <span class="block">No</span>
+              </li>
+              
+            
+            <li>
+              <span class="govuk-!-font-weight-bold">Is your case reserved to a judge?</span>
+              <span class="block">No</span>
+            </li>
+            <li>
+              <span class="govuk-!-font-weight-bold">Has the trial been fixed?</span>
+              <span class="block">No</span>
+            </li>
+            <li>
+              <span class="govuk-!-font-weight-bold">Choose your preferred type of hearing</span>
+              <span class="block">Telephone hearing; Joe Blogg</span>
+            </li>
+            <li>
+              <span class="govuk-!-font-weight-bold">Why would you prefer this type of hearing?</span>
+              <span class="block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            </li>
+            <li>
+              <span class="govuk-!-font-weight-bold">Preferred location</span>
+              <span class="block">Nottingham County Court</span>
+            </li>
+            <li>
+              <span class="govuk-!-font-weight-bold">Preferred telephone number</span>
+              <span class="block">020 123 88 9990</span>
+            </li>
+            <li>
+              <span class="govuk-!-font-weight-bold">Preferred email</span>
+              <span class="block">joe@blogg.com</span>
+            </li>
+            <li>
+              <span class="govuk-!-font-weight-bold">How long do you estimate the hearing will take?</span>
+              <span class="block">30 minutes</span>
+            </li>
+            <li>
+              <span class="govuk-!-font-weight-bold">Are there any dates when you cannot attend a hearing within the next 3 months?</span>
+              <span class="block">No</span>
+            </li>
+              <li>
+                <span class="govuk-!-font-weight-bold">Support requirements (optional)</span>
+                <span class="block">Sign language interpreter; BSL</span>
+              </li>
+            </ul>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/ocmc/general-applications/application-submission/6-hearing-details">
