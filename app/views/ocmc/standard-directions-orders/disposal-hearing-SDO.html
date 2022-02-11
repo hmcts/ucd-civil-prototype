@@ -5,6 +5,8 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% include "./includes/phase-banner.html" %}
+
 <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 
 {% endblock %}
@@ -20,7 +22,7 @@
       <h1 class="govuk-heading-l">Order and hearing details</h1>
 
 
-      <form class="form" action="/ocmc/standard-directions-orders/disposal-hearing" method="post">
+      <form class="form" action="/ocmc/standard-directions-orders/disposal-hearing-SDO" method="post">
 
 
 
@@ -263,17 +265,8 @@
 
 
 
-        <div class="govuk-button-group">
-
-
-          <button class="govuk-button" data-module="govuk-button">
-            Continue
-          </button>
-          <!-- <a class="govuk-link" href="#">Cancel</a> -->
-
-        </div>
-        <a class="govuk-link" href="#">Cancel</a>
-
+        <!-- Buttons -->
+        {% include "../../includes/buttons.html" %}
 
       </form>
 

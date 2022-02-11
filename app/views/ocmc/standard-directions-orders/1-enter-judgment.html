@@ -1,0 +1,73 @@
+{% extends "layout-judicial-case.html" %}
+
+{% block pageTitle %}
+  How do you want the Defendant to pay?
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <form class="form" action="/ocmc/standard-directions-orders/1-enter-judgment" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <!-- <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+           <h1 class="govuk-fieldset__heading">Directions Order</h1> -->
+           <h1 class="govuk-fieldset__heading">Do you wish you to enter judgement for a sum of damages to be decided</h1>
+              <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
+            </legend>
+
+<!--Do you wish you to enter judgement for a sum of damages to be decided -->
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+
+            <!-- <p>Do you wish you to enter judgement for a sum of damages to be decided</p> -->
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="damages-yes" name="damages" type="radio" value="true" data-aria-controls="conditional-yes">
+                <label class="govuk-label govuk-radios__label" for="damages">
+                  Yes
+                </label>
+              </div>
+
+
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="dedution-input">
+                    Enter deduction
+                  </label>
+
+                  <div id="dedution-input-hint" class="govuk-hint">
+                    Enter a value between 1 and 99
+                  </div>
+                    <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
+                        <div class="govuk-input__suffix" aria-hidden="true">%</div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="immediately" name="damages" type="radio" value="Immediately">
+                <label class="govuk-label govuk-radios__label" for="immediately">
+                  No
+                </label>
+              </div>
+            </div>
+
+
+          </fieldset>
+        </div>
+          <!-- Buttons -->
+          {% include "../../includes/buttons.html" %}
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

@@ -6,162 +6,53 @@
 {% endblock %}
 
 {% block head %}
+<header class="govuk-header hmcts-header__judicial" role="banner" data-module="govuk-header">
+  <div style="padding-top: 10px;" class="govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/index" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+
+        <!--  <span style="font-size:30px;"class="govuk-header__logotype-text">
+        MyHMCTS
+          </span> -->
 
 
-<header class="hmcts-header hmcts-header__judicial" role="banner">
+        </span>
 
-  <div class="hmcts-header__container">
+      </a>
 
-  <div class="hmcts-header__logo">
-    <a class="hmcts-header__link" href="#">Judicial Case Manager</a>
+    </div>
+    <a style=" color:white; text-decoration: none; margin-bottom: 10px; font-size: 19px; font-weight: bold;" href="/">
+
+      Judicial Case Manager
+
+       </a>
+       <a style="color:white; float: right;" href="/index">
+
+         Sign out
+
+          </a>
   </div>
+  <div class="govuk-width-container hmcts-primary-navigation__nav">
 
-  <div class="hmcts-header__content">
+    <nav  aria-label="Primary navigation" class="hmcts-primary-navigation transparent-background">
+      <ul class="hmcts-primary-navigation__list">
 
-    <nav class="hmcts-header__navigation" aria-label="Account navigation">
+        <a class="hmcts-primary-navigation__link " aria-current="true" style="color:white;"
+            href="/index"Case list</a>
 
-      <ul class="hmcts-header__navigation-list">
 
-        <li class="hmcts-header__navigation-item">
-          <a class="hmcts-header__navigation-link" href="#1">
-            Sign out
-          </a>
-        </li>
-
-        <li class="hmcts-header__navigation-item">
-          <a class="hmcts-header__navigation-link" href="#1">
-            Find case
-          </a>
-        </li>
+        <a class="hmcts-search-toggle__button hmcts-primary-navigation__link transparent-background" style="color:white;" href="/index">Find case</a>
 
       </ul>
+
 
     </nav>
 
   </div>
 
-  </div>
-
-  <div class="hmcts-primary-navigation hmcts-header__judicial">
-    <div class="hmcts-primary-navigation__container">
-    <div class="hmcts-primary-navigation__nav">
-      <nav class="hmcts-primary-navigation" aria-label="Primary navigation">
-        <ul class="hmcts-primary-navigation__list">
-
-          <!-- <li class="hmcts-primary-navigation__item">
-            <a class="hmcts-primary-navigation__link" aria-current="page" href="/index.html">
-              Case list
-            </a>
-          </li> -->
-
-            <li class="hmcts-primary-navigation__item hmcts-header__judicial">
-              <a class="hmcts-primary-navigation__link" href="/index.html">
-                Case list
-              </a>
-            </li>
-
-          </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-
-  </header>
-
-  <div class="govuk-width-container">
-    <div class="govuk-phase-banner">
-      <p class="govuk-phase-banner__content">
-        <strong class="govuk-tag govuk-phase-banner__content__tag">
-          beta
-        </strong>
-        <span class="govuk-phase-banner__text">
-          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-        </span>
-      </p>
-    </div>
-  </div>
-
-<!-- <header class="hmcts-header" role="banner">
-  <div class="hmcts-header__container">
-  <div class="govuk-header__logo">
-    <a href="#" class="govuk-header__link govuk-header__link--homepage">
-      <span class="govuk-header__logotype">
-        <span class="govuk-header__logotype-text">
-          MyHMCTS
-        </span>
-      </span>
-    </a>
-  </div>
-  <a class="hmcts-header__link" href="#">Manage cases</a>
-
-  <div class="hmcts-header__content">
-    <nav class="hmcts-header__navigation" aria-label="Account navigation">
-      <ul class="hmcts-header__navigation-list">
-
-        <li class="hmcts-header__navigation-item">
-          <a class="hmcts-header__navigation-link" href="#1">
-            Sign out
-          </a>
-        </li>
-
-        <li class="hmcts-header__navigation-item">
-          <a class="hmcts-header__navigation-link" href="#1">
-            Find case
-          </a>
-        </li>
-
-      </ul>
-    </nav>
-  </div>
-  <div class="hmcts-primary-navigation">
-
-    <div class="hmcts-primary-navigation__container">
-
-    <div class="hmcts-primary-navigation__nav">
-
-      <nav class="hmcts-primary-navigation" aria-label="Primary navigation">
-
-        <ul class="hmcts-primary-navigation__list">
-
-          <!-- <li class="hmcts-primary-navigation__item">
-            <a class="hmcts-primary-navigation__link" aria-current="page" href="#1">
-              Case list
-            </a>
-          </li> -->
-
-          <!-- <li class="hmcts-primary-navigation__item">
-            <a class="hmcts-primary-navigation__link" href="#2">
-              Case list
-            </a>
-          </li>
-
-          <li class="hmcts-primary-navigation__item">
-            <a class="hmcts-primary-navigation__link" href="#2">
-              Create cases
-            </a>
-          </li> -->
-
-          <!-- <li class="hmcts-primary-navigation__item">
-            <a class="hmcts-primary-navigation__link" href="#3">
-              Nav item 3
-            </a>
-          </li> -->
-
-        <!-- </ul>
-
-      </nav>
-
-    </div>
-
-    </div>
-
-    </div>
-  </div>
-  </header>  -->
-  <!-- <div style="padding-top:0px;" class="govuk-width-container govuk-phase-banner">
+</header>
+<!-- <div style="padding-top:0px;" class="govuk-width-container govuk-phase-banner">
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag govuk-tag--orange "> PROTOTYPE
     </strong><span class="govuk-phase-banner__text"> This is for design and user testing  </span></p>
 </div> -->

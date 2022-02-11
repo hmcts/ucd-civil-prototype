@@ -14,62 +14,25 @@
     <div class="govuk-grid-column-two-thirds">
 
 
-      <form class="form" action="/ocmc/standard-directions-orders/1-track" method="post">
+      <form class="form" action="/ocmc/standard-directions-orders/2-track-selection" method="post">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-              <span class="govuk-caption-m">#1522-0584-2506-7027</span>
-           <h1 class="govuk-fieldset__heading">Directions Order</h1>
+              <!-- <span class="govuk-caption-m">#1522-0584-2506-7027</span>
+           <h1 class="govuk-fieldset__heading">Directions Order</h1> -->
+           <h1 class="govuk-fieldset__heading">what track are you allocating the claim to?</h1>
               <!-- <h3 class="govuk-heading-s govuk-!-margin-top-2">#1522-0584-2506-7027</h3> -->
             </legend>
 
-<!--Do you wish you to enter judgement for a sum of damages to be decided -->
             <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
 
-            <p>Do you wish you to enter judgement for a sum of damages to be decided</p>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately" data-aria-controls="conditional-yes">
-                <label class="govuk-label govuk-radios__label" for="immediately">
-                  Yes
-                </label>
-              </div>
-
-
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-yes">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="dedution-input">
-                    Enter deduction
-                  </label>
-
-                  <div id="dedution-input-hint" class="govuk-hint">
-                    Enter a value between 1 and 99
-                  </div>
-                    <div class="govuk-input__wrapper"><input class="govuk-input govuk-input--width-5" id="weight" name="weight" type="text" spellcheck="false">
-                        <div class="govuk-input__suffix" aria-hidden="true">%</div>
-                    </div>
-                </div>
-              </div>
-
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately">
-                <label class="govuk-label govuk-radios__label" for="immediately">
-                  No
-                </label>
-              </div>
-            </div>
-
-<!--what track are you allocating the claim to? -->
-
-            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-
-              <label class="govuk-label govuk-body govuk-!-margin-top-4" for="dedution-input">
+              <!-- <label class="govuk-label govuk-body govuk-!-margin-top-4" for="dedution-input">
                 what track are you allocating the claim to?
-              </label>
+              </label> -->
 
               <div class="govuk-radios__item govuk-body govuk-!-margin-top-4">
-                <input class="govuk-radios__input" id="immediately" name="how-to-pay" type="radio" value="Immediately" data-aria-controls="conditional-small">
-                <label class="govuk-label govuk-radios__label" for="immediately">
+                <input class="govuk-radios__input" id="small-claims-track" name="claims-track" type="radio" value="Small-claims-track" data-aria-controls="conditional-small">
+                <label class="govuk-label govuk-radios__label" for="claims-track">
                   Small claims track
                 </label>
               </div>
@@ -103,8 +66,8 @@
 
 
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="by-set-date" name="how-to-pay" type="radio" value="By a set date" data-aria-controls="conditional-date">
-                <label class="govuk-label govuk-radios__label" for="contact-2">
+                <input class="govuk-radios__input" id="by-set-date" name="claims-track" type="radio" value="fast-track" data-aria-controls="conditional-date">
+                <label class="govuk-label govuk-radios__label" for="claims-trackt-2">
                   Fast track
                 </label>
               </div>
