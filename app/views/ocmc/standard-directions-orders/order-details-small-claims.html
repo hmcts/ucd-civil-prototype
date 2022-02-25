@@ -29,10 +29,31 @@
               <h2 class="govuk-fieldset govuk-!-margin-bottom-5">
                 Order details
               </h2>
-            </legend>
+            </legend>-->
+
+
+
+            <!-- warning message-->
+
+            <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="112" data-threshold="75">
+              <div class="govuk-form-group">
+
+
+                <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="5" aria-describedby="word-count-info">Warning:  you must comply with the terms imposed upon you by this order: otherwise your case is liable to be struck out or some other sanction imposed. If you cannot comply you are expected to make formal application to the court before any deadline imposed upon you expires.</textarea>
+              </div>
+
+              <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="4" aria-describedby="word-count-info">The parties are encouraged to try to settle the case by negotiation.  You may also contact the Small Claims Mediation Service to arrange a mediation appointment. The service is free and it can be contacted on 01604 795511. </textarea>
+            </div>
+
+            </div>
+
 
 
               <!-- Judge's recital-->
+
+              <!-- SECTION BREAK-->
+              {% include "./includes/section-break.html" %}
+              <!-- SECTION BREAK-->
 
               <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="112" data-threshold="75">
                 <div class="govuk-form-group">
@@ -40,7 +61,7 @@
                     Judge's recital</h2>
 
 
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="4" aria-describedby="word-count-info">DJ Pema has considered the statements of case, the directions and draft order <br> IT IS ORDERED THAT.....</textarea>
+                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="4" aria-describedby="word-count-info">DJ Pema has considered the statements of case and the directions questions<br> IT IS ORDERED THAT.....</textarea>
                 </div>
 
               </div>
@@ -68,7 +89,7 @@
                         </div>
 
 
-                  <textarea class="govuk-textarea govuk-js-character-count " id="word-count" name="word-count" rows="1" aria-describedby="word-count-info">1.    The claim is allocated to the Small Claims track.</textarea>
+                  <textarea class="govuk-textarea govuk-js-character-count " id="word-count" name="word-count" rows="1" aria-describedby="word-count-info">The claim is allocated to the Small Claims track.</textarea>
                 </div>
 
               </div>
@@ -94,14 +115,13 @@
                     </div>
                   </div>
 
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="3" aria-describedby="word-count-info">2.	The hearing of the claim will be on a date to be notified to you by a separate notification.  The hearing will have a time estimate of
-                  </textarea>
+                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">The hearing of the claim will be on a date to be notified to you by a separate notification.  The hearing will have a time estimate of                  </textarea>
 
                   <div class="govuk-inset-text">
                     Please note: Placeholder for time allocation pattern - to be aligned with automated List Assist service integration
                   </div>
 
-                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="3" aria-describedby="word-count-info">3.	The Claimant must by no later than 14 days before the hearing date, pay the court the required hearing fee  or submit a fully completed application for Help with Fees. If the Claimant fails to pay the fee or obtain a fee exemption by that time the claim will be struck without further order .</textarea>
+                  <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-3" id="word-count" name="word-count" rows="5" aria-describedby="word-count-info">The Claimant must by no later than 14 days before the hearing date, pay the court the required hearing fee  or submit a fully completed application for Help with Fees. If the Claimant fails to pay the fee or obtain a fee exemption by that time the claim will be struck without further order .</textarea>
 
               </div>
             </div>
@@ -203,9 +223,11 @@
                         </div>
 
 
-                  <textarea class="govuk-textarea govuk-js-character-count " id="word-count" name="word-count" rows="7" aria-describedby="word-count-info">1.	Each party must send to the other party(ies) and to the court office to be received not less than 14 days before the hearing, copies of all documents which they wish the court to consider when reaching its decision.
+                  <textarea class="govuk-textarea govuk-js-character-count " id="word-count" name="word-count" rows="4" aria-describedby="word-count-info">Each party must send to the other party(ies) and to the court office to be received not less than 14 days before the hearing, copies of all documents which they wish the court to consider when reaching its decision.
 
-2.	The court may refuse to consider any document which has not been sent to the other party/ies and the court as set out above.</textarea>
+                  </textarea>
+
+                  <textarea class="govuk-textarea govuk-js-character-count " id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">The court may refuse to consider any document which has not been sent to the other party/ies and the court as set out above.</textarea>
                 </div>
 
               </div>
@@ -245,7 +267,8 @@
                   </div>
               </div>
 
-              <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-5" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">witnesses for the claimant and</textarea>
+              <!-- <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-5" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">witnesses for the claimant and</textarea>-->
+              <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-5" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">For this limitation, a party is counted as a witness.</textarea>
 
               <div class="govuk-form-group">
                 <label class="govuk-label" for="dedution-input">
@@ -256,24 +279,28 @@
                   </div>
               </div>
 
-              <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-5" id="word-count" name="word-count" rows="2" aria-describedby="word-count-info">witnesses for the defendant. For this limitation, a party is counted as a witness.</textarea>
+
 
                 <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="112" data-threshold="75">
                   <div class="govuk-form-group">
 
-                    <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="9" aria-describedby="word-count-info">2.	A witness statement must:
+                    <textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="9" aria-describedby="word-count-info">A witness statement must:
 a)	Start with the name of the case and the claim number;
 b)	State the full name and address of the witness;
 c)	Set out the witness's evidence clearly in numbered paragraphs on numbered pages;
 d)	End with this paragraph:  ' ‘I believe that the facts stated in this witness statement are true. I understand that proceedings     for contempt of court may be brought against anyone who makes, or causes to be made, a false statement in a document verified by a statement of truth without an honest belief in its truth.’
 e)	be signed by the witness and dated.
 f)	If a witness is unable to read the statement there must be a certificate that it has been read or interpreted to the witness by a suitably qualified person and at the final hearing there must be an independent interpreter who will not be provided by the Court.
+</textarea>
 
-3)	The judge may refuse to allow a witness to give evidence or consider any statement of any witness whose statement has not been sent to the court and the other party/ies in accordance with the paragraphs above.
+<textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="4" aria-describedby="word-count-info">The judge may refuse to allow a witness to give evidence or consider any statement of any witness whose statement has not been sent to the court and the other party/ies in accordance with the paragraphs above.
+</textarea>
 
-4)	A witness whose statement is sent in accordance with the above must attend the hearing. If they do not attend, it will be for the court to decide how much reliance, if any, to place on their evidence. </textarea>
+<textarea class="govuk-textarea govuk-js-character-count govuk-body govuk-!-margin-top-4" id="word-count" name="word-count" rows="4" aria-describedby="word-count-info">A witness whose statement is sent in accordance with the above must attend the hearing. If they do not attend, it will be for the court to decide how much reliance, if any, to place on their evidence. </textarea>
                   </div>
                 </div>
+
+
 
 
 
