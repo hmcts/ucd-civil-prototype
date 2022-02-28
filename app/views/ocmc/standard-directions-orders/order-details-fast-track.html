@@ -725,9 +725,23 @@
                   <h3 class="govuk-body govuk-!-margin-bottom-1 govuk-!-font-weight-bold">
                     Type of claim</h3>
 
+                    <p>{{ data['fast-track']['claim-type'] }}</p>
+
+                    {% if (data['fast-track']['claim-type'] === 'building-dispute') %}
+
                     <div id="changed-name-hint" class="govuk-hint govuk-body govuk-!-margin-top-6">
-                        Road Traffic Accident
+                        building-dispute
                     </div>
+
+                    {% endif %}
+
+                    {% if (data['fast-track']['claim-type'] === 'Clinical-Negligence') %}
+
+                    <div id="changed-name-hint" class="govuk-hint govuk-body govuk-!-margin-top-6">
+                        building-dispute
+                    </div>
+
+                    {% endif %}
 
               </div>
             </div>
@@ -801,6 +815,11 @@
 
       <!--Additional directions-->
 
+      {% if (data['building-dispute-type'] === 'building-dispute') %}
+
+      {% else %}
+
+
       <!-- SECTION BREAK-->
       {% include "./includes/section-break.html" %}
       <!-- SECTION BREAK-->
@@ -812,6 +831,8 @@
 
       </div>
     </div>
+
+    {% endif %}
 
           </fieldset>
 

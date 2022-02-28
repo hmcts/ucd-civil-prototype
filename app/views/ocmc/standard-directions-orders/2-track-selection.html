@@ -45,14 +45,14 @@
                       <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="credit-hire-id" name="credit-hire-typee" type="checkbox" value="credit-hire">
+                          <input class="govuk-checkboxes__input" id="credit-hire-id" name="Small-claims-track[small-type]" type="checkbox" value="credit-hire" {{ checked("['Small-claims-track']['small-type']", "credit-hire") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="credit-hire">
                             Credit Hire
                           </label>
                         </div>
 
                         <div class="govuk-checkboxes__item">
-                          <input class="govuk-checkboxes__input" id="Road-Trafic-Accident-id" name="Road-Trafic-Accident-type" type="checkbox" value="Road-Trafic-Accident">
+                          <input class="govuk-checkboxes__input" id="Road-Trafic-Accident-id" name="Small-claims-track[small-type]" type="checkbox" value="Road-Trafic-Accident" {{ checked("['Small-claims-track']['small-type']", "Road-Trafic-Accident") }}>
                           <label class="govuk-label govuk-checkboxes__label" for="Road Trafic Accident">
                             Road Trafic Accident
                           </label>
@@ -80,42 +80,42 @@
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="building-dispute" name="building-dispute-type" type="checkbox" value="building-dispute">
+                      <input class="govuk-checkboxes__input" id="building-dispute" name="fast-track[claim-type]" type="checkbox" value="building-dispute" {{ checked("['fast-track']['claim-type']", "building-dispute") }}>
                       <label class="govuk-label govuk-checkboxes__label" for="building dispute claim">
                         Building dispute
                       </label>
                     </div>
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="Clinical-Negligence-id" name="Clinical Negligence-type" type="checkbox" value="Clinical-Negligencek">
+                      <input class="govuk-checkboxes__input" id="Clinical-Negligence-id" name="fast-track[claim-type]" type="checkbox" value="Clinical-Negligence" {{ checked("['fast-track']['claim-type']", "Clinical-Negligence") }}>
                       <label class="govuk-label govuk-checkboxes__label" for="Clinical Negligence">
                         Clinical Negligence
                       </label>
                     </div>
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="credit-hire-id" name="claim-type" type="checkbox" value="credit-hire-claim">
+                      <input class="govuk-checkboxes__input" id="credit-hire-id" name="fast-track[claim-type]" type="checkbox" value="credit-hire-claim" {{ checked("['fast-track']['claim-type']", "credit-hire-claim") }}>
                       <label class="govuk-label govuk-checkboxes__label" for="credit hire claim">
                         Credit hire
                       </label>
                     </div>
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="Employers-Liability-id" name="Employers-Liability-type" type="checkbox" value="Employers-Liability">
+                      <input class="govuk-checkboxes__input" id="Employers-Liability-id" name="fast-track[claim-type]" type="checkbox" value="Employers-Liability"{{ checked("['fast-track']['claim-type']", "Employers-Liability") }}>
                       <label class="govuk-label govuk-checkboxes__label" for="Employers Liability">
                         Employers Liability
                       </label>
                     </div>
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="Housing-Disrepair-id" name="Housing-Disrepair-type" type="checkbox" value="Housing-Disrepair">
+                      <input class="govuk-checkboxes__input" id="Housing-Disrepair-id" name="fast-track[claim-type]" type="checkbox" value="Housing-Disrepair" {{ checked("['fast-track']['claim-type']", "Housing-Disrepair") }}>
                       <label class="govuk-label govuk-checkboxes__label" for="Housing Disrepair">
                         Housing Disrepair
                       </label>
                     </div>
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="Personal-Injury-id" name="Personal-Injury-type" type="checkbox" value="Personal-Injury">
+                      <input class="govuk-checkboxes__input" id="Personal-Injury-id" name="fast-track[claim-type]" type="checkbox" value="Personal-Injury" {{ checked("['fast-track']['claim-type']", "Personal-Injury") }}>
                       <label class="govuk-label govuk-checkboxes__label" for="Personal Injury">
                         Personal Injury
                       </label>
@@ -123,7 +123,7 @@
 
 
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="Road-traffic-accident-id" name="Road-traffic-accident-type" type="checkbox" value="Road-traffic-accident">
+                      <input class="govuk-checkboxes__input" id="Road-traffic-accident-id" name="fast-track[claim-type]" type="checkbox" value="Road-traffic-accident" {{ checked("['fast-track']['claim-type']", " Road-traffic-accident") }}>
                       <label class="govuk-label govuk-checkboxes__label" for="Road traffic accident">
                         Road traffic accident
                       </label>
