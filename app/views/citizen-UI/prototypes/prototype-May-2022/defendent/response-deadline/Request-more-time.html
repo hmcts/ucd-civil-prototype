@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Time to respond
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form class="form" action="/citizen-UI/prototypes/prototype-May-2022/defendent/task-list/task-list-fast-track" method="post">
+
+      <h1 class="govuk-heading-xl">
+        Request more time to respond
+      </h1>
+
+      <h3 class="govuk-heading-m">
+        Current response deadline: 4pm on 13 December 2022
+        </h3>
+
+
+
+      <h3 class="govuk-heading-m">Request up to an additional 28 days</h3>
+
+      <p>You request this by contacting Jan Clark's legal representative - they do not have to agree to a request for more time.
+      Save and continue and contact Jan Clark's legal representative. If agreed the extra time will start from 13 December 2022</p>
+
+      <h3 class="govuk-heading-m">If your request for more time has been refused (use form N244)</h3>
+
+      <p>If you have requested more time from Jan Clark's legal representative and they have said no, you can ask the court to consider your request. Save and continue and <a href="https://www.gov.uk/government/publications/form-n244-application-notice">download form N244 (open in new tab).</a>.</p>
+
+
+      <h3 class="govuk-heading-m">If you need more than an additional 28 days (use form N244)</h3>
+
+      <p>You can request up to an additional 28 days from Jan Clark's legal representative. If you need more than an additional 28 days you can ask the court to consider your request. Save and continue and <a href="https://www.gov.uk/government/publications/form-n244-application-notice">download form N244 (open in new tab).</a>.</p>
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Contact us for help
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        We
+      </div>
+    </details>
+
+
+    </form>
+
+  </div>
+</div>
+
+
+{% endblock %}

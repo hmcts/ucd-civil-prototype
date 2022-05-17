@@ -10,3 +10,4 @@ require('./views/ocmc/default-judgments/routes.js')(router);
 require('./views/damages/default-judgments/routes.js')(router);
 require('./views/ocmc/standard-directions-orders/routes.js')(router);
 require('./views/ocmc/general-applications/routes.js')(router);
+require('./views/citizen-UI/prototypes/prototype-May-2022/routes.js')(router);

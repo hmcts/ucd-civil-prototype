@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Using expert evidence
+      </h1>
+
+
+      <p>Expert evidence is an opinion based on the expertise of a professional.
+      </p>
+
+      <p>This will only be allowed if the court is unable to make a decision without the assistance of a specialist. For example, a building surveyor who can comment on the quality of building work.</p>
+
+      <p>An expert can provide evidence:</p>
+
+        <ul class="govuk-list govuk-list--bullet ">
+        <li>
+          in written form
+        </li>
+        <li>
+          in person, as a witness at the trial
+      </ul>
+
+
+      <p>Usually experts only give written evidence, but they may also appear as witnesses at a trial if:
+
+        <ul class="govuk-list govuk-list--bullet ">
+        <li>
+          each party has an expert
+        </li>
+        <li>
+          both experts disagree, and the court can only decide between their evidence by hearing it in person
+      </ul>
+      </p>
+
+      <p>For more information about using an expert for evidence, read the <a href="https://www.justice.gov.uk/courts/procedure-rules/civil/rules/part35">Civil Procedure Rules for experts and assessors.</a>.</p>
+
+    </div>
+  </div>
+
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+
+{% endblock %}
