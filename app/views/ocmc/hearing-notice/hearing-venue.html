@@ -1,0 +1,105 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  When is the hearing?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="add-info" method="post">
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        When is the hearing?
+      </h1>
+    </legend>
+  </fieldset>
+</div>
+
+<div>
+<img src="/public/images/hmcts-date-picker.png" width="auto" height="400" alt="HMCTS date picker">
+</div>
+
+    <a class="govuk-body" href="https://hmcts-design-system.herokuapp.com/components/calendar-date-picker">Date picker from HMCTS Design System</a>
+
+<br><br><br>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Start time
+  </label>
+  <select class="govuk-select govuk-!-width" id="sort" name="sort">
+    <option value="updated" selected>15</option>
+  </select>
+  <select class="govuk-select govuk-!-width" id="sort" name="sort">
+    <option value="updated" selected>00</option>
+  </select>
+</div>
+
+<p class="govuk-body">The hearing will take place on <strong>Monday 15 November at 15:00</strong></p>
+
+<p class="govuk-body">The venue for the hearing is <strong>Bristol County Court</strong></p>
+
+<br>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Is this venue correct?
+      </h1>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+        <label class="govuk-label govuk-radios__label" for="contact">
+          Yes
+        </label>
+      </div>
+
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+        <label class="govuk-label govuk-radios__label" for="contact-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Where will the hearing be held?
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="updated" selected>Select a venue</option>
+            <option value="published">Oxford County Court</option>
+            <option value="views">Birmingham County Court</option>
+            <option value="comments">Manchester County Court</option>
+          </select>
+        </div>
+
+      </div>
+      
+    </div>
+
+  </fieldset>
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+</form>
+
+</div>
+</div>
+
+{% endblock %}
+

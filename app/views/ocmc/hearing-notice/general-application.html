@@ -1,0 +1,105 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  Which general application is the notice for?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="hearing-venue" method="post">
+      
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set emailHtml %}
+{{ govukInput({
+  id: "contact-by-email",
+  name: "contact-by-email",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false,
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Email address"
+  }
+}) }}
+{% endset -%}
+
+{% set phoneHtml %}
+{% endset -%}
+
+{% set textHtml %}
+{{ govukRadios({
+  idPrefix: "where-do-you-live",
+  name: "where-do-you-live",
+  fieldset: {
+    legend: {
+      text: "What is the trial in respect of?"
+    }
+  },
+  items: [
+    {
+      value: "claim",
+      text: "Claim"
+    },
+    {
+      value: "counter-claim",
+      text: "Counter-claim"
+    }
+  ]
+}) }}
+{% endset -%}
+
+{% set otherHtml %}
+{{ govukInput({
+  id: "what-notice-creating",
+  name: "what-notice-creating",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-!-width-two-thirds",
+  label: {
+    text: "What hearing notice are you creating?"
+  }
+}) }}
+{% endset -%}
+
+{{ govukRadios({
+  idPrefix: "which-gen-app",
+  name: "which-gen-app",
+  fieldset: {
+    legend: {
+      text: "Which general application is the notice for?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "ga-1",
+      text: "GA 1"
+    },
+    {
+      value: "ga-2",
+      text: "GA 2"
+    }
+  ]
+}) }}
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+</form>
+
+    </div>
+  </div>
+
+
+{% endblock %}

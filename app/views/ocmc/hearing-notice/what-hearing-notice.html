@@ -1,0 +1,122 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+  What hearing notice do you want to create?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="what-hearing-notice-answer" method="post">
+      
+          {% from "govuk/components/radios/macro.njk" import govukRadios %}
+          {% from "govuk/components/input/macro.njk" import govukInput %}
+
+          {% set emailHtml %}
+          {{ govukInput({
+            id: "notice-hearing",
+            name: "notice-hearing",
+            type: "email",
+            autocomplete: "email",
+            spellcheck: false,
+            classes: "govuk-!-width-one-third",
+            label: {
+              text: "Email address"
+            }
+          }) }}
+          {% endset -%}
+
+          {% set phoneHtml %}
+          {% endset -%}
+
+          {% set textHtml %}
+          {{ govukRadios({
+            idPrefix: "notice-trial",
+            name: "notice-trial",
+            fieldset: {
+              legend: {
+                text: "What is the trial in respect of?"
+              }
+            },
+            items: [
+              {
+                value: "claim",
+                text: "Claim"
+              },
+              {
+                value: "counter-claim",
+                text: "Counter-claim"
+              }
+            ]
+          }) }}
+          {% endset -%}
+
+          {% set otherHtml %}
+          {{ govukInput({
+            id: "contact-by-phone",
+            name: "contact-by-phone",
+            type: "tel",
+            autocomplete: "tel",
+            classes: "govuk-!-width-two-thirds",
+            label: {
+              text: "What hearing notice are you creating?"
+            }
+          }) }}
+          {% endset -%}
+
+          {{ govukRadios({
+            idPrefix: "notice-create",
+            name: "notice-create",
+            fieldset: {
+              legend: {
+                text: "What hearing notice do you want to create?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--l"
+              }
+            },
+            hint: {
+              text: "Select one option."
+            },
+            items: [
+              {
+                value: "notice-hearing",
+                text: "Notice of hearing"
+              },
+              {
+                value: "notice-hearing-app",
+                text: "Notice of hearing of application"
+              },
+              {
+                value: "notice-trial",
+                text: "Notice of trial date",
+                conditional: {
+                  html: textHtml
+                }
+              },
+              {
+                value: "other",
+                text: "Other",
+                conditional: {
+                  html: otherHtml
+                }
+              }
+            ]
+          }) }}
+
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+
+          </form>
+
+    </div>
+  </div>
+
+
+{% endblock %}
