@@ -19,41 +19,25 @@
   <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Hearing details
+        When is the hearing?
       </h1>
     </legend>
   </fieldset>
 </div>
 
-<p class="govuk-heading-m">Hearing venue</p>
-
-<div class="govuk-form-group">
-  <label class="govuk-label" for="sort">
-    Venue
-  </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="updated" selected>Bristol County Court</option>
-    <option value="published">Recently published</option>
-    <option value="views">Most views</option>
-    <option value="comments">Most comments</option>
-  </select>
-</div>
-
-<br>
-
-<p class="govuk-heading-m">Hearing date</p>
-<!--<a class="govuk-body-s" href="https://hmcts-design-system.herokuapp.com/components/calendar-date-picker">Date picker from HMCTS Design System</a>-->
-
 <div>
-<img src="/public/images/hmcts-date-picker.png" width="auto" height="380" alt="HMCTS date picker">
+<img src="/public/images/hmcts-date-picker.png" width="auto" height="400" alt="HMCTS date picker">
 </div>
 
-<br>
+    <a class="govuk-body-s" href="https://hmcts-design-system.herokuapp.com/components/calendar-date-picker">Date picker from HMCTS Design System</a>
+
+<br><br><br>
 
 <table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Date the hearing will take place</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Date the hearing will take place</th>
+      <th scope="col" class="govuk-table__header"></th>
       <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
       <th scope="col" class="govuk-table__header govuk-table__header--numeric"></th>
     </tr>
@@ -69,7 +53,7 @@
 <br>
 
 <p class="govuk-heading-m">
-        Hearing time
+        Time the hearing will take place
       </p>
 
 <div class="govuk-form-group">
@@ -86,7 +70,7 @@
 
 <br>
 
-      <!--<p class="govuk-heading-l">
+      <p class="govuk-heading-l">
         Summary
       </p>
 
@@ -134,7 +118,7 @@
     </div>
 
   </fieldset>
-</div>-->
+</div>
 
 <button class="govuk-button" data-module="govuk-button">
   Continue
