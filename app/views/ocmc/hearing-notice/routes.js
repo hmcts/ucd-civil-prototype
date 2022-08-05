@@ -24,7 +24,7 @@ module.exports = (router) => {
     }
     else {
       // Send user to ineligible page
-      res.redirect('8-confirmation')
+      res.redirect('listing-relisting')
     }
   
   })
