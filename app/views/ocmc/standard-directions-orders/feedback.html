@@ -1,0 +1,61 @@
+{% extends "layout-judicial-case.html" %}
+
+{% block pageTitle %}
+  How do you want the Defendant to pay?
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="" method="post">
+
+      <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+          Give judicial feedback
+        </label>
+      </h1>
+      </div>
+
+  <p class="govuk-body">Help us improve the service. Focusing on this and related screens, please tell us:</p>
+
+          <div class="govuk-form-group">
+      <label class="govuk-label" for="what-works-well">
+        <strong>What works well?</strong>
+      </label>
+      <textarea class="govuk-textarea" id="what-works-well" name="what-works-well" rows="5"></textarea>
+    </div>
+
+          <div class="govuk-form-group">
+      <label class="govuk-label" for="what-works-well-not">
+        <strong>What does not work well? </strong>
+      </label>
+      <textarea class="govuk-textarea" id="what-works-well-not" name="what-works-well-not" rows="5"></textarea>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="urgent-attention">
+        <strong>What do you consider is the most urgent issue that requires our attention?</strong>
+      </label>
+      <textarea class="govuk-textarea" id="urgent-attention" name="urgent-attention" rows="5"></textarea>
+    </div>
+
+    <p class="govuk-body">We value your feedback and will attempt to address as many issues as possible. Issues raised here will be reviewed and ranked with the most urgent issues being addressed first.</p>
+
+      <br>
+
+          <button class="govuk-button" data-module="govuk-button">
+            Send
+          </button>
+
+      </form>
+    </div>
+  </div>
+  
+
+{% endblock %}
