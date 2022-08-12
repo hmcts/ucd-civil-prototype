@@ -1,0 +1,98 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+What applications do you want to make?
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Make an application
+        <span class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold claim-number-title">#1344-0992-2231-9776</span>
+      </h1>
+
+
+      <form class="form" action="/ocmc/general-applications/application-submission/1-application" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="applications">
+
+            <span class="govuk-caption-m">Type of application</span>
+            <h1 class="govuk-heading-m">Case judgement</h1>
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="strike-out" name="strike-out" type="checkbox" value="strike-out" data-aria-controls="strike-out">
+                <label class="govuk-label govuk-checkboxes__label" for="strike-out">
+                  Summary judgement
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  The court makes a judgement against one of the parties if it considers that they have no real prospect of success and there is no compelling reason for a trial. 
+                </div>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="strike-out" name="strike-out" type="checkbox" value="strike-out" data-aria-controls="strike-out">
+                <label class="govuk-label govuk-checkboxes__label" for="strike-out">
+                  Unless Order
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  An order to instruct one of the parties to do something for the case by a deadline. If they do not comply, they will be penalised by the court.  
+                </div>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="strike-out" name="strike-out" type="checkbox" value="strike-out" data-aria-controls="strike-out">
+                <label class="govuk-label govuk-checkboxes__label" for="strike-out">
+                  Set aside judgment
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Ask the court to cancel the county court judgement or high court judgement. You can do this if you do not owe the money or did not receive the original claim. 
+                </div>
+              </div>
+              
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="strike-out" name="strike-out" type="checkbox" value="strike-out" data-aria-controls="strike-out">
+                <label class="govuk-label govuk-checkboxes__label" for="strike-out">
+                  Vary Order
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Ask the court to change an order that it has made.
+                </div>
+              </div>
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="strike-out" name="strike-out" type="checkbox" value="strike-out" data-aria-controls="strike-out">
+                <label class="govuk-label govuk-checkboxes__label" for="strike-out">
+                  Vary Judgment
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Ask the court to change the amount you must pay or to suspend a warrant issued by a court.
+                </div>
+              </div>
+
+                </div>
+
+              </div>
+
+          </fieldset>
+
+          <div class="govuk-inset-text">
+            To make an application not shown on this list, you'll need to submit a paper application to the court.
+          </div>
+
+          <!-- Buttons -->
+          {% include "../../../includes/buttons.html" %}
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

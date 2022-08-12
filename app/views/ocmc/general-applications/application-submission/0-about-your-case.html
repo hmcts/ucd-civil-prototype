@@ -1,0 +1,76 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+What applications do you want to make?
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Make an application
+        <span class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold claim-number-title">#1344-0992-2231-9776</span>
+      </h1>
+
+
+      <form class="form" action="/ocmc/general-applications/application-submission/1-application" method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="applications">
+
+            <span class="govuk-caption-m">Type of application</span>
+            <h1 class="govuk-heading-m">About your case</h1>
+
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+
+
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="strike-out" name="strike-out" type="checkbox" value="strike-out" data-aria-controls="strike-out">
+                <label class="govuk-label govuk-checkboxes__label" for="strike-out">
+                  Strike Out
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Ask the court to dismiss the whole case or part of it.
+                </div>
+              </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="extend-time" name="extend-time" type="checkbox" value="extend-time" data-aria-controls="extend-time">
+                  <label class="govuk-label govuk-checkboxes__label" for="extend-time">
+                    Amend the Statement of Case
+                  </label>
+                  <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Change the facts of your claim, defence or counter claim. Your statement of case details the merits of your case and the issues you intend to rely on in court.
+                </div>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="extend-time" name="extend-time" type="checkbox" value="extend-time" data-aria-controls="extend-time">
+                  <label class="govuk-label govuk-checkboxes__label" for="extend-time">
+                    Stay the Claim
+                  </label>
+                  <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  A stay will stop court proceedings. You can ask for a stay to stop all or part of the proceedings.
+                </div>
+                </div>
+
+                </div>
+
+              </div>
+
+          </fieldset>
+
+          <div class="govuk-inset-text">
+            To make an application not shown on this list, you'll need to submit a paper application to the court.
+          </div>
+
+          <!-- Buttons -->
+          {% include "../../../includes/buttons.html" %}
+
+        </div>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

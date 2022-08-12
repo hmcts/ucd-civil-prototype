@@ -1,0 +1,630 @@
+{% extends "layout-manage-cases.html" %}
+
+{% block pageTitle %}
+What applications do you want to make?
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <main style="padding-top:0px;" class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">
+        Make an application
+        <span class="govuk-body govuk-!-font-size-24 govuk-!-font-weight-bold claim-number-title">#1344-0992-2231-9776</span>
+      </h1>        
+    </div>
+    </div>
+
+<div class="govuk-grid-row">
+
+  <form class="form" action="/ocmc/general-applications/application-submission/1-application" method="post">
+
+  <div class="govuk-grid-column-one-third">
+        <div class="moj-filter-layout">
+          
+
+  <div class="moj-filter-layout__filter">
+
+    <div class="moj-filter">
+
+      <div class="moj-filter__header">
+
+        <div class="moj-filter__header-title">
+          <h2 class="govuk-heading-m">Filter</h2>
+        </div>
+
+        <div class="moj-filter__header-action">
+
+        </div>
+
+      </div>
+
+      <div class="moj-filter__content">
+
+        <div class="moj-filter__selected">
+
+          <div class="moj-filter__selected-heading">
+
+            <div class="moj-filter__heading-title">
+              <h2 class="govuk-heading-m">Selected filters</h2>
+            </div>
+
+            <div class="moj-filter__heading-action">
+              <p><a class="govuk-link govuk-link--no-visited-state" href="">Clear filters</a></p>
+            </div>
+
+          </div>
+
+          <!--<h3 class="govuk-heading-s govuk-!-margin-bottom-0">Application type</h3>
+
+          <ul class="moj-filter-tags">
+
+            <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> About your case</a></li>
+
+            <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Case judgement</a></li>
+
+          </ul>-->
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">About your case</h3>
+
+          <ul class="moj-filter-tags">
+
+            <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Strike Out</a></li>
+            <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Amend a Statement of Case</a></li>
+
+          </ul>
+
+          <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Case judgement</h3>
+
+          <ul class="moj-filter-tags">
+
+            <li><a class="moj-filter__tag" href="#"><span class="govuk-visually-hidden">Remove this filter</span> Unless Order</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="moj-filter__options">
+
+          <button class="govuk-button" data-module="govuk-button">
+            Apply filters
+          </button>
+
+
+          <div class="govuk-form-group">
+
+            <fieldset class="govuk-fieldset">
+
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+
+                Application type
+
+              </legend>
+
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    About your case
+                  </label>
+
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type-2" name="type" type="checkbox" value="2" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type-2">
+                    Case judgement
+                  </label>
+
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type-3" name="type" type="checkbox" value="3">
+                  <label class="govuk-label govuk-checkboxes__label" for="type-3">
+                    Time management
+                  </label>
+
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type-4" name="type" type="checkbox" value="4">
+                  <label class="govuk-label govuk-checkboxes__label" for="type-4">
+                    About your hearing
+                  </label>
+
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+
+
+    <div class="govuk-grid-column-two-thirds">
+    <div class="moj-filter-layout__content">
+
+    {# <div class="moj-action-bar">
+      <div class="moj-action-bar__filter"></div>
+      <div class="moj-button-menu">
+        <div class="moj-button-menu__wrapper">
+          <button class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
+            Action 1
+          </button>
+          <button class="govuk-button moj-button-menu__item govuk-button--secondary " data-module="govuk-button">
+            Action 2
+          </button>
+        </div>
+      </div>
+    </div> #}
+
+    
+    <div class="moj-scrollable-pane">
+
+      <hr>
+        <div class="govuk-inset-text">
+            To make an application not shown on this list, you'll need to submit a paper application to the court.
+          </div>
+
+          {# <!-- Buttons -->
+          {% include "../../../includes/buttons.html" %} #}
+
+          <div class="govuk-button-group">  
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Previous
+            </button>
+            <button class="govuk-button" data-module="govuk-button">
+              Continue
+            </button>
+
+            <a class="govuk-link" href="#">Cancel</a>
+        </div>
+      <hr>
+
+      <br>
+
+      <div class="moj-scrollable-pane__wrapper">
+
+        <table class="govuk-table">
+          
+          <p class="govuk-heading-m">About your case</p>
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+
+              {# <th scope="col" class="govuk-table__header">Reference</th> #}
+
+            </tr>
+          </thead>
+
+          <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                  Strike Out
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Ask the court to dismiss the whole case or part of it.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Amend the Statement of Case
+                  </label>
+                  <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Change the facts of your claim, defence or counter claim. Your statement of case details the merits of your case and the issues you intend to rely on in court.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Stay the Claim
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  A stay will stop court proceedings. You can ask for a stay to stop all or part of the proceedings.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Lorem Ipsum
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. It's been around since the 1900s.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Lorem Ipsum
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. It's been around since the 1900s.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+        
+        <table class="govuk-table">
+          
+          <p class="govuk-heading-m">Case judgement</p>
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+
+              {# <th scope="col" class="govuk-table__header">Reference</th> #}
+
+            </tr>
+          </thead>
+
+          <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                  Summary judgement
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  The court makes a judgement against one of the parties if it considers that they have no real prospect of success and there is no compelling reason for a trial. 
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                  Unless Order
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  An order to instruct one of the parties to do something for the case by a deadline. If they do not comply, they will be penalised by the court.  
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                  Set aside judgment
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Ask the court to cancel the county court judgement or high court judgement. You can do this if you do not owe the money or did not receive the original claim. 
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                  Vary Order
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Ask the court to change an order that it has made.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                  Vary Judgment
+                </label>
+                <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Ask the court to change the amount you must pay or to suspend a warrant issued by a court.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Lorem Ipsum
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. It's been around since the 1900s.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+
+        <table class="govuk-table">
+          
+          <p class="govuk-heading-m">Time management</p>
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+
+              {# <th scope="col" class="govuk-table__header">Reference</th> #}
+
+            </tr>
+          </thead>
+
+          <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Extend time
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. It's been around since the 1900s.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Relief from Sanctions
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. It's been around since the 1900s.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Lorem Ipsum
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. It's been around since the 1900s.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Lorem Ipsum
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. It's been around since the 1900s.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Lorem Ipsum
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. It's been around since the 1900s.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Lorem Ipsum
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. It's been around since the 1900s.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+
+        <table class="govuk-table">
+          
+          <p class="govuk-heading-m">About your hearing</p>
+
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+
+              {# <th scope="col" class="govuk-table__header">Reference</th> #}
+
+            </tr>
+          </thead>
+
+          <tbody class="govuk-table__body">
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Change the time and/or date
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Asking the Court to adjourn the case to another date, giving a reason.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" checked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Vacate the Hearing
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Provide explanation why a Hearing is no longer required, giving a reason.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Add a Witness
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Ask the Court to allow you to introduce new or more witness(es), experts or other documentation
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+            <tr class="govuk-table__row">
+
+              <td class="govuk-table__cell">
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="type" name="type" type="checkbox" value="1" unchecked>
+                  <label class="govuk-label govuk-checkboxes__label" for="type">
+                    Change the Time Estimate
+                  </label>
+                   <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                  Asking to varying the length of the court hearing due to, for example, the introduction of a new witness.
+                </div>
+                </div>
+              </td>
+
+            </tr>
+
+          </tbody>
+        </table>
+
+  </main>
+</div>
+</div>  
+
+
+
+{% endblock %}
