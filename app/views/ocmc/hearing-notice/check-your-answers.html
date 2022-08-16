@@ -34,12 +34,51 @@
               </a>
             </dd>
           </div>
-          <div class="govuk-summary-list__row">
+          {# <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               General application
             </dt>
             <dd class="govuk-summary-list__value">
               GA 1
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div> #}
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Application relates to
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Claimant
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type of application
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Freetext
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="#">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date of application
+            </dt>
+            <dd class="govuk-summary-list__value">
+              15 Aug 2022
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">
@@ -114,16 +153,16 @@
           </div>
         </dl>
 
-        <h2 class="govuk-heading-m">Now send your application</h2>
+        {# <h2 class="govuk-heading-m">Now send your application</h2>
 
-        <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+        <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p> #}
 
         <form action="/form-handler" method="post" novalidate>
 
           <input type="hidden" name="answers-checked" value="true">
 
           <button class="govuk-button" data-module="govuk-button">
-            Accept and send
+            Submit
           </button>
 
         </form>

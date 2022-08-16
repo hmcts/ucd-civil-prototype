@@ -20,7 +20,7 @@ module.exports = (router) => {
     }
     if (whathearingnoticeAnswer == "Notice of hearing of application") {
       // Send user to next page
-      res.redirect('general-application')
+      res.redirect('gen-app')
     }
     else {
       // Send user to ineligible page
