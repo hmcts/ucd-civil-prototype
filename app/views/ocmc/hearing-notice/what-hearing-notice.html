@@ -14,7 +14,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <form class="form" action="what-hearing-notice-answer" method="post">
-      
+
           {% from "govuk/components/radios/macro.njk" import govukRadios %}
           {% from "govuk/components/input/macro.njk" import govukInput %}
 
@@ -86,15 +86,15 @@
             items: [
               {
                 value: "Notice of hearing (Small Claims)",
-                text: "Notice of hearing (Small Claims)"
+                text: "Small Claims hearing"
               },
               {
                 value: "Notice of hearing of application",
-                text: "Notice of hearing of application"
+                text: "Hearing of application"
               },
               {
                 value: "Notice of trial date (Fast Track)",
-                text: "Notice of trial date (Fast Track)",
+                text: "Fast track trial date",
                 conditional: {
                   html: textHtml
                 }
