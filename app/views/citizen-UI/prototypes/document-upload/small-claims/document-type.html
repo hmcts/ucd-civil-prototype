@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Select the type of document you want to upload
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select the type of document you want to upload
+      </h1>
+
+      <p class="govuk-body">
+        You can select more than one type of document
+      </p>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Witness evidence
+            </h1>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            Your statement if you are giving evidence, statement written by your witness, summary of 	evidence
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Witness statement
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                Your written evidence if you are giving evidence, written evidence by your witness
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Witness summary
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                If you cannot get a full witness statement, you can use a witness summary of the evidence you 	would include in a witness statement. You need permission from the court to use a witness summary
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Documentary evidence
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                Documents you or your witness refer to in the statement, including emails, receipts, invoices, 	contracts and photos
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Expert evidence
+            </h1>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            Written evidence by your expert, joint statement by both parties’ experts
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Expert's report
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                Written evidence by an expert. If you have agreed to share a single joint expert, check if the 	other party has uploaded the report
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Joint statement of experts
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                Statement by both parties' experts setting out their areas of agreement and disagreement
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Trial documents
+            </h1>
+          </legend>
+          <div id="waste-hint" class="govuk-hint">
+            Documents for your trial including case summary, skeleton argument and authorities
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Authorities
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                Details of the case law, legislation or other legal precedent that you are going to rely on in court
+              </div>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Documentary evidence for trial
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                Documents that you wish to rely on at the trial, including emails, receipts, invoices, contracts 	and photos. You do not need to upload documents you have already uploaded
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <a href="javascript: window.history.go(-1)" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Previous
+            </a>
+
+          {# <button class="govuk-button" type="submit" data-module="govuk-button">
+            Continue
+          </button> #}
+
+          {{ govukButton({
+            text: "Continue",
+            href: "upload-documents"
+          }) }}
+          
+          <div class="govuk-form-group" > <a href="" class="govuk-body govuk-link" data-module="govuk-button">
+            Cancel
+           </a>
+          </div>
+
+    </div>
+  </div>
+{% endblock %}

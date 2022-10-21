@@ -1,0 +1,573 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Select the type of document you want to upload
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" onclick="history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Select the type of document you want to upload
+      </h1>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You cannot withdraw a document once you have uploaded it
+        </strong>
+      </div>
+
+      <h2 class="govuk-heading-l">
+        Disclosure
+      </h2>
+      <h3 class="govuk-heading-m">
+        Disclosure list
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <hr>
+
+      <h3 class="govuk-heading-m">
+        Documents for disclosure
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <br><br>
+
+      <h2 class="govuk-heading-l">
+        Witness evidence
+      </h2>
+      <h3 class="govuk-heading-m">
+        Witness statement
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Witness's name
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend">
+      Date statement was made
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 27 9 2022
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <hr>
+
+      <h3 class="govuk-heading-m">
+        Witness summary
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Witness's name
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <hr>
+
+      <h3 class="govuk-heading-m">
+        Notice of intention to rely on hearsay evidence
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Witness's name
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend">
+      Date statement was made
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 27 9 2022
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <hr>
+
+      <h3 class="govuk-heading-m">
+        Documentary evidence
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <br><br>
+
+      <h2 class="govuk-heading-l">
+        Expert evidence
+      </h2>
+      <h3 class="govuk-heading-m">
+        Expert’s report
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Expert's name
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Field of expertise
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend">
+      Date report was made
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 27 9 2022
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <hr>
+
+      <h3 class="govuk-heading-m">
+        Joint statement of experts
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Expert's name
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Field of expertise
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend">
+      Date statement was made
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      For example, 27 9 2022
+    </div>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <hr>
+
+      <h3 class="govuk-heading-m">
+        Questions for other party's expert
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Expert's name
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Other party's name
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Name of document you have questions about
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <hr>
+
+      <h3 class="govuk-heading-m">
+        Answers to questions asked by other party
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Expert's name
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Other party's name
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="select" selected>Select</option>
+          <option value="published">John Smith</option>
+          <option value="views">Mary Smith</option>
+          <option value="comments">Anne Smith</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="event-name">
+          Name of document with other party’s questions
+        </label>
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <br><br>
+
+      <h2 class="govuk-heading-l">
+        Trial documents
+      </h2>
+      <h3 class="govuk-heading-m">
+        Case summary
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <hr>
+
+      <h3 class="govuk-heading-m">
+        Skeleton argument
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <hr>
+
+      <h3 class="govuk-heading-m">
+        Authorities
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <hr>
+
+      <h3 class="govuk-heading-m">
+        Documentary evidence for trial
+      </h3>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <div id="nationality-item-hint" class="govuk-hint">
+          Each document must be less than 100MB. You can upload the following file types: Word,  Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Add another
+      </button>
+
+      <br><br><br>
+
+      <a href="javascript: window.history.go(-1)" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Previous
+            </a>
+
+          {# <button class="govuk-button" type="submit" data-module="govuk-button">
+            Continue
+          </button> #}
+
+          {{ govukButton({
+            text: "Continue",
+            href: "check-your-documents"
+          }) }}
+          
+          <div class="govuk-form-group" > <a href="" class="govuk-body govuk-link" data-module="govuk-button">
+            Cancel
+           </a>
+          </div>
+
+    </div>
+  </div>
+{% endblock %}
