@@ -24,14 +24,22 @@
         </strong>
       </div>
 
-      <h2 class="govuk-heading-l">
-        Witness evidence
-      </h2>
-      <h3 class="govuk-heading-m">
-        Witness statement
-      </h3>
+      <div data-module="moj-add-another">
 
-      <div class="govuk-form-group">
+  <h2 class="govuk-heading-l moj-add-another__heading" tabindex="-1">Witness evidence</h2>
+
+  <form method="post">
+
+    {% call govukFieldset({
+      classes: 'moj-add-another__item',
+      legend: {
+        text: 'Witness statement',
+        classes: 'moj-add-another__title govuk-fieldset__legend--m',
+        isPageHeading: false
+      }
+    }) %}
+
+    <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
           Witness's name
         </label>
@@ -85,17 +93,36 @@
         </div>
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </div>
-      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Add another
-      </button>
 
-      <hr>
+    {% endcall %}
 
-      <h3 class="govuk-heading-m">
-        Witness summary
-      </h3>
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
 
-      <div class="govuk-form-group">
+  </form>
+
+</div>
+
+      <br><hr>
+
+      <div data-module="moj-add-another">
+
+  <form method="post">
+
+    {% call govukFieldset({
+      classes: 'moj-add-another__item',
+      legend: {
+        text: 'Witness summary',
+        classes: 'moj-add-another__title govuk-fieldset__legend--m',
+        isPageHeading: false
+      }
+    }) %}
+
+    <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
           Witness's name
         </label>
@@ -111,17 +138,36 @@
         </div>
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </div>
-      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Add another
-      </button>
 
-      <hr>
+    {% endcall %}
 
-      <h3 class="govuk-heading-m">
-        Documentary evidence
-      </h3>
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
 
-      <div class="govuk-form-group">
+  </form>
+
+</div>
+
+      <br><hr>
+
+       <div data-module="moj-add-another">
+
+  <form method="post">
+
+    {% call govukFieldset({
+      classes: 'moj-add-another__item',
+      legend: {
+        text: 'Documentary evidence',
+        classes: 'moj-add-another__title govuk-fieldset__legend--m',
+        isPageHeading: false
+      }
+    }) %}
+
+    <div class="govuk-form-group">
         <label class="govuk-label" for="file-upload-1">
           Upload a file
         </label>
@@ -130,18 +176,36 @@
         </div>
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </div>
-      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Add another
-      </button>
+
+    {% endcall %}
+
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
+
+  </form>
+
+</div>
 
       <br><br>
 
-      <h2 class="govuk-heading-l">
-        Expert evidence
-      </h2>
-      <h3 class="govuk-heading-m">
-        Expert’s report
-      </h3>
+      <div data-module="moj-add-another">
+
+  <h2 class="govuk-heading-l moj-add-another__heading" tabindex="-1">Expert evidence</h2>
+
+  <form method="post">
+
+    {% call govukFieldset({
+      classes: 'moj-add-another__item',
+      legend: {
+        text: 'Expert’s report',
+        classes: 'moj-add-another__title govuk-fieldset__legend--m',
+        isPageHeading: false
+      }
+    }) %}
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
@@ -204,15 +268,35 @@
         </div>
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </div>
-      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Add another
-      </button>
 
-      <hr>
+      {% endcall %}
 
-      <h3 class="govuk-heading-m">
-        Joint statement of experts
-      </h3>
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
+
+  </form>
+
+</div>
+
+      <br><hr>
+
+      <div data-module="moj-add-another">
+
+  <form method="post">
+
+    {% call govukFieldset({
+      classes: 'moj-add-another__item',
+      legend: {
+        text: 'Joint statement of experts',
+        classes: 'moj-add-another__title govuk-fieldset__legend--m',
+        isPageHeading: false
+      }
+    }) %}
+
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
@@ -275,9 +359,19 @@
         </div>
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </div>
-      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Add another
-      </button>
+     
+         {% endcall %}
+
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
+
+  </form>
+
+</div>
 
       <br><br>
 
@@ -285,9 +379,18 @@
         Trial documents
       </h2>
 
-      <h3 class="govuk-heading-m">
-        Authorities
-      </h3>
+      <div data-module="moj-add-another">
+
+  <form method="post">
+
+    {% call govukFieldset({
+      classes: 'moj-add-another__item',
+      legend: {
+        text: 'Authorities',
+        classes: 'moj-add-another__title govuk-fieldset__legend--m',
+        isPageHeading: false
+      }
+    }) %}
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="file-upload-1">
@@ -298,15 +401,38 @@
         </div>
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </div>
-      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Add another
-      </button>
+      
+          {% endcall %}
 
-      <hr>
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
 
-      <h3 class="govuk-heading-m">
+  </form>
+
+</div>
+
+      <br><hr>
+
+       <div data-module="moj-add-another">
+
+  <form method="post">
+
+    {# <h3 class="govuk-heading-m">
         Documentary evidence for trial
-      </h3>
+      </h3> #}
+
+    {% call govukFieldset({
+      classes: 'moj-add-another__item',
+      legend: {
+        text: 'Documentary evidence for trial',
+        classes: 'moj-add-another__title govuk-fieldset__legend--m',
+        isPageHeading: false
+      }
+    }) %}
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="file-upload-1">
@@ -317,9 +443,19 @@
         </div>
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </div>
-      <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Add another
-      </button>
+      
+          {% endcall %}
+
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
+
+  </form>
+
+</div>
 
       <br><br><br>
 
