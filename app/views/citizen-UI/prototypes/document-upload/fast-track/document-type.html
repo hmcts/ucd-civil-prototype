@@ -27,9 +27,9 @@
               Disclosure
             </h1>
           </legend>
-          <div id="waste-hint" class="govuk-hint">
+          {# <div id="waste-hint" class="govuk-hint">
             Documents you must show the other parties and a list of those documents
-          </div>
+          </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
@@ -60,9 +60,9 @@
               Witness evidence
             </h1>
           </legend>
-          <div id="waste-hint" class="govuk-hint">
+          {# <div id="waste-hint" class="govuk-hint">
             Your statement if you are giving evidence, statement written by your witness, summary of 	evidence
-          </div>
+          </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
@@ -94,7 +94,7 @@
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
               <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                Documentary evidence
+                Documents referred to in the statement
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
                 Documents you or your witness refer to in the statement, including emails, receipts, invoices, 	contracts and photos
@@ -111,9 +111,9 @@
               Expert evidence
             </h1>
           </legend>
-          <div id="waste-hint" class="govuk-hint">
+          {# <div id="waste-hint" class="govuk-hint">
             Written evidence by your expert, joint statement by both parties’ experts
-          </div>
+          </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
@@ -136,10 +136,10 @@
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
               <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                Questions for other party’s experts
+                Questions for other party’s expert or joint expert
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Written questions about an expert's report
+                Written questions about an expert's report or a joint statement of experts
               </div>
             </div>
             <div class="govuk-checkboxes__item">
@@ -162,9 +162,9 @@
               Trial documents
             </h1>
           </legend>
-          <div id="waste-hint" class="govuk-hint">
+          {# <div id="waste-hint" class="govuk-hint">
             Documents for your trial including case summary, skeleton argument and authorities
-          </div>
+          </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
@@ -206,24 +206,40 @@
         </fieldset>
       </div>
 
-      <a href="javascript: window.history.go(-1)" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-            Previous
-            </a>
+      
 
           {# <button class="govuk-button" type="submit" data-module="govuk-button">
             Continue
           </button> #}
 
           {{ govukButton({
-            text: "Continue",
+            text: "Save and continue",
             href: "upload-documents"
           }) }}
-          
-          <div class="govuk-form-group" > <a href="" class="govuk-body govuk-link" data-module="govuk-button">
-            Cancel
-           </a>
-          </div>
 
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Contact us for help
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <strong>Email</strong>
+          <br>
+          <a class="govuk-body" href="mailto:contactocmc@justice.gov.uk">contactocmc@justice.gov.uk</a>
+          <br>
+          <p class="govuk-body">We'll get back to you within 10 days.</p>
+
+          <strong>Telephone</strong>
+          <p class="govuk-body">0300 123 7050
+            <br>
+          Monday to Friday, 8.30am to 5pm
+            <br>
+          <a href="https://www.gov.uk/call-charges" class="govuk-link" rel="noreferrer noopener" target="_blank">Find out about call charges (opens in a new window)</a>
+          </p>
+        </div>
+      </details>
+      
     </div>
   </div>
 {% endblock %}
