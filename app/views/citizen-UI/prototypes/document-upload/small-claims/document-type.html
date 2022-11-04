@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Select the type of document you want to upload
+  What types of documents do you want to upload?
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,11 +23,11 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Select the type of document you want to upload
+        What types of documents do you want to upload?
       </h1>
 
       <p class="govuk-body">
-        You can select more than one type of document
+        Select all the types of documents that apply.
       </p>
 
       <div class="govuk-form-group">
@@ -38,7 +38,7 @@
             </h1>
           </legend>
           {# <div id="waste-hint" class="govuk-hint">
-            Your statement if you are giving evidence, statement written by your witness, summary of 	evidence
+            Your statement if you are giving evidence, statement written by your witness, summary of evidence
           </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
@@ -109,7 +109,7 @@
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Trial documents
+              Hearing documents
             </h1>
           </legend>
           {# <div id="waste-hint" class="govuk-hint">
@@ -128,10 +128,10 @@
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="docev" name="waste" type="checkbox" value="mines">
               <label class="govuk-label govuk-checkboxes__label" for="docev">
-                Documentary evidence for trial
+                Documentary evidence for the hearing
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Documents that you wish to rely on at the trial, including emails, receipts, invoices, contracts 	and photos. You do not need to upload documents you have already uploaded
+                Documents that you wish to rely on at the hearing, including emails, receipts, invoices, contractsand photos. You do not need to upload documents you have already uploaded
               </div>
             </div>
           </div>
