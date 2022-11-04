@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Select the type of document you want to upload
+  What types of documents do you want to upload?
 {% endblock %}
 
 {% block beforeContent %}
@@ -13,11 +13,11 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Select the type of document you want to upload
+        What types of documents do you want to upload?
       </h1>
 
       <p class="govuk-body">
-        You can select more than one type of document
+        Select all the types of documents that apply.
       </p>
 
       <div class="govuk-form-group">
@@ -31,6 +31,15 @@
             Documents you must show the other parties and a list of those documents
           </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+           <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Documents for disclosure
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                Recorded information that you must show the other parties - for example, contracts, invoices, receipts, emails, text messages, photos, social media messages
+              </div>
+            </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
               <label class="govuk-label govuk-checkboxes__label" for="waste">
@@ -38,15 +47,6 @@
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
                 A list of the documents that you must show the other parties
-              </div>
-            </div>
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                Documents for disclosure
-              </label>
-              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Recorded information that you must show the other parties - for example, contracts, invoices, 	receipts, emails, text messages, photos, social media messages
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@
                 Witness summary
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                If you cannot get a full witness statement, you can use a witness summary of the evidence you 	would include in a witness statement. You need permission from the court to use a witness summary
+                If you cannot get a full witness statement, you can use a witness summary of the evidence you would include in a witness statement. You need permission from the court to use a witness summary
               </div>
             </div>
             <div class="govuk-checkboxes__item">
@@ -88,7 +88,7 @@
                 Notice of intention to rely on hearsay evidence
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Notice to tell the other parties that you intend to rely on hearsay evidence at the trial. If the 	evidence is in a witness statement and the witness is not going to be in court, you must say why
+                Notice to tell the other parties that you intend to rely on hearsay evidence at the trial. If the evidence is in a witness statement and the witness is not going to be in court, you must say why
               </div>
             </div>
             <div class="govuk-checkboxes__item">
@@ -97,7 +97,7 @@
                 Documents referred to in the statement
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Documents you or your witness refer to in the statement, including emails, receipts, invoices, 	contracts and photos
+                Documents you or your witness refer to in the statement, including emails, receipts, invoices, contracts and photos
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@
                 Expert's report
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Written evidence by an expert. If you have agreed to share a single joint expert, check if the 	other party has uploaded the report
+                Written evidence by an expert. If you have agreed to share a single joint expert, check if the other party has uploaded the report
               </div>
             </div>
             <div class="govuk-checkboxes__item">
