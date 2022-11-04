@@ -11,7 +11,7 @@
       PROTOTYPE ONLY
     </strong>
     <span class="govuk-phase-banner__text">
-      Scenario: <a class="govuk-link" href="part-document-type">Show user selected checkboxes and related upload sections on the following screen</a>
+      Scenario: <a class="govuk-link" href="document-type">Shows user unselected checkboxes and all upload sections on the following screen</a>
     </span>
   </p>
 </div>
@@ -42,7 +42,7 @@
           </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="ws" name="waste" type="checkbox" value="carcasses">
+              <input class="govuk-checkboxes__input" id="ws" name="waste" type="checkbox" value="carcasses" checked>
               <label class="govuk-label govuk-checkboxes__label" for="ws">
                 Witness statement
               </label>
@@ -84,7 +84,7 @@
           </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="er" name="waste" type="checkbox" value="carcasses">
+              <input class="govuk-checkboxes__input" id="er" name="waste" type="checkbox" value="carcasses" checked>
               <label class="govuk-label govuk-checkboxes__label" for="er">
                 Expert's report
               </label>
@@ -117,7 +117,7 @@
           </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="au" name="waste" type="checkbox" value="mines">
+              <input class="govuk-checkboxes__input" id="au" name="waste" type="checkbox" value="mines" checked>
               <label class="govuk-label govuk-checkboxes__label" for="au">
                 Authorities
               </label>
@@ -146,7 +146,7 @@
 
           {{ govukButton({
             text: "Save and continue",
-            href: "upload-documents"
+            href: "part-upload-documents"
           }) }}
           
       <details class="govuk-details" data-module="govuk-details">
@@ -180,7 +180,7 @@
             Prototype Only
           </strong>
           <br>
-          <a href="part-document-type">Scenario: Shows user selected checkboxes and related upload sections on the following screen</a>
+          <a href="document-type">Scenario: Shows user unselected checkboxes and all upload sections on the following screen</a>
         </p>
       </div> #}
 
