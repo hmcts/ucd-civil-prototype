@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Select the type of document you want to upload
+  What types of documents do you want to upload?
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,7 +11,7 @@
       PROTOTYPE ONLY
     </strong>
     <span class="govuk-phase-banner__text">
-      Scenario: <a class="govuk-link" href="document-type">Shows user unselected checkboxes and all upload sections on the following screen</a>
+      Scenario: <a class="govuk-link" href="document-type">Show user selected checkboxes and related upload sections on the following screen</a>
     </span>
   </p>
 </div>
@@ -23,11 +23,11 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Select the type of document you want to upload
+        What types of documents do you want to upload?
       </h1>
 
       <p class="govuk-body">
-        You can select more than one type of document
+        Select all the types of documents that apply.
       </p>
 
       <div class="govuk-form-group">
@@ -38,7 +38,7 @@
             </h1>
           </legend>
           {# <div id="waste-hint" class="govuk-hint">
-            Your statement if you are giving evidence, statement written by your witness, summary of 	evidence
+            Your statement if you are giving evidence, statement written by your witness, summary of evidence
           </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
@@ -89,7 +89,7 @@
                 Expert's report
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Written evidence by an expert. If you have agreed to share a single joint expert, check if the other party has uploaded the report
+                Written evidence by an expert. If you have agreed to share a single joint expert, check if the 	other party has uploaded the report
               </div>
             </div>
             <div class="govuk-checkboxes__item">
@@ -113,7 +113,7 @@
             </h1>
           </legend>
           {# <div id="waste-hint" class="govuk-hint">
-            Documents for your hearing including case summary, skeleton argument and authorities
+            Documents for your trial including case summary, skeleton argument and authorities
           </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
@@ -128,10 +128,10 @@
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="docev" name="waste" type="checkbox" value="mines">
               <label class="govuk-label govuk-checkboxes__label" for="docev">
-                Documentary evidence for hearing
+                Documentary evidence for the hearing
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Documents that you wish to rely on at the hearing, including emails, receipts, invoices, contracts and photos. You do not need to upload documents you have already uploaded
+                Documents that you wish to rely on at the hearing, including emails, receipts, invoices, contractsand photos. You do not need to upload documents you have already uploaded
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@
             Prototype Only
           </strong>
           <br>
-          <a href="document-type">Scenario: Shows user unselected checkboxes and all upload sections on the following screen</a>
+          <a href="part-document-type">Scenario: Shows user selected checkboxes and related upload sections on the following screen</a>
         </p>
       </div> #}
 

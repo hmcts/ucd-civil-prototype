@@ -9,6 +9,14 @@
 {% endblock %}
 
 {% block content %}
+
+      {%- from "govuk/components/button/macro.njk" import govukButton -%}
+      {%- from "govuk/components/date-input/macro.njk" import govukDateInput -%}
+      {%- from "govuk/components/fieldset/macro.njk" import govukFieldset -%}
+      {%- from "govuk/components/input/macro.njk" import govukInput -%}
+      {%- from "govuk/components/textarea/macro.njk" import govukTextarea -%}
+
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
@@ -24,61 +32,22 @@
         </strong>
       </div>
 
-  <h2 class="govuk-heading-l moj-add-another__heading" tabindex="-1">Witness evidence</h2>
+<div data-module="moj-add-another">
 
-<div>
-  <h3 class="govuk-heading-m">Witness statement
-        <a class="govuk-button govuk-button--secondary" href="upload-documents-filled-3#we" style="position:relative;left:330px;top:0px" data-module="govuk-button">
-          Remove
-        </a>
-      </h3>
+  <h2 class="govuk-heading-l moj-add-another__heading" tabindex="-1">Disclosure</h2>
+
+  <form method="post">
+
+    {% call govukFieldset({
+      classes: 'moj-add-another__item',
+      legend: {
+        text: 'Disclosure list',
+        classes: 'moj-add-another__title govuk-fieldset__legend--m',
+        isPageHeading: false
+      }
+    }) %}
 
     <div class="govuk-form-group">
-        <label class="govuk-label" for="event-name">
-          Witness's name
-        </label>
-        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text" value="Jane Smith">
-      </div>
-
-      <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-    <legend class="govuk-fieldset__legend">
-      Date statement was made
-    </legend>
-    <div id="passport-issued-hint" class="govuk-hint">
-      For example, 27 9 2022
-    </div>
-    <div class="govuk-date-input" id="passport-issued">
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-            Day
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric" value="10">
-        </div>
-      </div>
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-            Month
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric" value="10">
-        </div>
-      </div>
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-            Year
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric" value="2022">
-        </div>
-      </div>
-    </div>
-
-  </fieldset>
-</div>
-
-      <div class="govuk-form-group">
         <label class="govuk-label" for="file-upload-1">
           Upload a file
         </label>
@@ -88,18 +57,29 @@
         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
       </div>
 
-        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-          Add another
-        </button>
+    {% endcall %}
+
+    <div class="moj-button-action">
+      {{ govukButton({
+        text: 'Add another',
+        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
+      }) }}
+    </div>
+
+  </form>
 
 </div>
 
-      <br><hr>
+      <br><br>
+
+      <div data-module="moj-add-another">
+
+  <h2 class="govuk-heading-l moj-add-another__heading" tabindex="-1" id="we">Witness evidence</h2>
 
       <h3 class="govuk-heading-m">Witness statement
-        <button class="govuk-button govuk-button--secondary" style="position:relative;left:330px;top:0px" data-module="govuk-button">
+        <a class="govuk-button govuk-button--secondary" style="position:relative;left:330px;top:0px" data-module="govuk-button">
           Remove
-        </button>
+        </a>
       </h3>
 
     <div class="govuk-form-group">
@@ -240,7 +220,7 @@
         <label class="govuk-label" for="event-name">
           Witness's name
         </label>
-        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text" value="Anne Smith">
+        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text" value="Jane Smith">
       </div>
 
       <div class="govuk-form-group">
@@ -295,55 +275,9 @@
           Add another
         </button>
 
-
       <br><hr>
 
       <div data-module="moj-add-another">
-
-  <form method="post">
-
-    {% call govukFieldset({
-      classes: 'moj-add-another__item',
-      legend: {
-        text: 'Witness summary',
-        classes: 'moj-add-another__title govuk-fieldset__legend--m',
-        isPageHeading: false
-      }
-    }) %}
-
-    <div class="govuk-form-group">
-        <label class="govuk-label" for="event-name">
-          Witness's name
-        </label>
-        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="file-upload-1">
-          Upload a file
-        </label>
-        <div id="nationality-item-hint" class="govuk-hint">
-          Each document must be less than 100MB. You can upload the following file types: Word, Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
-        </div>
-        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-      </div>
-
-    {% endcall %}
-
-    <div class="moj-button-action">
-      {{ govukButton({
-        text: 'Add another',
-        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
-      }) }}
-    </div>
-
-  </form>
-
-</div>
-
-      <br><hr>
-
-       <div data-module="moj-add-another">
 
   <form method="post">
 
@@ -379,18 +313,19 @@
 
 </div>
 
+    
       <br><br>
 
-      <div data-module="moj-add-another">
-
   <h2 class="govuk-heading-l moj-add-another__heading" tabindex="-1">Expert evidence</h2>
+
+      <div data-module="moj-add-another">
 
   <form method="post">
 
     {% call govukFieldset({
       classes: 'moj-add-another__item',
       legend: {
-        text: 'Expert’s report',
+        text: 'Answers to questions asked by other party',
         classes: 'moj-add-another__title govuk-fieldset__legend--m',
         isPageHeading: false
       }
@@ -404,182 +339,23 @@
       </div>
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="event-name">
-          Field of expertise
+        <label class="govuk-label" for="sort">
+          Other party's name
         </label>
-        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-    <legend class="govuk-fieldset__legend">
-      Date report was made
-    </legend>
-    <div id="passport-issued-hint" class="govuk-hint">
-      For example, 27 9 2022
-    </div>
-    <div class="govuk-date-input" id="passport-issued">
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-            Day
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-        </div>
-      </div>
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-            Month
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-        </div>
-      </div>
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-            Year
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-        </div>
-      </div>
-    </div>
-
-  </fieldset>
-</div>
-
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="file-upload-1">
-          Upload a file
-        </label>
-        <div id="nationality-item-hint" class="govuk-hint">
-          Each document must be less than 100MB. You can upload the following file types: Word, Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
-        </div>
-        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-      </div>
-
-      {% endcall %}
-
-    <div class="moj-button-action">
-      {{ govukButton({
-        text: 'Add another',
-        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
-      }) }}
-    </div>
-
-  </form>
-
-</div>
-
-      <br><hr>
-
-      <div data-module="moj-add-another">
-
-  <form method="post">
-
-    {% call govukFieldset({
-      classes: 'moj-add-another__item',
-      legend: {
-        text: 'Joint statement of experts',
-        classes: 'moj-add-another__title govuk-fieldset__legend--m',
-        isPageHeading: false
-      }
-    }) %}
-
-
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="event-name">
-          Experts' names
-        </label>
-        <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="select" selected>Select</option>
+          <option value="published">John Smith</option>
+          <option value="views">Mary Smith</option>
+          <option value="comments">Anne Smith</option>
+        </select>
       </div>
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="event-name">
-          Fields of expertise
+          Name of document with other party’s questions
         </label>
         <input class="govuk-input govuk-input--width-30" id="event-name" name="event-name" type="text">
       </div>
-
-      <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-    <legend class="govuk-fieldset__legend">
-      Date statement was made
-    </legend>
-    <div id="passport-issued-hint" class="govuk-hint">
-      For example, 27 9 2022
-    </div>
-    <div class="govuk-date-input" id="passport-issued">
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-            Day
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-        </div>
-      </div>
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-            Month
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-        </div>
-      </div>
-      <div class="govuk-date-input__item">
-        <div class="govuk-form-group">
-          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-            Year
-          </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-        </div>
-      </div>
-    </div>
-
-  </fieldset>
-</div>
-
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="file-upload-1">
-          Upload a file
-        </label>
-        <div id="nationality-item-hint" class="govuk-hint">
-          Each document must be less than 100MB. You can upload the following file types: Word, Excel, PowerPoint, PDF, RTF, TXT, CSV, JPG, JPEG, PNG, BMP, TIF, TIFF
-        </div>
-        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-      </div>
-     
-         {% endcall %}
-
-    <div class="moj-button-action">
-      {{ govukButton({
-        text: 'Add another',
-        classes: 'govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4'
-      }) }}
-    </div>
-
-  </form>
-
-</div>
-
-      <br><br>
-
-      <h2 class="govuk-heading-l">
-        Hearing documents
-      </h2>
-
-      <div data-module="moj-add-another">
-
-  <form method="post">
-
-    {% call govukFieldset({
-      classes: 'moj-add-another__item',
-      legend: {
-        text: 'Authorities',
-        classes: 'moj-add-another__title govuk-fieldset__legend--m',
-        isPageHeading: false
-      }
-    }) %}
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="file-upload-1">
@@ -604,20 +380,18 @@
 
 </div>
 
-      <br><hr>
+      <br><br>
 
-       <div data-module="moj-add-another">
+  <h2 class="govuk-heading-l moj-add-another__heading" tabindex="-1">Trial documents</h2>
+
+            <div data-module="moj-add-another">
 
   <form method="post">
-
-    {# <h3 class="govuk-heading-m">
-        Documentary evidence for the hearing
-      </h3> #}
 
     {% call govukFieldset({
       classes: 'moj-add-another__item',
       legend: {
-        text: 'Documentary evidence for the hearing',
+        text: 'Skeleton argument',
         classes: 'moj-add-another__title govuk-fieldset__legend--m',
         isPageHeading: false
       }
@@ -648,18 +422,14 @@
 
       <br><br><br>
 
-
-
-          {# <button class="govuk-button" type="submit" data-module="govuk-button">
-            Continue
-          </button> #}
+          
 
           {{ govukButton({
             text: "Save and continue",
-            href: "check-your-documents-3"
+            href: "part-check-your-documents-3"
           }) }}
 
-      <details class="govuk-details" data-module="govuk-details">
+    <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
             Contact us for help
@@ -681,7 +451,7 @@
           </p>
         </div>
       </details>
-      
+
     </div>
   </div>
 {% endblock %}
