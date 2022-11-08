@@ -16,40 +16,6 @@
         Check your documents
       </h1>
 
-        <h2 class="govuk-heading-m">Disclosure</h2>
-
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Documents for disclosure
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <a class="govuk-link" href="#">Contract_May_2019.pdf</a><hr>
-              <a class="govuk-link" href="#">Receipt_21_June_2019.pdf</a><hr>
-              <a class="govuk-link" href="#">PhotoOfRoof.jpg</a><hr>
-              <a class="govuk-link" href="#">Email_21_June_2019.rtf</a>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="upload-documents">
-                Change<span class="govuk-visually-hidden"> date of birth</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Disclosure list
-            </dt>
-            <dd class="govuk-link govuk-summary-list__value">
-              <a class="govuk-link" href="#">Disclosure_list_Case1234566.pdf</a>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="upload-documents">
-                Change<span class="govuk-visually-hidden"> name</span>
-              </a>
-            </dd>
-          </div>
-        </dl>
-
          <h2 class="govuk-heading-m">Witness evidence</h2>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -58,7 +24,6 @@
               Witness statement
             </dt>
             <dd class="govuk-link govuk-summary-list__value">
-              <a class="govuk-link" href="#">1_Witness_statement_Jane_Smith.pdf</a><hr>
               <a class="govuk-link" href="#">2_Witness_statement_Fred_Bloggs.pdf</a><hr>
               <a class="govuk-link" href="#">3_Witness_statement_Peter_Bloggs.pdf</a><hr>
               <a class="govuk-link" href="#">4_Witness_statement_Jane_Smith.pdf</a>
@@ -75,19 +40,6 @@
             </dt>
             <dd class="govuk-summary-list__value">
               <a class="govuk-link" href="#">Witness_summary_Arthur_Pendragon.pdf</a>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="upload-documents">
-                Change<span class="govuk-visually-hidden"> date of birth</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Notice of intention to rely on hearsay evidence
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <a class="govuk-link" href="#">Notice_of_intention_Hearsay_Fred_Bloggs.pdf</a>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="upload-documents">
@@ -142,63 +94,11 @@
               </a>
             </dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Questions for other party’s expert or joint expert
-            </dt>
-            <dd class="govuk-link govuk-summary-list__value">
-              <a class="govuk-link" href="#">Qs_for_other_party.pdf</a>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="upload-documents">
-                Change<span class="govuk-visually-hidden"> name</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Answers to questions asked by other party
-            </dt>
-            <dd class="govuk-link govuk-summary-list__value">
-              <a class="govuk-link" href="#">Answers_to_qs_for_other.pdf</a>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="upload-documents">
-                Change<span class="govuk-visually-hidden"> name</span>
-              </a>
-            </dd>
-          </div>
         </dl>
 
-         <h2 class="govuk-heading-m">Trial documents</h2>
+         <h2 class="govuk-heading-m">Hearing documents</h2>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Case summary
-            </dt>
-            <dd class="govuk-link govuk-summary-list__value">
-              <a class="govuk-link" href="#">Trial_case_summary_Case1234567.pdf</a>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="upload-documents">
-                Change<span class="govuk-visually-hidden"> name</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Skeleton argument
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <a class="govuk-link" href="#">Skeleton_argument_Case1234567.pdf</a>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="upload-documents">
-                Change<span class="govuk-visually-hidden"> date of birth</span>
-              </a>
-            </dd>
-          </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Authorities
@@ -214,7 +114,7 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Documentary evidence for trial
+              Documentary evidence for the hearing
             </dt>
             <dd class="govuk-link govuk-summary-list__value">
               <a class="govuk-link" href="#">Photo_of_flooding.jpg</a>
@@ -229,6 +129,7 @@
 
         <form action="/form-handler" method="post" novalidate>
 
+        
 
           {# <button class="govuk-button" type="submit" data-module="govuk-button">
             Continue
@@ -241,7 +142,7 @@
           
 
         </form>
-        
+
         <details class="govuk-details" data-module="govuk-details">
         <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
@@ -264,7 +165,7 @@
           </p>
         </div>
       </details>
-
+      
       </div>
     </div>
 
