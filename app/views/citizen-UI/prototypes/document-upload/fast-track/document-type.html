@@ -29,7 +29,7 @@
       </h1>
 
       <p class="govuk-body">
-        Select all the types of documents that apply.
+       Select the types of documents that apply to your case. You may not need to upload documents for every category 
       </p>
 
       <div class="govuk-form-group">
@@ -76,13 +76,22 @@
             Your statement if you are giving evidence, statement written by your witness, summary of evidence
           </div> #}
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+             <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="ws" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="ws">
+                Your statement
+              </label>
+              <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
+                A written statement of what you want to tell the court
+              </div>
+            </div>
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="ws" name="waste" type="checkbox" value="carcasses">
               <label class="govuk-label govuk-checkboxes__label" for="ws">
                 Witness statement
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Your written evidence if you are giving evidence, written evidence by your witness
+                A written statement of what your witness wants to tell the court
               </div>
             </div>
             <div class="govuk-checkboxes__item">
@@ -91,7 +100,7 @@
                 Witness summary
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                If you cannot get a full witness statement, you can use a witness summary of the evidence you would include in a witness statement. You need permission from the court to use a witness summary
+                If you cannot get a written statement from your witness, you can write a summary of the evidence you would want to include in the witness statement. You need permission from the court to use a witness summary at the hearing 
               </div>
             </div>
             <div class="govuk-checkboxes__item">
@@ -133,7 +142,7 @@
                 Expert's report
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Written evidence by an expert. If you have agreed to share a single joint expert, check if the other party has uploaded the report
+                A written report by your expert. Expert evidence is an opinion based on the expertise of a specialist, for example – a building surveyor who can comment on the quality of building work. An expert is not a legal representative 
               </div>
             </div>
             <div class="govuk-checkboxes__item">
@@ -142,7 +151,7 @@
                 Joint statement of experts
               </label>
               <div id="nationality-item-hint" class="govuk-hint govuk-checkboxes__hint">
-                Statement by both parties' experts setting out their areas of agreement and disagreement
+                A statement by the experts for both parties, setting out the facts in the case that they agree on or disagree on. This only applies if you and the other party set up a meeting for your experts. The experts write this statement after their discussion  
               </div>
             </div>
             <div class="govuk-checkboxes__item">
