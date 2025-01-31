@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Message sent",
+        html: "Your message has been sent to HMCTS"
+      }) }}
+
+  
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>
+        Our team will read your message and respond within 10 days.      </p>
+
+      <p>
+        You will be notified when the court responds to your message and you will be able to view it from your dashboard .
+      </p>
+
+      <div class="govuk-button-group">
+        <a class="govuk-link govuk-link--no-visited-state" href="010-00-mail-after-query.html">Go to your dashboard</a>
+      </div>
+     
+
+
+    </div>
+  </div>
+
+{% endblock %}

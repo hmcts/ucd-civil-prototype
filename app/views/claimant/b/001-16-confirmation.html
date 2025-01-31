@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    {{ govukPanel({
+    titleText: "Application created",
+    html: "You need to pay the application fee to submit the application"
+    }) }}
+
+
+    <h2 class="govuk-heading-m">
+      What happens next
+    </h2>
+
+    <p>
+      Your application has been saved, but you need to pay the application fee of £108. 
+    </p>
+
+    <p>
+      Until you pay the application
+      fee, your application will not be sent to the other parties or considered by a judge.
+      
+    </p>
+    
+    <p>
+    You’ll have the option to
+      apply for help with fees once you’ve clicked ‘Pay application fee’.
+
+
+
+      <form action="001-16-confirmation" method="post" novalidate>
+
+
+       
+          <button type="submit" class="govuk-button" data-module="govuk-button" style="display:block; margin-bottom: 20px;">
+            Pay application fee
+          </button>
+
+          <p class="govuk-body"> 
+          <a class="govuk-link govuk-link--no-visited-state" href="001-17-dashboard-after-gen-app-change.html" style="display:block; margin-bottom: 10px;"">Close and return to case details</a> </p>
+
+  
+  
+      </form>
+  
+    
+
+
+
+
+  </div>
+</div>
+
+{% endblock %}

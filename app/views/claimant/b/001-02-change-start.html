@@ -1,0 +1,104 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="/parties-agreed-b" method="post">
+
+      <span class="govuk-caption-l">More time to do what’s required by a court order</span>
+      <h1 class="govuk-heading-l">Agreement from the other parties</h1>
+
+      <p class="govuk-body"> You’ll need to pay a fee to make an application. </p>
+      <p class="govuk-body"> The fee amount depends on whether the other parties have agreed to you making this
+        application. The other parties are the other side or sides involved in your case. </p>
+
+      <h3 class="govuk-heading-s"> Getting agreement </h3>
+      <p class="govuk-body"> Asking the other parties to agree is optional. If they’ve agreed, you do not need to have
+        proof of this.
+
+      </p>
+
+      <p class="govuk-body">
+
+        If you’re not able to contact the other parties, or you’ve attempted to contact them but have not had a
+        response, select 'No'. </p>
+
+
+      <h3 class="govuk-heading-s"> If the other parties have agreed </h3>
+
+      <p class="govuk-body">The application fee will be reduced, unless this is an application to:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>set aside (remove) a judgment</li>
+        <li>vary a judgment</li>
+        <li>reconsider an order</li>
+      </ul>
+
+      
+
+
+      <p class="govuk-body" style="margin-bottom: 40px;">
+        There may also be no need for a hearing to make a decision on the application. You’ll see the final application
+        fee amount before you pay.</p>
+
+
+        {{ govukRadios({
+          name: "partiesAgreed",
+          fieldset: {
+            legend: {
+              text: "Have the other parties agreed to this application?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: "If you’ll be selecting multiple applications, this answer will apply to all of them."
+          },
+          items: [
+            {
+              value: "Yes",
+              text: "Yes"
+            },
+            {
+              value: "No",
+              text: "No"
+            }
+          ]
+        }) }}
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+  
+
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

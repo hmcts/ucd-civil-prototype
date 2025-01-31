@@ -1,0 +1,102 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="001-14-pay" method="post">
+
+      <span class="govuk-caption-l">More time to do what’s required by a court order</span>
+      <h1 class="govuk-heading-l">Adjustments or support to attend a hearing</h1>
+
+      <h3 class="govuk-heading-s">  If you need a sign language or language interpreter </h3>
+
+      <p class="govuk-body">You’ll need to arrange your own language interpreter.   </p>
+      <p class="govuk-body"> 
+        If you’re not able to arrange your own interpreter, the court may be able to arrange one for you. </p>
+
+      <p class="govuk-body">
+
+        If you’ll be arranging your own interpreter, you still need to tell us what language you’ll be using by ticking the ‘Language interpreter’ box below. </p>
+
+        <p class="govuk-body">
+
+          We’ll always arrange a sign language interpreter. Tell us what type of sign language you need an interpreter for by ticking the ‘Sign language interpreter’ box below. </p>
+  
+
+      <p class="govuk-body" style="margin-bottom: 40px;">
+        Find out how to <a href="/" class="govuk-link govuk-link--no-visited-state"> get an interpreter at a court or tribunal. </a> </p>
+
+
+
+        {{ govukCheckboxes({
+          name: "support",
+          fieldset: {
+            legend: {
+              text: "Do you need any adjustments or support to attend a hearing (optional)?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          hint: {
+            text: "Select all that apply"
+          },
+          items: [
+            {
+              value: "step",
+              text: "Step-free access"
+            },
+            {
+              value: "loop",
+              text: "Hearing loop"
+            },
+            {
+              value: "sign",
+              text: "Sign language interpreter"
+            },
+            {
+              value: "language",
+              text: "Language interpreter"
+            },
+            {
+              value: "other",
+              text: "Other support"
+            }
+          ]
+        }) }}
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+  
+
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

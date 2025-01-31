@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+
+    <span class="govuk-caption-l">Get an update on my case</span>
+    <h1 class="govuk-heading-l">Get an update on the claim after a judgment request</h1>
+
+    <hr class="govuk-section-break govuk-section-break--m">
+
+
+    <h2 class="govuk-heading-m">If you have issued a judgment request online</h2>
+    <p class="govuk-body">
+      Judgment requests issued online are progressed automatically.
+    </p>
+    <p class="govuk-body">
+      Claimants and defendants will be sent a copy of the judgment order.
+    </p>
+
+    <p class="govuk-body">
+      You can <a href="https://www.gov.uk/guidance/civil-processing-dates" class= "govuk-link--no-visited-state">check current average times to progress claims on GOV.UK(opens in a new window)</a>.
+    </p>
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Anything else</h2>
+    <p class="govuk-body">
+      If you still need an update on your claim, you can send a message to the court.
+    </p>
+
+    <p class="govuk-body">
+      It takes at least 10 days for the court to respond to a message.      </p>
+
+
+
+    <p class="govuk-body">
+      <a href="0000-raise-query.html" class="govuk-link govuk-link--no-visited-state">Send message</a>
+    </p>
+
+
+    <div class="govuk-button-group" style="margin-top: 50px;">
+      <button type="submit" class="govuk-button" data-module="govuk-button" disabled> 
+        Continue
+      </button>
+      <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+    </div>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

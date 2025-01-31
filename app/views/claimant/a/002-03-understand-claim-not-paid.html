@@ -1,0 +1,84 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+
+    <span class="govuk-caption-l">Get an update on my case</span>
+    <h1 class="govuk-heading-l">Understand what happens if claim is not paid</h1>
+
+    <hr class="govuk-section-break govuk-section-break--m">
+
+
+
+    <p class="govuk-body">
+      The defendant has 28 days to respond once they receive the claim (if both parties agree, the 28 days can be extended).
+
+    </p>
+
+
+    <p class="govuk-body">They can decide to:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>pay the full amount</li>
+  <li>pay a different amount (if they think they owe less)</li>
+  <li>defend the claim (if they do not think they owe any money)</li>
+</ul>
+
+
+
+    <p class="govuk-body">
+      If they offer to pay a different amount and that is rejected, there may be a hearing where they will have to give more information. The claimant will be asked to attend the hearing.
+    </p>
+
+ 
+    <h2 class="govuk-heading-s">If the defendant does not pay the full amount in time</h2>
+
+    <p class="govuk-body">
+      If they do not pay in time, the claimant will be given the option to<a href="https://www.gov.uk/county-court-judgments-ccj-for-debt" class= "govuk-link--no-visited-state">request a county court judgment</a>.
+    </p>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Anything else</h2>
+    <p class="govuk-body">
+      If you still need help on your claim, you can send a message to the court.
+    </p>
+
+    <p class="govuk-body">
+      It takes at least 10 days for the court to respond to a message.      </p>
+
+
+
+    <p class="govuk-body">
+      <a href="0000-raise-query.html" class="govuk-link govuk-link--no-visited-state">Send message</a>
+    </p>
+
+
+    <div class="govuk-button-group" style="margin-top: 50px;">
+      <button type="submit" class="govuk-button" data-module="govuk-button" disabled> 
+        Continue
+      </button>
+      <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+    </div>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

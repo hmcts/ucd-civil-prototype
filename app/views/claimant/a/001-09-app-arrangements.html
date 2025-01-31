@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="001-10-app-arrangements" method="post">
+
+      <span class="govuk-caption-l">Change a hearing date</span>
+      <h1 class="govuk-heading-l">Application hearing arrangements</h1>
+
+      <p class="govuk-body"> You may need to attend an application hearing so that a judge can consider the application with you and the other parties. </p>
+      
+       
+        <p class="govuk-body"  style="margin-bottom: 40px;"> This hearing is not to consider the claim. This is a separate hearing to consider the application.  </p>
+
+    
+
+
+
+
+
+
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+          <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+        </div>
+
+
+
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,110 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+
+    <span class="govuk-caption-l">Send documents to the court</span>
+    <h1 class="govuk-heading-l">Upload enforcement requests</h1>
+
+    <hr class="govuk-section-break govuk-section-break--m">
+
+
+    <p class="govuk-body">
+      Enforcement requests cannot be uploaded using the Money claims system.
+
+    </p>
+
+
+    <p class="govuk-body">
+      There is guidance on <a
+        href="https://www.gov.uk/government/publications/what-to-do-if-a-defendant-doesnt-pay-money-after-judgment-ex321"
+        class="govuk-link--no-visited-state"> what to do if a defendant does not pay money after a judgment </a> . </p>
+
+
+    <p class="govuk-body">
+      There are various options for you to enforce a judgment, you will have to fill in forms and submit them to the
+      court.
+
+    </p>
+
+
+    <p class="govuk-body">
+      The options for enforcing a judgment are:
+
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>
+        <a href="https://www.gov.uk/government/publications/how-to-ask-for-a-warrant-of-control-ex322"
+          class="govuk-link--no-visited-state"> warrant of control </a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/government/publications/form-n337-request-for-attachment-of-earnings-order"
+          class="govuk-link--no-visited-state"> attachment of earnings order </a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/government/publications/third-party-debt-orders-and-charging-orders-ex325"
+          class="govuk-link--no-visited-state">third-party debt order </a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/government/publications/third-party-debt-orders-and-charging-orders-ex325"
+          class="govuk-link--no-visited-state">charging order </a>
+      </li>
+
+    </ul>
+
+
+    <p class="govuk-body">
+      Each option has its own fee, check the <a
+        href="https://www.gov.uk/government/publications/fees-in-the-civil-and-family-courts-main-fees-ex50"
+        class="govuk-link--no-visited-state">  civil fees list </a> to find the costs for the option you select. </p>
+
+
+
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Anything else</h2>
+    <p class="govuk-body">
+      If you still need help with your claim, you can send a message to the court.
+    </p>
+
+    <p class="govuk-body">
+      It takes at least 10 days for the court to respond to a message. </p>
+
+
+
+    <p class="govuk-body">
+      <a href="0000-raise-query.html" class="govuk-link govuk-link--no-visited-state">Send message</a>
+    </p>
+
+
+    <div class="govuk-button-group" style="margin-top: 50px;">
+      <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+        Continue
+      </button>
+      <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+    </div>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

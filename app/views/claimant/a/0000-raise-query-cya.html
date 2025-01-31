@@ -1,0 +1,130 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+  
+    <span class="govuk-caption-l">Send a message</span>
+
+    <h1 class="govuk-heading-l">
+      Check message details
+    </h1>
+
+    {{ govukSummaryList({
+
+    rows: [
+    {
+
+    key: {
+    text: "Message subject"
+    },
+    value: {
+    text: data['query-subject']
+    },
+    actions: {
+    items: [
+    {
+    href: "0000-raise-query",
+    text: "Change",
+    visuallyHiddenText: "Question 1"
+    }
+    ]
+    }
+    }
+    ,
+
+    {
+    key: {
+    text: "Message details"
+    },
+    value: {
+    text: data['query-details']
+    },
+    actions: {
+    items: [
+    {
+    href: "0000-raise-query",
+    text: "Change",
+    visuallyHiddenText: "Question 2"
+    }
+    ]
+    }
+    }
+    ,
+
+    {
+    key: {
+    text: "Is the message hearing related? "
+    },
+    value: {
+    text: data['hearing-related']
+    },
+    actions: {
+    items: [
+    {
+    href: "0000-raise-query",
+    text: "Change",
+    visuallyHiddenText: "Question 3"
+    }
+    ]
+    }
+    }
+    ,
+
+    {
+      key: {
+      text: "Add documents to this message (Optional)"
+      },
+      value: {
+      text: "No documents uploaded"
+      },
+      actions: {
+      items: [
+      {
+      href: "0000-raise-query",
+      text: "Change",
+      visuallyHiddenText: "Question 2"
+      }
+      ]
+      }
+      }
+
+
+
+
+    ]
+    }) }}
+
+  
+
+    <form action="0000-raise-query-confirmation" method="post" novalidate>
+
+    
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+      
+    </form>
+
+  </div>
+</div>
+{% endblock %}
+   
+    

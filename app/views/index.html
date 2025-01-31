@@ -1,64 +1,44 @@
+{% extends "layouts/main.html" %}
 
-{% extends "layout.html" %}
-
-{% block pageTitle %}
-  GOV.UK Prototype Kit
-{% endblock %}
+{% set pageName="Home" %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">
-        Civil prototypes
-      </h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h2 class="govuk-heading-l">Citizen UI</h2>
+    <h1 class="govuk-heading-xl">
+      Index
+    </h1>
 
-      <h3 class="govuk-heading-m">Citizen UI 2022 updates</h3>
-      <p><a href="index-citizen-UI" class="govuk-link govuk-link--no-visited-state">Current version</a></p>
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Previous versions
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p><a href="https://hmcts-cmc-prototype.herokuapp.com/" class="govuk-link govuk-link--no-visited-state">Version x</a> &ndash; January 2021</p>
-        </div>
-      </details>
-
-      <h2 class="govuk-heading-l">Legal rep</h2>
-
-      <h3 class="govuk-heading-m">Case progression</h3>
-      <p><a href="index-case-progression" class="govuk-link govuk-link--no-visited-state">Current version</a></p>
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Previous versions
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p><a href="" class="govuk-link govuk-link--no-visited-state">Version x</a> &ndash; xx September 2021</p>
-        </div>
-      </details>
-
-      <h3 class="govuk-heading-m">Legal rep Vs Legal rep</h3>
-      <p><a href="https://legal-rep-prototype.herokuapp.com/" class="govuk-link govuk-link--no-visited-state">Current version</a></p>
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Previous versions
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p><a href="" class="govuk-link govuk-link--no-visited-state">Version x</a> &ndash; xx September 2021</p>
-        </div>
-      </details>
+    <h3 class="govuk-heading-m">
+     Claimant
+    </h3>
 
 
+    <p class="govuk-body"> <a href="claimant/a/000-dashboard.html" class="govuk-link govuk-link--no-visited-state">Change hearing date (gen app a) </a></p>
+    <p class="govuk-body"> <a href="claimant/b/000-dashboard.html" class="govuk-link govuk-link--no-visited-state">Ask for more time (gen app bpp b) </a></p>
+    <p class="govuk-body"> <a href="claimant/a/010-00-dashboard-before-query.html" class="govuk-link govuk-link--no-visited-state">What is happening with case (raise a query?) </a></p>
+    <p class="govuk-body"> <a href="claimant/a/010-00-dashboard-after-query.html" class="govuk-link govuk-link--no-visited-state">What happens if judgment not paid (raise a query) </a></p>
 
-    </div>
+
+    <h3 class="govuk-heading-m">
+      Defendant
+     </h3>
+
+    <p class="govuk-body"> <a href="" class="govuk-link govuk-link--no-visited-state">Gen app 1 </a></p>
+    <p class="govuk-body"> <a href="" class="govuk-link govuk-link--no-visited-state">Gen app 2 </a></p>
+
+     <!-- I want to section 
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+
+    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
+    -->
   </div>
+</div>
 
 {% endblock %}

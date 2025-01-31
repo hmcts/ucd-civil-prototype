@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   
+
+    <form class="form" action="/send-update-to-court" method="post">
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+      name: "whatUpdateDoYouWantToSend",
+      value: data['get-update'],
+      fieldset: {
+      legend: {
+      html: '<span class="govuk-caption-l"> Pay a hearing fee or get help with fees</span><h1 class="govuk-heading-l" style="margin-bottom: 10px;">Guidance</h1> ',
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+      }
+      },
+      items: [
+      {
+      value: "01-change-date",
+      text: "Change the hearing date"
+      },
+    
+      {
+          value: "02-change-details",
+          text: "Change hearing details ",
+          hint: {
+            text: "For example hearing location or  in person or video hearing"
+          }
+        },
+        {
+          value: "03-ask-help",
+          text: "Ask for help and support during my hearing"
+          }
+      ]
+    }) }}
+
+
+     
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

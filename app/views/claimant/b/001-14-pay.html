@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="001-15-change-cya" method="post">
+
+      <span class="govuk-caption-l">More time to do what’s required by a court order</span>
+      <h1 class="govuk-heading-l">Paying for your application</h1>
+
+      <h3 class="govuk-heading-s"> Application fee to pay</h3>
+
+      <p class="govuk-body">£108  </p>
+
+
+      <p class="govuk-body" style="margin-bottom: 40px;">
+       You'll be asked to pay for your application once it has been submitted  </p>
+
+
+
+  
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+  
+
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

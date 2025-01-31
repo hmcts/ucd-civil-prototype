@@ -1,0 +1,119 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+
+    <span class="govuk-caption-l">Send an update on my case</span>
+    <h1 class="govuk-heading-l">Amend the claim details</h1>
+
+    <hr class="govuk-section-break govuk-section-break--m">
+
+
+
+    <p class="govuk-body">
+      You can change the details of your claim, including:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>   the reasons for the claim </li>
+      <li>the claim amount</li>
+      <li>the person you are claiming against</li>
+    </ul>
+
+
+    
+    <p class="govuk-body">
+     
+You must apply to amend the claim details, do this by
+
+      <a href="/"
+      class="govuk-link--no-visited-state"> making an application</a>, you will have to pay a fee of £119.
+  </p>
+
+  <p class="govuk-body">
+     
+    If you are changing the amount of the claim, this could change the court fee you have to pay. 
+    
+          <a href="/"
+          class="govuk-link--no-visited-state"> Check the fees list </a>  to make sure you pay the correct fee.
+      </p>
+
+
+    <h2 class="govuk-heading-s">If the defendant’s address is wrong</h2>
+
+
+
+    <p class="govuk-body">
+      You can send an amended claim form, with the correct address written in red ink. Email the amended form to
+
+      <a href="/"
+      class="govuk-link--no-visited-state"> contactocmc@justice.gov.uk</a>.
+  </p>
+
+
+  
+
+
+
+    <h2 class="govuk-heading-s">To update your contact details</h2>
+
+
+
+
+    <p class="govuk-body">
+      To update your contact details,
+
+      <a href="/"
+      class="govuk-link--no-visited-state">raise a query</a>.
+  </p>
+
+
+
+
+   
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Anything else</h2>
+    <p class="govuk-body">
+      If you still need help with your claim, you can send a message to the court.
+    </p>
+
+    <p class="govuk-body">
+      It takes at least 10 days for the court to respond to a message. </p>
+
+
+
+    <p class="govuk-body">
+      <a href="0000-raise-query.html" class="govuk-link govuk-link--no-visited-state">Send message</a>
+    </p>
+
+
+    <div class="govuk-button-group" style="margin-top: 50px;">
+      <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+        Continue
+      </button>
+      <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+    </div>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

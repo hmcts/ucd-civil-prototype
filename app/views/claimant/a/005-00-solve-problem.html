@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   
+
+    <form class="form" action="/" method="post">
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+      name: "sendDocs",
+      value: data['get-update'],
+      fieldset: {
+      legend: {
+      html: '<span class="govuk-caption-l"> Solve a problem I am having using the Money Claims system</span><h1 class="govuk-heading-l" style="margin-bottom: 10px;">What are you trying to do?</h1> ',
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+      }
+      },
+      items: [
+      {
+      value: "01-submit",
+      text: "Submit a response to the defendant"
+      },
+      {
+      value: "02-see",
+      text: "See the claim on my account"
+      },
+      {
+        value: "03-view",
+        text: "View documents on my account"
+        },
+      {
+        value: "04-feedback",
+        text: "Give feedback"
+        }
+      ]
+    }) }}
+
+
+     
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

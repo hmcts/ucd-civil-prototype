@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <span class="govuk-caption-l">Get an update on my case</span>
+    <h1 class="govuk-heading-l">Get an update on the claim after a judgment request</h1>
+
+
+    <p>
+      This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.
+    </p>
+
+    <p>
+      Read more <a href="">about this topic</a>.
+    </p>
+
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <h2 class="govuk-heading-s">Anything else</h2>
+    <p>
+      This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.
+    </p>
+
+    <p class="govuk-body">
+      <a href="0000-raise-query.html" class="govuk-link govuk-link--no-visited-state">Raise a query</a>
+    </p>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

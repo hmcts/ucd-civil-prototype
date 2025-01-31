@@ -1,0 +1,127 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-l">
+      Check your answers
+    </h1>
+
+
+    {{ govukSummaryList({
+
+    rows: [
+    {
+
+    key: {
+    text: "Query subject"
+    },
+    value: {
+    text: data['query-subject']
+    },
+    actions: {
+    items: [
+    {
+    href: "0000-raise-query",
+    text: "Change",
+    visuallyHiddenText: "Question 1"
+    }
+    ]
+    }
+    }
+    ,
+
+    {
+    key: {
+    text: "Query details"
+    },
+    value: {
+    text: data['query-details']
+    },
+    actions: {
+    items: [
+    {
+    href: "0000-raise-query",
+    text: "Change",
+    visuallyHiddenText: "Question 2"
+    }
+    ]
+    }
+    }
+    ,
+
+    {
+    key: {
+    text: "Is the query hearing related? "
+    },
+    value: {
+    text: data['hearing-related']
+    },
+    actions: {
+    items: [
+    {
+    href: "0000-raise-query",
+    text: "Change",
+    visuallyHiddenText: "Question 3"
+    }
+    ]
+    }
+    }
+    ,
+
+    {
+      key: {
+      text: "Add document to this query "
+      },
+      value: {
+      text: "No documents uploaded"
+      },
+      actions: {
+      items: [
+      {
+      href: "0000-raise-query",
+      text: "Change",
+      visuallyHiddenText: "Question 2"
+      }
+      ]
+      }
+      }
+
+
+
+
+    ]
+    }) }}
+
+  
+
+    <form action="/0000-raise-query-confirmation" method="post" novalidate>
+
+    
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+      
+    </form>
+
+  </div>
+</div>
+{% endblock %}
+   
+    

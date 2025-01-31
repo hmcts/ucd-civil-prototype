@@ -1,0 +1,219 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="/make-gen-app" method="post">
+
+      
+
+      {% set dateHtml %}
+      {{ govukRadios({
+        name: "select-app-other",
+        fieldset: {
+        legend: {
+     
+       
+        }
+        },
+  
+  
+        items: [
+        {
+        value: "application--other-1",
+        text: "Ask to make a change to your claim or defence that you’ve submitted",
+        hint: {
+        text: "This is also known as an application to amend a statement of case. "
+        }
+        },
+        {
+        value: "application-other-2",
+        text: "Ask the court to make a summary judgment on a case",
+        hint: {
+        text: "This application should only be made if you do not believe the other parties’ claim has any real prospect of success. "
+        }
+        },
+        {
+        value: "application-other-3",
+        text: "Ask the court to strike out a document uploaded by the other parties",
+        hint: {
+        text: "This application should only be made if you believe that a document uploaded by the other parties, such as their defence, should be struck out as it has no real prospect of success. "
+        }
+        },
+  
+        {
+        value: "application-other-4",
+        text: "Ask the court to pause a claim",
+        hint: {
+        text: "This is also known as an application to stay the claim. "
+        }
+        },
+        {
+        value: "application-other-5",
+        text: "Ask the court to impose a sanction on the other parties unless they do a specific action",
+        hint: {
+        text: "For example, striking out their claim or defence unless they upload all their documents by a specific date. This is also known as an application for an unless order. "
+        }
+        },
+        {
+        value: "application-other-6",
+        text: "Ask the court to make an order settling the claim by consent",
+        hint: {
+        text: "The other parties must have agreed to this application. If there's a hearing date already scheduled for your case, you'll need to request cancellation of this when you provide details about your application. "
+        }
+        },
+        {
+        value: "application-other-7",
+        text: "Ask the court to do something that’s not on this list ",
+        hint: {
+        text: "Select this option if you cannot see the application you want on this list. "
+        }
+        },
+  
+  
+        {
+        value: "application-other",
+        text: "Other",
+        conditional: {
+        html: dateHtml
+        }
+        }
+        ]
+        }) }}
+  
+  
+      {% endset -%}
+
+      <fieldset class="govuk-fieldset">
+        <span class="govuk-caption-l"> Make an application </span>
+        <h1 class="govuk-heading-l" style="margin-bottom: 40px;"> Select application</h1> 
+        
+        <!-- Paragraph added below the legend -->
+        <p class="govuk-body">When you request a change to your case, or contact the court to take a specific action, this is known as making an ‘application’ to the court for an order. </p>
+
+        <p class="govuk-body"> An application is not a new claim. It is a request for a judge to take an action on an existing claim. </p>
+
+        <p class="govuk-body">Select the application you want and click continue. </p>
+
+        <p class="govuk-body" style="margin-bottom: 40px;"> If you need to make multiple applications, you’ll have the option to add another application later on </p>
+
+        
+    
+      {{ govukRadios({
+      name: "selectApp",
+    
+      
+      
+
+      
+
+
+      items: [
+      {
+      value: "application-1",
+      text: "Ask to set aside (remove) a judgment",
+      hint: {
+      text: "For example, if you do not believe a judgment should’ve been made or you’ve not had the opportunity to
+      respond to a claim and you have a defence. This application is usually made by defendants. "
+      }
+      },
+      {
+      value: "application-2",
+      text: "Ask to vary a judgment",
+      hint: {
+      text: "For example, if you want to request to pay a judgment amount in instalments or make a change to instalments
+      you’ve already agreed. This application is usually made by defendants. Your payment offer will be presented to the
+      other parties who can accept or reject it. If you’re a defendant selecting this application, you’ll need to upload
+      an N245 form. "
+      }
+      },
+      {
+      value: "application-3",
+      text: "Ask the court to reconsider an order",
+      hint: {
+      text: "If an order has been made after an application or a hearing that you were not informed about. This is also
+      known as an application to set aside or vary an order. "
+      }
+      },
+
+      {
+      value: "application-4",
+      text: "Ask to change a hearing date",
+      hint: {
+      text: "This is also known as an application to adjourn a hearing. "
+      }
+      },
+      {
+      value: "application-5",
+      text: "Ask for more time to do what is required by a court order",
+      hint: {
+      text: "For example, asking for the deadline for uploading documents before a trial or hearing to be extended.
+      You’ll need to provide a valid reason for not meeting the original deadline. This application can only be made
+      before the original deadline has passed. This is also known as an application to extend time.
+
+      Instead of making an application, you can get written agreement from the other parties for more time to do what’s
+      required by the court. To do this, the time extension you request must be less than 28 days and should not affect
+      a hearing date. "
+      }
+      },
+      {
+      value: "application-6",
+      text: "Ask for relief from a penalty you've been given by the court",
+      hint: {
+      text: "This is also known as an application to adjourn a hearing. "
+      }
+      },
+      {
+      value: "application-7",
+      text: "Ask to change a hearing date",
+      hint: {
+      text: "For example, if you have not uploaded documents by the deadline. You can only make this application after
+      the penalty has been given. This is also known as an application for relief from sanctions. "
+      }
+      },
+
+
+      {
+      value: "application-other",
+      text: "Other",
+      conditional: {
+      html: dateHtml
+      }
+      }
+      ]
+      }) }}
+
+
+
+
+
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

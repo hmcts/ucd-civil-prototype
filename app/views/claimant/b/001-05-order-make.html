@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="001-06-order-why" method="post">
+
+      <span class="govuk-caption-l">More time to do what’s required by a court order</span>
+      <h1 class="govuk-heading-l">What order do you want the judge to make?</h1>
+
+      <p class="govuk-body"> A judge will consider your application and make an order. The order that a judge would
+        usually make to change a hearing date is in the box below. </p>
+      <p class="govuk-body">
+        You’ll need to add information to the box, like when your hearing is currently arranged for, after what date
+        you’d like to change it to and any dates to avoid. </p>
+
+      <p class="govuk-body">
+
+        You can also alter any of the other text if you need to. </p>
+
+      <p class="govuk-body">
+
+        You'll be able to explain your reasons on the next screen. </p>
+
+
+      <p class="govuk-body" style="margin-bottom: 40px;">
+        The contents of this box will be seen by the other parties.</p>
+
+
+     
+
+      {{ govukTextarea({
+        name: "order-make",
+        id: "order-make",
+        label: {
+          text: "Enter the order that you want the judge to make",
+          classes: "govuk-label--s",
+          isPageHeading: true
+        },
+        value: "The time by which I must [specify what needs to be done] be extended to [enter the date you can do this by].
+        "
+      }) }}
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+
+
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}
