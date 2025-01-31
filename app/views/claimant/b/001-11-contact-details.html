@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="001-12-any-dates" method="post">
+
+      <span class="govuk-caption-l">More time to do what’s required by a court order</span>
+      <h1 class="govuk-heading-l">Contact details</h1>
+
+    
+      
+
+
+    
+
+        {{ govukInput({
+          label: {
+            text: "Preferred phone number ",
+            classes: "govuk-label--s",
+            isPageHeading: true
+          },
+          id: "phone",
+          name: "phone"
+        }) }}
+
+
+
+        {{ govukInput({
+          label: {
+            text: "Preferred email address ",
+            classes: "govuk-label--s",
+            isPageHeading: true
+          },
+          id: "email",
+          name: "email"
+        }) }}
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+  
+
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

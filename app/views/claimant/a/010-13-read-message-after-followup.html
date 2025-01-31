@@ -1,0 +1,152 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+   
+  
+    <h1 class="govuk-heading-l">Help with documents</h1>
+
+
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Message details
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body "> I need help in figuring something out...can you help me please?</p>
+
+         
+        </dd>
+      </div>
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Is the message hearing related?
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">No</p>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Attachments
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">No documents uploaded</p>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Sent by
+        </dt>
+        <dd class="govuk-summary-list__value">
+         You
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Sent on
+        </dt>
+        <dd class="govuk-summary-list__value">
+         04 Feb 2025, 11.59	
+        </dd>
+      </div>
+    </dl>
+
+
+
+
+
+    
+    
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+            
+  
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Message details
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body"> I am following up hellooooooo</p>
+
+         
+        </dd>
+      </div>
+      
+     
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Attachments
+
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">No documents uploaded</p>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Sent by
+        </dt>
+        <dd class="govuk-summary-list__value">
+         You
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Sent on
+        </dt>
+        <dd class="govuk-summary-list__value">
+          05 Feb 2025, 09.46
+        </dd>
+      </div>
+    </dl>
+         
+
+
+      
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+    <form class="form" action="010-12-query-list-after-followup" method="post">
+
+      <div class="govuk-button-group">
+        <!-- Return to messages list button -->
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Return to messages list
+        </button>
+        
+        <!-- Send message button with specific page action -->
+        <button type="submit" class="govuk-button govuk-button--secondary" 
+          data-module="govuk-button" formaction="">
+          Send a follow up message
+        </button>
+      </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

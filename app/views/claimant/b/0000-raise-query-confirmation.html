@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Query submitted",
+        html: "Your query has been sent to HMCTS"
+      }) }}
+
+  
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>
+        Our team will read your query and will respond.
+      </p>
+
+      <p>
+        Content explaining where to find the query
+      </p>
+
+      <div class="govuk-button-group">
+        <a class="govuk-link govuk-link--no-visited-state" href="000-dashboard.html">Go to your dashboard</a>
+      </div>
+     
+
+
+    </div>
+  </div>
+
+{% endblock %}

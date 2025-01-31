@@ -1,0 +1,131 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+   
+  
+
+
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--l">Messages</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header ">Message subject</th>
+          <th scope="col" class="govuk-table__header ">Sent on</th>
+          <th scope="col" class="govuk-table__header ">Last updated by</th>
+          <th scope="col" class="govuk-table__header ">Last updated on</th>
+          <th scope="col" class="govuk-table__header ">Status</th>
+          
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <p class="govuk-body" style="margin-bottom: 5px;">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Help with documents</a>
+          </p></th>
+          <td class="govuk-table__cell">11 Jan 2025, 08.12</td>
+          <td class="govuk-table__cell">HMCTS</td>
+          <td class="govuk-table__cell">25 Jan 2025, 17.46</td>
+         <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              Response available
+            </strong>
+          </td> 
+        </tr>
+        
+
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <p class="govuk-body" style="margin-bottom: 5px;">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Need support</a>
+          </p></th>
+          <td class="govuk-table__cell">14 Jan 2025, 11.59</td>
+
+          <td class="govuk-table__cell">You</td>
+          <td class="govuk-table__cell">16 Jan 2025, 13.15</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Message sent
+            </strong>
+          </td> 
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <p class="govuk-body" style="margin-bottom: 5px;">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">Help with pictures</a>
+          </p></th>
+          <td class="govuk-table__cell">11 Jan 2025, 18.47</td>
+          <td class="govuk-table__cell">HMCTS</td>
+          <td class="govuk-table__cell">12 Jan 2025, 07.21</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green">
+              Response read
+            </strong>
+          </td> 
+        </tr>
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <p class="govuk-body" style="margin-bottom: 5px;">
+            <a href="#" class="govuk-link govuk-link--no-visited-state">How do I...?</a>
+          </p></th>
+          <td class="govuk-table__cell">01 Jan 2025, 18.47</td>
+          <td class="govuk-table__cell">-</td>
+          <td class="govuk-table__cell">-</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Message sent
+            </strong>
+          </td> 
+        </tr>
+
+       
+      
+      
+        
+      </tbody>
+    </table>
+    <form class="form" action="/" method="post">
+
+   
+
+     
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="010-00-dashboard-after-query.html">Cancel</a>
+      </div>
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

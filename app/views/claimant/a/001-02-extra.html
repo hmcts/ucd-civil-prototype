@@ -1,0 +1,100 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="001-03-fee-info" method="post">
+
+      <span class="govuk-caption-l">Change a hearing date</span>
+      <h1 class="govuk-heading-l">Informing the other parties</h1>
+
+      <p class="govuk-body"> The court will usually send the other parties a copy of your application to give them the opportunity to respond to it. </p>
+      <p class="govuk-body"> In some circumstances a judge may make an order without sending your application to the other parties first. </p>
+
+      <h3 class="govuk-heading-s">If you do not want the court to inform the other parties about this application </h3>
+      <p class="govuk-body">You must provide a reason which will be considered by a judge.</p>
+      <p class="govuk-body" style="margin-bottom: 40px;">
+        If the judge orders that the other parties should be informed, you’ll be notified and you'll need to pay an additional fee. Your application may also be delayed.</p>
+
+
+        {% set moreDetail %}
+
+
+{{ govukTextarea({
+  name: "moreDetail",
+  id: "more-detail",
+  label: {
+    text: " Why do you not want the court to inform the other parties?",
+    classes: "govuk-label--s",
+    isPageHeading: true
+  }
+}) }}
+
+{% endset -%}
+
+        {{ govukRadios({
+          name: "courtInform",
+          fieldset: {
+            legend: {
+              text: "Should the court inform the other parties about this application?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          hint: {
+            text: "If you’ll be selecting multiple applications, this answer will apply to all of them."
+          },
+          items: [
+            {
+              value: "Yes",
+              text: "Yes"
+            },
+            {
+              value: "No",
+              text: "No",
+              conditional: {
+                html: moreDetail
+              }
+            }
+          ]
+        }) }}
+
+       
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+  
+
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

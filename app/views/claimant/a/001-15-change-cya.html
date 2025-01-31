@@ -1,0 +1,321 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+
+    <h1 class="govuk-heading-l">
+      Check your answers
+    </h1>
+
+
+    {{ govukSummaryList({
+
+      
+
+    rows: [
+
+    {
+    key: {
+    text: "Have the other parties agreed to this application?
+    "
+    },
+    value: {
+    text: data['partiesAgreed']
+    },
+    actions: {
+    items: [
+    {
+    href: "001-02-change-start",
+    text: "Change",
+    visuallyHiddenText: "Question 1"
+    }
+    ]
+    }
+    }
+    ,
+
+
+    {
+    key: {
+    text: "Do you want to ask for your costs back?"
+    },
+    value: {
+    text: data['costsBack']
+    },
+    actions: {
+    items: [
+    {
+    href: "001-04-application-costs",
+    text: "Change",
+    visuallyHiddenText: "Question 2"
+    }
+    ]
+    }
+    }
+    ,
+
+    {
+      key: {
+      text: "What order do you want the judge to make? "
+      },
+      value: {
+      text: data['order-make']
+      },
+      actions: {
+      items: [
+      {
+      href: "001-05-order-make",
+      text: "Change",
+      visuallyHiddenText: "Question 3"
+      }
+      ]
+      }
+      }
+      ,
+  
+  
+
+    {
+    key: {
+    text: "Why are you requesting this order?
+    "
+    },
+    value: {
+    text: data['reasons']
+    },
+    actions: {
+    items: [
+    {
+    href: "001-06-order-why",
+    text: "Change",
+    visuallyHiddenText: "Question 3"
+    }
+    ]
+    }
+    }
+    ,
+
+
+    {
+      key: {
+      text: "Do you want to add another application?
+      "
+      },
+      value: {
+      text: "No"
+      },
+      actions: {
+      items: [
+      {
+      href: "001-07-multiple-applications",
+      text: "Change",
+      visuallyHiddenText: "Question 3"
+      }
+      ]
+      }
+      }
+      ,
+
+      {
+        key: {
+        text: "Do you want to upload documents to support your application? (Optional)
+
+        "
+        },
+        value: {
+        text: "No"
+        },
+        actions: {
+        items: [
+        {
+        href: "001-08-upload-documents",
+        text: "Change",
+        visuallyHiddenText: "Question 3"
+        }
+        ]
+        }
+        }
+        ,
+
+        
+  
+        {
+          key: {
+          text: "Have the other parties agreed to this application?
+          "
+          },
+          value: {
+          text: data['typeHearing']
+          },
+          actions: {
+          items: [
+          {
+          href: "001-10-app-arrangements",
+          text: "Change",
+          visuallyHiddenText: "Question 1"
+          }
+          ]
+          }
+          }
+          ,
+      
+
+
+  
+          {
+            key: {
+            text: "Why would you prefer this type of hearing?
+
+            "
+            },
+            value: {
+            text: data['prefer']
+            },
+            actions: {
+            items: [
+            {
+            href: "001-10-app-arrangements",
+            text: "Change",
+            visuallyHiddenText: "Question 3"
+            }
+            ]
+            }
+            }
+            ,
+
+
+          {
+            key: {
+            text: "If a judge requires the hearing to take place in person at the court, do you have a preferred location (optional)?
+
+            "
+            },
+            value: {
+            text: data['location']
+            },
+            actions: {
+            items: [
+            {
+            href: "001-10-app-arrangements",
+            text: "Change",
+            visuallyHiddenText: "Question 3"
+            }
+            ]
+            }
+            }
+            ,
+
+
+
+            {
+              key: {
+              text: "Preferred phone number
+
+  
+              "
+              },
+              value: {
+              text: data['phone']
+              },
+              actions: {
+              items: [
+              {
+              href: "001-11-contact-details",
+              text: "Change",
+              visuallyHiddenText: "Question 3"
+              }
+              ]
+              }
+              }
+              ,
+
+
+              {
+                key: {
+                text: "Preferred email address
+
+  
+    
+                "
+                },
+                value: {
+                text: data['email']
+                },
+                actions: {
+                items: [
+                {
+                href: "001-11-contact-details",
+                text: "Change",
+                visuallyHiddenText: "Question 3"
+                }
+                ]
+                }
+                }
+                ,
+  
+
+
+
+
+
+
+
+
+
+
+    {
+    key: {
+    text: "Add document to this query "
+    },
+    value: {
+    text: "No documents uploaded"
+    },
+    actions: {
+    items: [
+    {
+    href: "0000-raise-query",
+    text: "Change",
+    visuallyHiddenText: "Question 2"
+    }
+    ]
+    }
+    }
+
+
+
+
+    ]
+    }) }}
+
+
+
+    <form action="001-16-confirmation" method="post" novalidate>
+
+      <div class="govuk-button-group">
+  
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Submit
+        </button>
+
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+     
+
+     
+
+    </form>
+
+  </div>
+</div>
+{% endblock %}

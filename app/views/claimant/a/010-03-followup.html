@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <span class="govuk-caption-l">Send a follow up message</span>
+
+    <h1 class="govuk-heading-l">
+      Enter message details
+    </h1>
+ 
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+    <form class="form" action="010-04-followup-cya" method="post">
+
+
+
+
+   <!-- Query details -->
+
+{{ govukTextarea({
+  name: "query-details",
+  id: "query-details-2",
+  value: data['query-details'],
+  label: {
+    text: "Message detail",
+    classes: "govuk-label--s"
+  },
+  hint: {
+    text: "Include as many details as possible so case workers can respond to your message"
+  }
+}) }}
+
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="file-upload-1">
+          Add documents to this message (Optional)
+        </label>
+        <div class="govuk-hint">
+          Only upload documents related to your message. <br> To upload documents to progress your claim, use the appropriate upload options.
+        </div>
+        <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+      </div>
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="010-00-dashboard-after-query.html">Cancel</a>
+      </div>
+
+    </form>
+
+
+  </div>
+</div>
+
+{% endblock %}

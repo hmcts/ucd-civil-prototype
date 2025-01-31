@@ -1,0 +1,81 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+   
+  
+
+
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--l">Messages</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header ">Message subject</th>
+          <th scope="col" class="govuk-table__header ">Sent on</th>
+          <th scope="col" class="govuk-table__header ">Last updated by</th>
+          <th scope="col" class="govuk-table__header ">Last updated on</th>
+          <th scope="col" class="govuk-table__header ">Status</th>
+          
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+
+
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            <p class="govuk-body" style="margin-bottom: 5px;">
+            <a href="010-23-read-message-after-response.html" class="govuk-link govuk-link--no-visited-state">Help with documents</a>
+          </p></th>
+          <td class="govuk-table__cell">04 Feb 2025, 11.59</td>
+          <td class="govuk-table__cell">HMCTS staff</td>
+          <td class="govuk-table__cell">13 Feb 2025, 08.22</td>
+         <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green">
+              Response read
+            </strong>
+          </td> 
+        </tr>
+        
+
+
+        
+        
+
+      
+      
+        
+      </tbody>
+    </table>
+   
+
+   
+
+     
+
+
+      
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,388 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Task list template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<main class="govuk-main-wrapper">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Case name</h1>
+      <p class="govuk-body-m">Claim number: 1234 1234 1234 1234 <br> Claim amount: £400</p>
+
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <div id="divider" style="border-top: 2px solid #1d70b8;"> </div>
+
+      <!-- Response section -->
+
+      <div id="dashboard-claim" style="margin-top: 30px;">
+
+        <h2 class="govuk-heading-m">The claim</h2>
+
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="#"
+                aria-describedby="view-claim">
+                View the claim
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="view-claim">
+              <strong class="govuk-tag govuk-tag--green">
+                Done
+              </strong>
+            </div>
+          </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="#"
+                aria-describedby="view-claimant-details">
+                View information about the claimant
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="view-claimant-details">
+              <strong class="govuk-tag govuk-tag--blue">
+               Optional
+              </strong>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- Response section -->
+
+      <div id="dashboard-response">
+
+        <h2 class="govuk-heading-m">The response</h2>
+
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="#"
+                aria-describedby="view-response">
+                View the response to the claim
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="view-response">
+              <strong class="govuk-tag govuk-tag--green">
+                Done
+              </strong>
+            </div>
+          </li>
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="#"
+                aria-describedby="view-defendant-details">
+                View information about the defendant
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="view-defendant-details">
+              <strong class="govuk-tag govuk-tag--blue">
+               Optional
+              </strong>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!-- Hearings section -->
+
+      <div id="dashboard-hearings">
+
+        <h2 class="govuk-heading-m">Hearings</h2>
+
+        <ul class="govuk-task-list">
+
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="#"
+                aria-describedby="hearing-details-hint hearing-details-status">
+                View the hearing
+              </a>
+              <div id="hearing-details-hint" class="govuk-task-list__hint">
+                Deadline is 4pm on 04 Feb 2025
+              </div>
+            </div>
+            <div class="govuk-task-list__status" id="hearing-details-status">
+              <strong class="govuk-tag govuk-tag--red">
+                Action needed
+              </strong>
+            </div>
+          </li>
+
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="#"
+                aria-describedby="hearing-details-hint hearing-details-status">
+                Upload hearing documents
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="upload docs">
+              <strong class="govuk-tag govuk-tag--red">
+                Action needed
+              </strong>
+            </div>
+          </li>
+
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <p class="govuk-body" style="margin-bottom: 0px;" aria-describedby="trial">
+                View documents
+              </p>
+            </div>
+            <div class="govuk-task-list__status" id="view docs">
+              <strong class="govuk-tag govuk-tag--grey">
+                Not available yet
+              </strong>
+            </div>
+
+
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <p class="govuk-body" style="margin-bottom: 0px;" aria-describedby="trial">
+                Add the trial arrangements
+              </p>
+            </div>
+            <div class="govuk-task-list__status" id="trial">
+              <strong class="govuk-tag govuk-tag--grey">
+                Not available yet
+              </strong>
+            </div>
+          </li>
+
+          </li>
+
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="#"
+                aria-describedby="pay-hearing-hint pay-hearing-status">
+                Pay hearing fee
+              </a>
+              <div id="pay-hearing-hint" class="govuk-task-list__hint">
+                Deadline is 4pm on 04 Feb 2025
+              </div>
+            </div>
+            <div class="govuk-task-list__status" id="pay-hearing-status">
+              <strong class="govuk-tag govuk-tag--red">
+               Action needed
+              </strong>
+            </div>
+          </li>
+
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <p class="govuk-body" style="margin-bottom: 0px;" aria-describedby="">
+                View the bundle
+              </p>
+            </div>
+            <div class="govuk-task-list__status" id="view bundle">
+              <strong class="govuk-tag govuk-tag--grey">
+                Not available yet
+              </strong>
+            </div>
+
+
+
+
+        </ul>
+
+      </div>
+
+      <!-- Orders and notices from the court -->
+
+      <div id="dashboard-order-notices">
+
+        <h2 class="govuk-heading-m">Orders and notices from the court</h2>
+
+        <ul class="govuk-task-list">
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <a class="govuk-link govuk-link--no-visited-state govuk-task-list__link" href="#"
+                aria-describedby="view-orders">
+                View orders and notices
+              </a>
+            </div>
+            <div class="govuk-task-list__status" id="view-orders">
+              <strong class="govuk-tag govuk-tag--blue">
+               Available
+              </strong>
+            </div>
+          </li>
+         
+        </ul>
+
+      </div>
+
+
+      <!-- Judgments from the court section -->
+
+      <div id="dashboard-judgments">
+
+        <h2 class="govuk-heading-m">Judgments from the court</h2>
+
+        <ul class="govuk-task-list">
+
+
+
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <p class="govuk-body" style="margin-bottom: 0px;" aria-describedby="trial">
+                View the judgment
+              </p>
+            </div>
+            <div class="govuk-task-list__status" id="trial">
+              <strong class="govuk-tag govuk-tag--grey">
+                Not available yet
+              </strong>
+            </div>
+          </li>
+
+
+
+
+
+
+        </ul>
+
+      </div>
+
+      <!-- Applications and messages  to the court section -->
+
+      <div id="dashboard-contacts">
+
+        <h2 class="govuk-heading-m">Applications and messages to the court</h2>
+
+        <ul class="govuk-task-list">
+
+
+
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <p class="govuk-body" style="margin-bottom: 0px;" aria-describedby="all-applications">
+                View all applications
+              </p>
+            </div>
+            <div class="govuk-task-list__status" id="all-applications">
+              <strong class="govuk-tag govuk-tag--grey">
+                Not available yet
+              </strong>
+            </div>
+          </li>
+
+          <li class="govuk-task-list__item govuk-task-list__item--with-link">
+            <div class="govuk-task-list__name-and-hint">
+              <p class="govuk-body" style="margin-bottom: 0px;" aria-describedby="all-queries">
+                View the messages you have sent
+              </p>
+            </div>
+            <div class="govuk-task-list__status" id="all-queries">
+              <strong class="govuk-tag govuk-tag--grey">
+                Not available yet
+              </strong>
+            </div>
+          </li>
+
+
+
+
+
+
+        </ul>
+
+      </div>
+
+
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <div id="divider" style="border-top: 2px solid #1d70b8;"> </div>
+
+
+      <!-- I want to section -->
+
+      <h2 class="govuk-heading-m" style="margin-top: 30px;">I want to...</h2>
+      <p class="govuk-body" style="margin-bottom: 10px;">
+        <a href="001-00-contact-the-court.html" class="govuk-link govuk-link--no-visited-state">Contact or apply to the court</a>
+      </p>
+      <p class="govuk-body" style="margin-bottom: 10px;">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Settle or discontinue a case</a>
+      </p>
+      <p class="govuk-body" style="margin-bottom: 10px;">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Get debt respite (breathing space)</a>
+      </p>
+
+      <!-- Help and support section -->
+
+      <h2 class="govuk-heading-m">Help and support</h2>
+      <p class="govuk-body" style="margin-bottom: 10px;">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Help with fees</a>
+      </p>
+      <p class="govuk-body" style="margin-bottom: 10px;">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Find out about mediation</a>
+      </p>
+      <p class="govuk-body" style="margin-bottom: 10px;">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">What to expect at a hearing</a>
+      </p>
+      <p class="govuk-body" style="margin-bottom: 10px;">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Represent myself at a hearing</a>
+      </p>
+      <p class="govuk-body" style="margin-bottom: 10px;">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Find legal advice</a>
+      </p>
+      <p class="govuk-body" style="margin-bottom: 10px;">
+        <a href="#" class="govuk-link govuk-link--no-visited-state">Find information about my court</a>
+      </p>
+
+
+      <!-- Contact us section -->
+
+      <details class="govuk-details" style="margin-top: 40px;">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Contact us 
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+
+          <h3 class="govuk-heading-s" style="margin-bottom: 5px;">Send a message </h3>
+          <p class="govuk-body" style="margin-bottom: 5px;">
+            <a href="001-00-contact-the-court.html" class="govuk-link govuk-link--no-visited-state" >Send a message to the court</a>
+          </p>
+          <p class="govuk-body">
+            You will be able to view the message from the dashboard
+          </p>
+      
+
+
+          <h3 class="govuk-heading-s" style="margin-bottom: 5px;">Telephone </h3>
+          <p class="govuk-body"> 0300 123 7550 <br> Monday to Friday, 8.30am to 5pm</p>
+
+          
+         
+        </div>
+      </details>
+
+    </div>
+  </div>
+</main>
+{% endblock %}

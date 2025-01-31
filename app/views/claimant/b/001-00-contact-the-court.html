@@ -1,0 +1,96 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="/contact-the-court-b" method="post">
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+      name: "whatDoYouWant",
+      value: data['contact'],
+      fieldset: {
+      legend: {
+      html: '<span class="govuk-caption-l"> Contact the court </span>
+      <h1 class="govuk-heading-l" style="margin-bottom: 10px;"> What do you want to do?</h1> ',
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+      }
+      },
+      items: [
+      {
+      value: "01-request",
+      text: "Request a change to my case (make an application)  "
+      },
+      {
+      value: "02-get-update",
+      text: "Get an update on my case"
+      },
+      {
+      value: "03-send-update",
+      text: "Send an update on my case"
+      },
+      {
+      value: "04-documents",
+      text: "Send documents"
+      },
+      {
+      value: "05-problems",
+      text: "Solve a problem I am having using the Money Claims system"
+      },
+      {
+      value: "06-hearing-details",
+      text: "Update hearing details"
+      },
+      {
+      value: "07-fee",
+      text: "Pay a hearing fee or get help with fees"
+      },
+      {
+      value: "08-correspondence",
+      text: "Get support as the correspondence I received is unclear"
+      },
+      {
+      value: "09-followup",
+      text: "Follow up on an existing query"
+      },
+      {
+      value: "10-something-else",
+      text: "Something else"
+      }
+      ]
+      }) }}
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

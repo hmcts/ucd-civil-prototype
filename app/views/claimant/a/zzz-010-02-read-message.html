@@ -1,0 +1,173 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+   
+  
+    <h1 class="govuk-heading-l">Help with documents</h1>
+
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+         Message
+
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Message details 
+            </dt>
+            <dd class="govuk-summary-list__value">
+              I need help in figuring something out...can you help me please?
+            </dd>
+            
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Sent by 
+            </dt>
+            <dd class="govuk-summary-list__value">
+              You
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Sent on
+            </dt>
+            <dd class="govuk-summary-list__value">
+              04 Feb 2025, 11.59	
+            </dd>
+            
+          </div>
+        
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+               Is the message hearing related?
+              </dt>
+              <dd class="govuk-summary-list__value">
+               No
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Attachments
+              </dt>
+              <dd class="govuk-summary-list__value">
+                No documents uploaded
+              </dd>
+            </div>
+            
+  
+        </dl>
+      </div>
+    </div>
+    
+    
+
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">
+         Response
+
+        </h2>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Message details
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Sure what do you need? Read the attached guidance please
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Sent by 
+            </dt>
+            <dd class="govuk-summary-list__value">
+              HMCTS
+            </dd>
+          </div>
+            
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Sent on
+            </dt>
+            <dd class="govuk-summary-list__value">
+              14 Feb 2025, 09.12
+            </dd>
+            
+          </div>
+        
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Attachments
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body" style="margin-bottom: 5px;">
+                  <a href="010-02-read-message.html" class="govuk-link govuk-link--no-visited-state">Help with documents</a>
+                </p>
+              </dd>
+            </div>
+            
+  
+
+         
+
+
+        </dl>
+      </div>
+    </div>
+    
+
+
+    <form class="form" action="/" method="post">
+
+   
+
+     
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="010-00-dashboard-after-query.html">Cancel</a>
+      </div>
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

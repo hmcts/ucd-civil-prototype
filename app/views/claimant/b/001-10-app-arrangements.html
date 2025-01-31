@@ -1,0 +1,105 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="001-11-contact-details" method="post">
+
+      <span class="govuk-caption-l">More time to do what’s required by a court order</span>
+      <h1 class="govuk-heading-l">Application hearing arrangements</h1>
+
+    
+      
+
+{{ govukRadios({
+  name: "typeHearing",
+  fieldset: {
+    legend: {
+      text: "What type of hearing would you prefer?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--s"
+    }
+  },
+  items: [
+    {
+      value: "In person at the court",
+      text: "In person at the court"
+    },
+    {
+      value: "Video conference",
+      text: "Video conference"
+    },
+    {
+      value: "Telephone",
+      text: "Telephone"
+    }
+  ]
+}) }}
+
+{{ govukTextarea({
+  name: "reasons",
+  id: "reasons",
+  label: {
+    text: "Why would you prefer this type of hearing?",
+    classes: "govuk-label--s",
+    isPageHeading: true
+  }
+}) }}
+
+
+  
+
+
+      
+
+        
+    
+
+        {{ govukInput({
+          label: {
+            text: "If a judge requires the hearing to take place in person at the court, do you have a preferred location (optional)? ",
+            classes: "govuk-label--s",
+            isPageHeading: true
+          },
+          id: "location",
+          name: "location"
+        }) }}
+
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+  
+
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

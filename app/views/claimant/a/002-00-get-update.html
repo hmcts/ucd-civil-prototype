@@ -1,0 +1,72 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   
+
+    <form class="form" action="/get-update-from-court" method="post">
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+      {{ govukRadios({
+      name: "whatUpdateDoYouWant",
+      value: data['get-update'],
+      fieldset: {
+      legend: {
+      html: '<span class="govuk-caption-l"> Get an update on my case </span><h1 class="govuk-heading-l" style="margin-bottom: 10px;"> What do you want to do?</h1> ',
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+      }
+      },
+      items: [
+      {
+      value: "01-get-update-after",
+      text: "Get an update on the claim after a judgment request "
+      },
+      {
+      value: "02-get-general-update",
+      text: "Get a general update on what is happening with the case"
+      },
+      {
+        value: "03-understand-claim-not-paid",
+        text: "Understand what will happen if the claim is not paid"
+        },
+      {
+      value: "04-understand-judgment-not-paid",
+      text: "Understand what will happen if the judgment is not paid"
+      }
+      ]
+      }) }}
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}

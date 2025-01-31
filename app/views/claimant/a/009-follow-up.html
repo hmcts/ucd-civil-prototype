@@ -1,0 +1,78 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+
+    <span class="govuk-caption-l">Follow up on an existing message</span>
+    <h1 class="govuk-heading-l">Follow up on an existing message</h1>
+
+    <hr class="govuk-section-break govuk-section-break--m">
+
+
+
+    <p class="govuk-body">
+      Your existing messages are listed on your dashboard.
+    </p>
+
+
+
+    
+    <p class="govuk-body">
+     
+      You can follow up on an existing message by selecting the one you want to view from the '
+
+      <a href="/"
+      class="govuk-link--no-visited-state"> Applications and messages to the court</a>' section.
+  </p>
+
+  <p class="govuk-body">
+    You can reply to any message from the court, your reply must be about the original question you asked.
+  </p>
+
+
+  <p class="govuk-body">
+    Any replies not related to the original question will not be replied to and so you must send a new message.
+  </p>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+    <div class="govuk-button-group" style="margin-top: 50px;">
+      <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+        Continue
+      </button>
+      <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+    </div>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+text: "Back",
+href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    <form class="form" action="001-05-order-make" method="post">
+
+      <span class="govuk-caption-l">Change a hearing date</span>
+      <h1 class="govuk-heading-l">Application costs</h1>
+
+      <p class="govuk-body">When a judge makes a decision on your application, they'll decide who should pay the costs. </p>
+      <p class="govuk-body"> If your application is successful, the other parties may be ordered to pay back your costs associated with the application. </p>
+
+      <p class="govuk-body">Costs can include amounts like:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>your application fee</li>
+        <li>loss of earnings and travel costs if you have to attend a hearing</li>
+      </ul>
+
+      <p class="govuk-body">
+
+        You’ll still need to pay the application fee when you submit the application. </p>
+
+
+     
+
+    
+
+      
+
+
+      <p class="govuk-body" style="margin-bottom: 40px;">
+        The other parties will be able to see your answer to this question and respond to it.</p>
+
+
+        {{ govukRadios({
+          name: "costsBack",
+          fieldset: {
+            legend: {
+              text: "Do you want to ask for your costs back?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "Yes",
+              text: "Yes"
+            },
+            {
+              value: "No",
+              text: "No"
+            }
+          ]
+        }) }}
+
+
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a class="govuk-link" href="000-dashboard.html">Cancel</a>
+      </div>
+
+
+  
+
+
+
+  </div>
+
+
+  </form>
+
+</div>
+</div>
+
+{% endblock %}
